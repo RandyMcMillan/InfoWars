@@ -84,6 +84,14 @@ IBOutlet UIButton *watchNow;
 
 }
 
+-(IBAction)displayWebPage:(id)sender {
+
+    
+
+
+
+}
+
 -(void)loadVideo {
 
     NSURL *movieURL = [NSURL URLWithString:self.movieURLString];

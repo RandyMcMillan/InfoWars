@@ -13,5 +13,5 @@
 @interface ViewController : UIViewController
 
 -(IBAction)playVideoStream:(id)sender;
-
+-(IBAction)displayWebPage:(id)sender;
 @end
