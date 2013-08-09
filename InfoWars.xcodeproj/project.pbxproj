@@ -24,6 +24,10 @@
 		48C025DD17B5522C00070D92 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 48C025B517B5522C00070D92 /* Foundation.framework */; };
 		48C025E517B5522D00070D92 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 48C025E317B5522D00070D92 /* InfoPlist.strings */; };
 		48C025E817B5522D00070D92 /* InfoWarsTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 48C025E717B5522D00070D92 /* InfoWarsTests.m */; };
+		48C025F217B5543B00070D92 /* MediaPlayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 48C025F117B5543B00070D92 /* MediaPlayer.framework */; };
+		48C025F717B5569D00070D92 /* FooterBkGrnd.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 48C025F417B5569D00070D92 /* FooterBkGrnd.jpg */; };
+		48C025F817B5569D00070D92 /* Header.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 48C025F517B5569D00070D92 /* Header.jpg */; };
+		48C025F917B5569D00070D92 /* ListenNow.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 48C025F617B5569D00070D92 /* ListenNow.jpg */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -60,6 +64,10 @@
 		48C025E417B5522D00070D92 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		48C025E617B5522D00070D92 /* InfoWarsTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = InfoWarsTests.h; sourceTree = "<group>"; };
 		48C025E717B5522D00070D92 /* InfoWarsTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = InfoWarsTests.m; sourceTree = "<group>"; };
+		48C025F117B5543B00070D92 /* MediaPlayer.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MediaPlayer.framework; path = System/Library/Frameworks/MediaPlayer.framework; sourceTree = SDKROOT; };
+		48C025F417B5569D00070D92 /* FooterBkGrnd.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = FooterBkGrnd.jpg; sourceTree = "<group>"; };
+		48C025F517B5569D00070D92 /* Header.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Header.jpg; sourceTree = "<group>"; };
+		48C025F617B5569D00070D92 /* ListenNow.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = ListenNow.jpg; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -67,6 +75,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				48C025F217B5543B00070D92 /* MediaPlayer.framework in Frameworks */,
 				48C025B417B5522C00070D92 /* UIKit.framework in Frameworks */,
 				48C025B617B5522C00070D92 /* Foundation.framework in Frameworks */,
 				48C025B817B5522C00070D92 /* CoreGraphics.framework in Frameworks */,
@@ -89,6 +98,7 @@
 		48C025A717B5522C00070D92 = {
 			isa = PBXGroup;
 			children = (
+				48C025F117B5543B00070D92 /* MediaPlayer.framework */,
 				48C025B917B5522C00070D92 /* InfoWars */,
 				48C025E017B5522D00070D92 /* InfoWarsTests */,
 				48C025B217B5522C00070D92 /* Frameworks */,
@@ -133,6 +143,7 @@
 		48C025BA17B5522C00070D92 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				48C025F317B5569D00070D92 /* Images */,
 				48C025BB17B5522C00070D92 /* InfoWars-Info.plist */,
 				48C025BC17B5522C00070D92 /* InfoPlist.strings */,
 				48C025BF17B5522C00070D92 /* main.m */,
@@ -161,6 +172,16 @@
 				48C025E317B5522D00070D92 /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		48C025F317B5569D00070D92 /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				48C025F417B5569D00070D92 /* FooterBkGrnd.jpg */,
+				48C025F517B5569D00070D92 /* Header.jpg */,
+				48C025F617B5569D00070D92 /* ListenNow.jpg */,
+			);
+			path = Images;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -240,6 +261,9 @@
 				48C025CA17B5522C00070D92 /* Default-568h@2x.png in Resources */,
 				48C025CD17B5522C00070D92 /* MainStoryboard_iPhone.storyboard in Resources */,
 				48C025D017B5522C00070D92 /* MainStoryboard_iPad.storyboard in Resources */,
+				48C025F717B5569D00070D92 /* FooterBkGrnd.jpg in Resources */,
+				48C025F817B5569D00070D92 /* Header.jpg in Resources */,
+				48C025F917B5569D00070D92 /* ListenNow.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
