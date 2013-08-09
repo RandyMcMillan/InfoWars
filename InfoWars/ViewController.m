@@ -87,7 +87,7 @@ IBOutlet UIButton *watchNow;
 -(IBAction)displayWebPage:(id)sender {
 
     
-
+    NSLog(@"display infowars.com");
 
 
 }
