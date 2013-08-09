@@ -100,6 +100,13 @@
     //    self.webView loadRequest:request;
     //[self.webView setFrame:CGRectZero];
     //self.webView.frame.size.width = self.view.frame.size.width;
+    /*
+    self.webView.frame  =
+        CGRectMake(self.view.frame.size.width*0.15,
+                   self.view.frame.size.width*0.15,
+                   self.view.frame.size.width*0.8,
+                   self.view.frame.size.width*0.8);
+*/
     
     
 }
