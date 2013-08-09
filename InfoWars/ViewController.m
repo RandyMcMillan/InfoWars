@@ -27,7 +27,6 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    self.webView.center = self.view.center;
     [self startReach];
 	// Do any additional setup after loading the view, typically from a nib.
 }
@@ -103,16 +102,13 @@
     //self.webView.frame.size.width = self.view.frame.size.width;
     
     
-    self.webView.center = self.view.center;
-    
 }
 
 -(void)loadVideo {
 
     NSURL *movieURL = [NSURL URLWithString:self.movieURLString];
-    
-    MPMoviePlayerViewController *moviePlayer = [[MPMoviePlayerViewController alloc] initWithContentURL:movieURL];
-    //moviePlayer.supportedInterfaceOrientations = (UIInterfaceOrientationPortrait & UIInterfaceOrientationMaskLandscape);
+    MPMoviePlayerViewController *moviePlayer =
+            [[MPMoviePlayerViewController alloc] initWithContentURL:movieURL];
 	[self presentMoviePlayerViewControllerAnimated:moviePlayer];
 
 
