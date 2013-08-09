@@ -37,7 +37,7 @@
     NSURL *movieURL = [NSURL URLWithString:self.movieURLString];
     
     MPMoviePlayerViewController *moviePlayer = [[MPMoviePlayerViewController alloc] initWithContentURL:movieURL];
-    
+    //moviePlayer.supportedInterfaceOrientations = (UIInterfaceOrientationPortrait & UIInterfaceOrientationMaskLandscape);
 	[self presentMoviePlayerViewControllerAnimated:moviePlayer];
 
 

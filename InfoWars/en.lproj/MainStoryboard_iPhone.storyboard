@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="2.0" toolsVersion="3084" systemVersion="12E55" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="2">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="2.0" toolsVersion="3084" systemVersion="12E55" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" initialViewController="2">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="2083"/>
     </dependencies>
@@ -12,36 +12,14 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="u61-69-UDh">
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
-                                <state key="normal" title="Video">
-                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <state key="highlighted">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="playVideoStream:" destination="2" eventType="touchUpInside" id="Pen-wh-ffx"/>
-                                </connections>
-                            </button>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="Header.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="uH6-Ja-rER">
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="77" id="xQp-x4-f7q"/>
-                                </constraints>
+                            <imageView userInteractionEnabled="NO" alpha="0.30000000000000016" contentMode="scaleToFill" horizontalHuggingPriority="1" verticalHuggingPriority="1" horizontalCompressionResistancePriority="1000" verticalCompressionResistancePriority="1000" image="jonesgaze.jpg" id="ElM-y4-tbu">
+                                <rect key="frame" x="0.0" y="-52" width="570" height="788"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="jonesgaze.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="ElM-y4-tbu">
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="300" id="0j3-bo-leh"/>
-                                    <constraint firstAttribute="width" constant="240" id="dsp-nA-QDt"/>
-                                </constraints>
-                            </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="L0Z-57-x2w">
+                            <button opaque="NO" contentMode="scaleToFill" horizontalCompressionResistancePriority="1" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="L0Z-57-x2w">
+                                <rect key="frame" x="0.0" y="508" width="320" height="60"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <color key="backgroundColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="238" id="FUx-cW-GdC"/>
-                                    <constraint firstAttribute="height" constant="62" id="ugh-H4-Zhe"/>
-                                </constraints>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="30"/>
                                 <state key="normal" title="WATCH NOW">
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
@@ -54,24 +32,19 @@
                                     <action selector="playVideoStream:" destination="2" eventType="touchUpInside" id="L8n-Wi-fMk"/>
                                 </connections>
                             </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalCompressionResistancePriority="1000" verticalCompressionResistancePriority="1000" image="Header.jpg" id="uH6-Ja-rER">
+                                <rect key="frame" x="0.0" y="0.0" width="321" height="77"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" red="0.017004925271739135" green="0.017004925271739135" blue="0.017004925271739135" alpha="1" colorSpace="calibratedRGB"/>
-                        <constraints>
-                            <constraint firstItem="uH6-Ja-rER" firstAttribute="leading" secondItem="3" secondAttribute="leading" type="default" id="45h-MU-IL5"/>
-                            <constraint firstItem="uH6-Ja-rER" firstAttribute="centerX" secondItem="3" secondAttribute="centerX" type="default" id="5gt-US-vSS"/>
-                            <constraint firstAttribute="bottom" secondItem="L0Z-57-x2w" secondAttribute="bottom" constant="104" id="5jb-5g-QPS"/>
-                            <constraint firstItem="u61-69-UDh" firstAttribute="top" secondItem="3" secondAttribute="top" constant="252" id="8kq-Gz-cxx"/>
-                            <constraint firstItem="ElM-y4-tbu" firstAttribute="leading" secondItem="L0Z-57-x2w" secondAttribute="leading" type="default" id="PSf-GO-NVN"/>
-                            <constraint firstItem="uH6-Ja-rER" firstAttribute="centerX" secondItem="u61-69-UDh" secondAttribute="centerX" type="default" id="Rt1-6z-ICZ"/>
-                            <constraint firstItem="ElM-y4-tbu" firstAttribute="top" secondItem="3" secondAttribute="top" constant="105" id="WEN-EI-BcH"/>
-                            <constraint firstItem="ElM-y4-tbu" firstAttribute="centerX" secondItem="u61-69-UDh" secondAttribute="centerX" type="default" id="fSi-Xm-0ln"/>
-                            <constraint firstItem="uH6-Ja-rER" firstAttribute="top" secondItem="3" secondAttribute="top" type="default" id="nr1-6z-iDU"/>
-                        </constraints>
                     </view>
                     <nil key="simulatedStatusBarMetrics"/>
+                    <simulatedOrientationMetrics key="simulatedOrientationMetrics"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="123" y="-6"/>
         </scene>
     </scenes>
     <resources>
@@ -79,9 +52,6 @@
         <image name="jonesgaze.jpg" width="340" height="437"/>
     </resources>
     <classes>
-        <class className="NSLayoutConstraint" superclassName="NSObject">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/NSLayoutConstraint.h"/>
-        </class>
         <class className="ViewController" superclassName="UIViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/ViewController.h"/>
             <relationships>
