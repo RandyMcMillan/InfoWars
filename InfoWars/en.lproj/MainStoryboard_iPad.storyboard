@@ -12,12 +12,12 @@
                         <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxX="YES" heightSizable="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" alpha="0.30000000000000016" contentMode="scaleToFill" image="jonesgaze.jpg" id="cQV-0T-pyT">
+                            <imageView userInteractionEnabled="NO" alpha="0.20000000000000015" contentMode="scaleToFill" image="jonesgaze.jpg" id="cQV-0T-pyT">
                                 <rect key="frame" x="-20" y="-6" width="1064" height="1326"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="4WR-F1-KVZ">
-                                <rect key="frame" x="0.0" y="962" width="768" height="62"/>
+                                <rect key="frame" x="0.0" y="981" width="768" height="43"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <color key="backgroundColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="30"/>
@@ -32,10 +32,10 @@
                                     <action selector="playVideoStream:" destination="2" eventType="touchUpInside" id="TeS-ht-O7J"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" alpha="0.60000000000000009" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="MKI-RF-Rwj">
-                                <rect key="frame" x="0.0" y="0.0" width="1050" height="108"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="MKI-RF-Rwj">
+                                <rect key="frame" x="20" y="0.0" width="388" height="67"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="44"/>
                                 <state key="normal" title="InfoWars.com">
                                     <attributedString key="attributedTitle">
@@ -47,7 +47,7 @@
                                             </attributes>
                                         </fragment>
                                     </attributedString>
-                                    <color key="titleColor" red="0.29454860855796783" green="0.47478152015904385" blue="0.80129076086956519" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleColor" red="0.3675926679" green="0.59252089669999997" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
