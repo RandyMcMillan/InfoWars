@@ -117,13 +117,11 @@
 		48C025A717B5522C00070D92 = {
 			isa = PBXGroup;
 			children = (
-				48C0260A17B578F400070D92 /* SystemConfiguration.framework */,
 				48C0260217B55D2700070D92 /* Default-568h@2x.png */,
 				48C0260017B55D2500070D92 /* Default@2x.png */,
 				48C025FE17B55D2200070D92 /* Default.png */,
 				48C025FC17B55D0600070D92 /* Default-Portrait@2x~ipad.png */,
 				48C025FA17B55D0300070D92 /* Default-Portrait~ipad.png */,
-				48C025F117B5543B00070D92 /* MediaPlayer.framework */,
 				48C025B917B5522C00070D92 /* InfoWars */,
 				48C025E017B5522D00070D92 /* InfoWarsTests */,
 				48C025B217B5522C00070D92 /* Frameworks */,
@@ -143,6 +141,8 @@
 		48C025B217B5522C00070D92 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				48C0260A17B578F400070D92 /* SystemConfiguration.framework */,
+				48C025F117B5543B00070D92 /* MediaPlayer.framework */,
 				48C025B317B5522C00070D92 /* UIKit.framework */,
 				48C025B517B5522C00070D92 /* Foundation.framework */,
 				48C025B717B5522C00070D92 /* CoreGraphics.framework */,
@@ -527,6 +527,7 @@
 				48C025ED17B5522D00070D92 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		48C025EE17B5522D00070D92 /* Build configuration list for PBXNativeTarget "InfoWarsTests" */ = {
 			isa = XCConfigurationList;
@@ -535,6 +536,7 @@
 				48C025F017B5522D00070D92 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
