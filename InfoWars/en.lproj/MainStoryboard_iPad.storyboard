@@ -12,6 +12,11 @@
                         <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxX="YES" heightSizable="YES" flexibleMaxY="YES"/>
                         <subviews>
+                            <webView contentMode="scaleToFill" id="BSe-7f-8jH">
+                                <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                            </webView>
                             <imageView userInteractionEnabled="NO" alpha="0.20000000000000015" contentMode="scaleToFill" image="jonesgaze.jpg" id="cQV-0T-pyT">
                                 <rect key="frame" x="-20" y="-6" width="1064" height="1326"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -61,6 +66,7 @@
                     <simulatedOrientationMetrics key="simulatedOrientationMetrics"/>
                     <connections>
                         <outlet property="watchNow" destination="4WR-F1-KVZ" id="qPO-Zp-OzQ"/>
+                        <outlet property="webView" destination="BSe-7f-8jH" id="QUr-gw-xFH"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3" sceneMemberID="firstResponder"/>
@@ -78,6 +84,7 @@
                 <relationship kind="action" name="displayWebPage:"/>
                 <relationship kind="action" name="playVideoStream:"/>
                 <relationship kind="outlet" name="watchNow" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="webView" candidateClass="UIWebView"/>
             </relationships>
         </class>
     </classes>

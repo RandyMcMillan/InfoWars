@@ -11,21 +11,23 @@
 
 @interface ViewController () {
 
-IBOutlet UIButton *watchNow;
-
+    IBOutlet UIButton *watchNow;
+    IBOutlet UIWebView *webView;
 }
 
 @property (nonatomic,readwrite) NSString *movieURLString;
 @property (nonatomic,readwrite) UIButton *watchNow;
+@property (nonatomic,readwrite) UIWebView *webView;
 
 @end
 
 @implementation ViewController
-@synthesize watchNow;
+@synthesize watchNow,webView;
 
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    self.webView.center = self.view.center;
     [self startReach];
 	// Do any additional setup after loading the view, typically from a nib.
 }
@@ -88,8 +90,21 @@ IBOutlet UIButton *watchNow;
 
     
     NSLog(@"display infowars.com");
-
-
+   
+    
+    NSURL *url = [NSURL URLWithString:@"http://www.infowars.com"];
+    NSURLRequest *request = [NSURLRequest requestWithURL:url];
+    
+    //[self.webView loadRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:@"www.google.com"]]];
+    [self.webView loadRequest:request];
+    
+    //    self.webView loadRequest:request;
+    //[self.webView setFrame:CGRectZero];
+    //self.webView.frame.size.width = self.view.frame.size.width;
+    
+    
+    self.webView.center = self.view.center;
+    
 }
 
 -(void)loadVideo {

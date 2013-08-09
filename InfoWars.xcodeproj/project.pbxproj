@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		48317D5617B5A5A300849D6C /* ModalViewController_iPhone.m in Sources */ = {isa = PBXBuildFile; fileRef = 48317D5517B5A5A300849D6C /* ModalViewController_iPhone.m */; };
+		48317D5917B5A5B300849D6C /* ModalViewController_iPad.m in Sources */ = {isa = PBXBuildFile; fileRef = 48317D5817B5A5B300849D6C /* ModalViewController_iPad.m */; };
+		48317D5B17B5A5D100849D6C /* ModalViewController_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 48317D5A17B5A5D100849D6C /* ModalViewController_iPhone.storyboard */; };
+		48317D5D17B5A5E200849D6C /* ModalViewController_iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 48317D5C17B5A5E200849D6C /* ModalViewController_iPad.storyboard */; };
 		48C025B417B5522C00070D92 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 48C025B317B5522C00070D92 /* UIKit.framework */; };
 		48C025B617B5522C00070D92 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 48C025B517B5522C00070D92 /* Foundation.framework */; };
 		48C025B817B5522C00070D92 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 48C025B717B5522C00070D92 /* CoreGraphics.framework */; };
@@ -50,6 +54,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		48317D5417B5A5A300849D6C /* ModalViewController_iPhone.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ModalViewController_iPhone.h; sourceTree = "<group>"; };
+		48317D5517B5A5A300849D6C /* ModalViewController_iPhone.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ModalViewController_iPhone.m; sourceTree = "<group>"; };
+		48317D5717B5A5B300849D6C /* ModalViewController_iPad.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ModalViewController_iPad.h; sourceTree = "<group>"; };
+		48317D5817B5A5B300849D6C /* ModalViewController_iPad.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ModalViewController_iPad.m; sourceTree = "<group>"; };
+		48317D5A17B5A5D100849D6C /* ModalViewController_iPhone.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = ModalViewController_iPhone.storyboard; sourceTree = "<group>"; };
+		48317D5C17B5A5E200849D6C /* ModalViewController_iPad.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = ModalViewController_iPad.storyboard; sourceTree = "<group>"; };
 		48C025B017B5522C00070D92 /* InfoWars.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = InfoWars.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		48C025B317B5522C00070D92 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		48C025B517B5522C00070D92 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -158,6 +168,12 @@
 				48C025C317B5522C00070D92 /* AppDelegate.m */,
 				48C025CB17B5522C00070D92 /* MainStoryboard_iPhone.storyboard */,
 				48C025CE17B5522C00070D92 /* MainStoryboard_iPad.storyboard */,
+				48317D5417B5A5A300849D6C /* ModalViewController_iPhone.h */,
+				48317D5517B5A5A300849D6C /* ModalViewController_iPhone.m */,
+				48317D5717B5A5B300849D6C /* ModalViewController_iPad.h */,
+				48317D5817B5A5B300849D6C /* ModalViewController_iPad.m */,
+				48317D5A17B5A5D100849D6C /* ModalViewController_iPhone.storyboard */,
+				48317D5C17B5A5E200849D6C /* ModalViewController_iPad.storyboard */,
 				48C025D117B5522C00070D92 /* ViewController.h */,
 				48C025D217B5522C00070D92 /* ViewController.m */,
 				48C025BA17B5522C00070D92 /* Supporting Files */,
@@ -298,6 +314,8 @@
 				48C0260117B55D2500070D92 /* Default@2x.png in Resources */,
 				48C0260317B55D2700070D92 /* Default-568h@2x.png in Resources */,
 				48C0260517B5603100070D92 /* jonesgaze.jpg in Resources */,
+				48317D5B17B5A5D100849D6C /* ModalViewController_iPhone.storyboard in Resources */,
+				48317D5D17B5A5E200849D6C /* ModalViewController_iPad.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -336,6 +354,8 @@
 				48C025C417B5522C00070D92 /* AppDelegate.m in Sources */,
 				48C025D317B5522C00070D92 /* ViewController.m in Sources */,
 				48C0260817B578DF00070D92 /* Reachability.m in Sources */,
+				48317D5617B5A5A300849D6C /* ModalViewController_iPhone.m in Sources */,
+				48317D5917B5A5B300849D6C /* ModalViewController_iPad.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
