@@ -7,21 +7,73 @@
 //
 
 #import "ViewController.h"
+#import "Reachability.h"
 
-@interface ViewController ()
+@interface ViewController () {
+
+IBOutlet UIButton *watchNow;
+
+}
 
 @property (nonatomic,readwrite) NSString *movieURLString;
+@property (nonatomic,readwrite) UIButton *watchNow;
 
 @end
 
 @implementation ViewController
+@synthesize watchNow;
 
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    [self startReach];
 	// Do any additional setup after loading the view, typically from a nib.
 }
 
+- (void)startReach {
+
+
+
+    
+    [[NSNotificationCenter defaultCenter] addObserver:self
+                                             selector:@selector(reachabilityChanged:)
+                                                 name:kReachabilityChangedNotification
+                                               object:nil];
+    
+    Reachability * rightBrainReach = [Reachability reachabilityWithHostname:@"http://rightbrainmedia.mpl.miisolutions.net"];
+    
+    rightBrainReach.reachableBlock = ^(Reachability * reachability)
+    {
+        dispatch_async(dispatch_get_main_queue(), ^{
+            //[playButton setTitle:@"Play" forState:UIControlStateNormal];
+                        [self.watchNow setTitle:@"Watch Now" forState:UIControlStateNormal];
+        });
+    };
+    
+    rightBrainReach.unreachableBlock = ^(Reachability * reachability)
+    {
+        dispatch_async(dispatch_get_main_queue(), ^{
+                        [self.watchNow setTitle:@"Connect to WIFI" forState:UIControlStateNormal];
+        });
+    };
+    
+    [rightBrainReach startNotifier];
+}
+
+
+-(void)reachabilityChanged:(NSNotification*)note
+{
+    Reachability * reach = [note object];
+    
+    if([reach isReachable])
+    {
+        //[self.watchNow setTitle:@"tite" forState:UIControlStateNormal];
+    }
+    else
+    {
+        //[self.watchNow setTitle:@"tite" forState:UIControlStateNormal];
+    }
+}
 
 
 -(IBAction)playVideoStream:(id)sender {
