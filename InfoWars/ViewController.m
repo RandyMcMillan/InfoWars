@@ -9,6 +9,9 @@
 #import "ViewController.h"
 #import "Reachability.h"
 
+#import "ModalViewController_iPhone.h"
+
+
 @interface ViewController () {
 
     IBOutlet UIButton *watchNow;
@@ -28,6 +31,7 @@
 {
     [super viewDidLoad];
     [self startReach];
+    self.webView.center = self.view.center;
 	// Do any additional setup after loading the view, typically from a nib.
 }
 
@@ -95,18 +99,29 @@
     NSURLRequest *request = [NSURLRequest requestWithURL:url];
     
     //[self.webView loadRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:@"www.google.com"]]];
-    [self.webView loadRequest:request];
+    //  [self.webView loadRequest:request];
     
     //    self.webView loadRequest:request;
     //[self.webView setFrame:CGRectZero];
     //self.webView.frame.size.width = self.view.frame.size.width;
-    /*
+   /*
     self.webView.frame  =
-        CGRectMake(self.view.frame.size.width*0.15,
-                   self.view.frame.size.width*0.15,
+        CGRectMake(self.view.frame.size.height*0.1,
+                   self.view.frame.size.width*0.1,
                    self.view.frame.size.width*0.8,
                    self.view.frame.size.width*0.8);
+    self.webView.center = self.view.center;
 */
+
+    
+    NSString * storyboardName = @"ModalViewController_iPhone";
+    //NSString * viewControllerID = @"ViewID";
+    UIStoryboard * storyboard = [UIStoryboard storyboardWithName:storyboardName bundle:nil];
+    
+    ModalViewController_iPhone *controller = [ModalViewController_iPhone alloc];
+    //ModalViewController_iPhone *controller = (ModalViewController_iPhone *)[storyboard instantiateViewControllerWithIdentifier:viewControllerID];
+    [self presentViewController:controller animated:YES completion:nil];
+
     
     
 }
