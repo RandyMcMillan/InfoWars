@@ -30,12 +30,6 @@ NSString * const HD4 = @"http://stream.wmnf.org:8000/wmnf_hd4";
 @synthesize currentArtist, currentTitle, channelList, currentChannel;
 
 
-- (IBAction)cancel:(id)sender {
-    
-    [self dismissViewControllerAnimated:YES completion:nil];
-    
-}
-
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -92,7 +86,7 @@ NSString * const HD4 = @"http://stream.wmnf.org:8000/wmnf_hd4";
 		[self createTimers:NO];
 		
 		[streamer stop];
-		//[streamer release];
+		[streamer release];
 		streamer = nil;
 	}
 }
@@ -109,11 +103,11 @@ NSString * const HD4 = @"http://stream.wmnf.org:8000/wmnf_hd4";
 		metadataTitle.text = currentTitle;
     
 	if (!streamer) {
-		[levelMeterView updateMeterWithLeftValue:0.0 
+		[levelMeterView updateMeterWithLeftValue:0.0
 									  rightValue:0.0];
 		[self setButtonImage:[UIImage imageNamed:@"playbutton.png"]];
 	}
-	else 
+	else
 		[self playbackStateChanged:NULL];
 }
 
@@ -133,10 +127,10 @@ NSString * const HD4 = @"http://stream.wmnf.org:8000/wmnf_hd4";
              selector:@selector(updateProgress:)
              userInfo:nil
              repeats:YES];
-            levelMeterUpdateTimer = [NSTimer scheduledTimerWithTimeInterval:.1 
-                                                                     target:self 
-                                                                   selector:@selector(updateLevelMeters:) 
-                                                                   userInfo:nil 
+            levelMeterUpdateTimer = [NSTimer scheduledTimerWithTimeInterval:.1
+                                                                     target:self
+                                                                   selector:@selector(updateLevelMeters:)
+                                                                   userInfo:nil
                                                                     repeats:YES];
 		}
 	}
@@ -162,7 +156,7 @@ NSString * const HD4 = @"http://stream.wmnf.org:8000/wmnf_hd4";
 {
     NSLog(@">>> Entering %s <<<", __PRETTY_FUNCTION__);
     self.channelList = [[NSArray alloc] initWithObjects:@"http://stream.wmnf.org:8000/wmnf_high_quality",@"http://131.247.176.1:8000/stream",@"http://stream.wmnf.org:8000/wmnf_hd3",@"http://stream.wmnf.org:8000/wmnf_hd4", nil];
-
+    
 	if (streamer)
 	{
 		return;
@@ -172,14 +166,14 @@ NSString * const HD4 = @"http://stream.wmnf.org:8000/wmnf_hd4";
 	[self destroyStreamer];
     NSLog(@"2");
 	
-//	NSString *escapedValue =
-//    [(NSString *)CFURLCreateStringByAddingPercentEscapes(
-//                                                         nil,
-//                                                         (CFStringRef)downloadSourceField.text,
-//                                                         NULL,
-//                                                         NULL,
-//                                                         kCFStringEncodingUTF8)
-//     autorelease];
+    //	NSString *escapedValue =
+    //    [(NSString *)CFURLCreateStringByAddingPercentEscapes(
+    //                                                         nil,
+    //                                                         (CFStringRef)downloadSourceField.text,
+    //                                                         NULL,
+    //                                                         NULL,
+    //                                                         kCFStringEncodingUTF8)
+    //     autorelease];
     NSLog(@"3");
     NSLog(@"channel list = %@", self.channelList);
     NSLog(@"channel index = %@", self.currentChannel);
@@ -194,15 +188,15 @@ NSString * const HD4 = @"http://stream.wmnf.org:8000/wmnf_hd4";
                                                          NULL,
                                                          kCFStringEncodingUTF8)
      autorelease];
-
+    
     NSLog(@"5");
-
+    
 	NSURL *url = [NSURL URLWithString:escapedValue];
 	streamer = [[AudioStreamer alloc] initWithURL:url];
 	
 	[self createTimers:YES];
     NSLog(@"6 ");
-
+    
 	[[NSNotificationCenter defaultCenter]
      addObserver:self
      selector:@selector(playbackStateChanged:)
@@ -228,10 +222,7 @@ NSString * const HD4 = @"http://stream.wmnf.org:8000/wmnf_hd4";
 - (void)viewDidLoad
 {
 	[super viewDidLoad];
-   
     
-    //self.uiIsVisible = YES;
-
     self.channelList = [[NSArray alloc] initWithObjects:@"http://stream.wmnf.org:8000/wmnf_high_quality",@"http://131.247.176.1:8000/stream",@"http://stream.wmnf.org:8000/wmnf_hd3",@"http://stream.wmnf.org:8000/wmnf_hd4", nil];
     currentChannel = 0;
 	
@@ -243,21 +234,19 @@ NSString * const HD4 = @"http://stream.wmnf.org:8000/wmnf_hd4";
 	
 	levelMeterView = [[LevelMeterView alloc] initWithFrame:CGRectMake(10.0, 310.0, 300.0, 60.0)];
 	[self.view addSubview:levelMeterView];
-
-
+    
+    
     NSError *setCategoryErr = nil;
     NSError *activationErr  = nil;
     [[AVAudioSession sharedInstance]
      setCategory: AVAudioSessionCategoryPlayback
      error: &setCategoryErr];
+    //    [[AVAudioSessionsharedInstance]
+    //     setActive: YES
+    //     error: &activationErr];'
     
-    //was commented out
-    [[AVAudioSession sharedInstance]
-     setActive: YES
-     error: &activationErr];
-
-
-
+    
+    
 }
 
 - (void)viewDidAppear:(BOOL)animated {
@@ -266,23 +255,13 @@ NSString * const HD4 = @"http://stream.wmnf.org:8000/wmnf_hd4";
 	if([application respondsToSelector:@selector(beginReceivingRemoteControlEvents)])
 		[application beginReceivingRemoteControlEvents];
 	[self becomeFirstResponder]; // this enables listening for events
-	// update the UI in case we were in the background
+                                 // update the UI in case we were in the background
 	NSNotification *notification =
 	[NSNotification
 	 notificationWithName:ASStatusChangedNotification
 	 object:self];
 	[[NSNotificationCenter defaultCenter]
 	 postNotification:notification];
-}
-
-- (void)viewDidDisappear:(BOOL)animated {
-
-    
-    
-    AppDelegate *appDelegate = [[UIApplication sharedApplication] delegate];
-    //self.uiIsVisible = NO;
-    appDelegate.uiIsVisible = NO;
-    
 }
 
 - (BOOL)canBecomeFirstResponder {
@@ -333,12 +312,12 @@ NSString * const HD4 = @"http://stream.wmnf.org:8000/wmnf_hd4";
 {
 	if (finished)
 	{
-		[self spinButton];
+		//[self spinButton];
 	}
 }
 
 //
-// buttonPressed:
+// buttonspin:
 //
 // Handles the play/stop button. Creates, observes and starts the
 // audio streamer when it is a play button. Stops the audio streamer when
@@ -355,7 +334,7 @@ NSString * const HD4 = @"http://stream.wmnf.org:8000/wmnf_hd4";
 		
 		//[self createStreamer];
         [self createStreamer:[channelList objectAtIndex:[currentChannel intValue]]];
-
+        
 		[self setButtonImage:[UIImage imageNamed:@"loadingbutton.png"]];
 		[streamer start];
 	}
@@ -395,7 +374,6 @@ NSString * const HD4 = @"http://stream.wmnf.org:8000/wmnf_hd4";
 	if ([streamer isWaiting])
 	{
 		if (appDelegate.uiIsVisible) {
-		//if (self.uiIsVisible) {
 			[levelMeterView updateMeterWithLeftValue:0.0
                                           rightValue:0.0];
 			[streamer setMeteringEnabled:NO];
@@ -405,14 +383,12 @@ NSString * const HD4 = @"http://stream.wmnf.org:8000/wmnf_hd4";
 	else if ([streamer isPlaying])
 	{
 		if (appDelegate.uiIsVisible) {
-		//if (self.uiIsVisible) {
 			[streamer setMeteringEnabled:YES];
 			[self setButtonImage:[UIImage imageNamed:@"stopbutton.png"]];
 		}
 	}
 	else if ([streamer isPaused]) {
 		if (appDelegate.uiIsVisible) {
-		//if (self.uiIsVisible) {
 			[levelMeterView updateMeterWithLeftValue:0.0
                                           rightValue:0.0];
 			[streamer setMeteringEnabled:NO];
@@ -422,7 +398,6 @@ NSString * const HD4 = @"http://stream.wmnf.org:8000/wmnf_hd4";
 	else if ([streamer isIdle])
 	{
 		if (appDelegate.uiIsVisible) {
-		//if (self.uiIsVisible) {
 			[levelMeterView updateMeterWithLeftValue:0.0
                                           rightValue:0.0];
 			[self setButtonImage:[UIImage imageNamed:@"playbutton.png"]];
@@ -433,7 +408,7 @@ NSString * const HD4 = @"http://stream.wmnf.org:8000/wmnf_hd4";
 
 #ifdef SHOUTCAST_METADATA
 /** Example metadata
- * 
+ *
  StreamTitle='Kim Sozzi / Amuka / Livvi Franc - Secret Love / It's Over / Automatik',
  StreamUrl='&artist=Kim%20Sozzi%20%2F%20Amuka%20%2F%20Livvi%20Franc&title=Secret%20Love%20%2F%20It%27s%20Over%20%2F%20Automatik&album=&duration=1133453&songtype=S&overlay=no&buycd=&website=&picture=',
  
@@ -483,7 +458,6 @@ NSString * const HD4 = @"http://stream.wmnf.org:8000/wmnf_hd4";
 	// only update the UI if in foreground
 	AppDelegate *appDelegate = [[UIApplication sharedApplication] delegate];
 	if (appDelegate.uiIsVisible) {
-	//if (self.uiIsVisible) {
 		metadataArtist.text = streamArtist;
 		metadataTitle.text = streamTitle;
 		metadataAlbum.text = streamAlbum;
@@ -534,7 +508,6 @@ NSString * const HD4 = @"http://stream.wmnf.org:8000/wmnf_hd4";
 - (void)updateLevelMeters:(NSTimer *)timer {
 	AppDelegate *appDelegate = (AppDelegate *)[[UIApplication sharedApplication] delegate];
 	if([streamer isMeteringEnabled] && appDelegate.uiIsVisible) {
-	//if([streamer isMeteringEnabled] && self.uiIsVisible) {
 		[levelMeterView updateMeterWithLeftValue:[streamer averagePowerForChannel:0]
 									  rightValue:[streamer averagePowerForChannel:([streamer numberOfChannels] > 1 ? 1 : 0)]];
 	}
@@ -544,10 +517,10 @@ NSString * const HD4 = @"http://stream.wmnf.org:8000/wmnf_hd4";
 - (void)changeChannel:(int)channelIndex {
     NSLog(@">>> Entering %s <<<", __PRETTY_FUNCTION__);
     self.channelList = [[NSArray alloc] initWithObjects:@"http://stream.wmnf.org:8000/wmnf_high_quality",@"http://131.247.176.1:8000/stream",@"http://stream.wmnf.org:8000/wmnf_hd3",@"http://stream.wmnf.org:8000/wmnf_hd4", nil];
-
+   
     [streamer stop];
     [self destroyStreamer];
-    //AppDelegate *appDelegate = [[UIApplication sharedApplication] delegate];
+    AppDelegate *appDelegate = [[UIApplication sharedApplication] delegate];
     //appDelegate.tabBarController.selectedIndex = 0;
 	[self createStreamer:[channelList objectAtIndex:channelIndex]];
     [streamer start];
@@ -579,7 +552,7 @@ NSString * const HD4 = @"http://stream.wmnf.org:8000/wmnf_hd4";
     }
     self.currentChannel = [NSString stringWithFormat:@"%d", channelIndex];
     NSLog(@"<<< Leaving %s >>>", __PRETTY_FUNCTION__);
-
+    
 }
 
 
@@ -596,7 +569,7 @@ NSString * const HD4 = @"http://stream.wmnf.org:8000/wmnf_hd4";
 - (BOOL)textFieldShouldReturn:(UITextField *)sender
 {
 	[sender resignFirstResponder];
-	//[self createStreamer];
+	[self createStreamer];
 	return YES;
 }
 
@@ -604,10 +577,10 @@ NSString * const HD4 = @"http://stream.wmnf.org:8000/wmnf_hd4";
 {
     switch ([currentChannel intValue]) {
         case 0:
-            [[UIApplication sharedApplication] openURL:[NSURL URLWithString:@"tel:813-239-9663"]]; 
+            [[UIApplication sharedApplication] openURL:[NSURL URLWithString:@"tel:813-239-9663"]];
             break;
         case 1:
-            [[UIApplication sharedApplication] openURL:[NSURL URLWithString:@"tel:813-974-9285"]]; 
+            [[UIApplication sharedApplication] openURL:[NSURL URLWithString:@"tel:813-974-9285"]];
             break;
         default:
             break;
@@ -618,21 +591,21 @@ NSString * const HD4 = @"http://stream.wmnf.org:8000/wmnf_hd4";
 {
     switch ([currentChannel intValue]) {
         case 0:
-            [[UIApplication sharedApplication] openURL:[NSURL URLWithString:@"mailto:dj@wmnf.org"]]; 
+            [[UIApplication sharedApplication] openURL:[NSURL URLWithString:@"mailto:dj@wmnf.org"]];
             break;
         case 1:
-            [[UIApplication sharedApplication] openURL:[NSURL URLWithString:@"mailto:hd2@wmnf.org"]]; 
+            [[UIApplication sharedApplication] openURL:[NSURL URLWithString:@"mailto:hd2@wmnf.org"]];
             break;
         case 2:
-            [[UIApplication sharedApplication] openURL:[NSURL URLWithString:@"mailto:hd3@wmnf.org"]]; 
+            [[UIApplication sharedApplication] openURL:[NSURL URLWithString:@"mailto:hd3@wmnf.org"]];
             break;
         case 3:
-            [[UIApplication sharedApplication] openURL:[NSURL URLWithString:@"mailto:hd4@wmnf.org"]]; 
+            [[UIApplication sharedApplication] openURL:[NSURL URLWithString:@"mailto:hd4@wmnf.org"]];
             break;
         default:
             break;
     }
-   [[UIApplication sharedApplication] openURL:[NSURL URLWithString:@"mailto:dj@wmnf.org"]]; 
+    [[UIApplication sharedApplication] openURL:[NSURL URLWithString:@"mailto:dj@wmnf.org"]];
 }
 
 
