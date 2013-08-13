@@ -8,26 +8,26 @@
 
 #import "ViewController.h"
 #import "Reachability.h"
-#import "Scene2ViewController.h"
+//#import "Scene2ViewController.h"
 
 @interface ViewController () {
 
 
 IBOutlet UIButton *watchNow;
 IBOutlet UIButton *listenNow;
-    IBOutlet UIWebView *webView;
+    IBOutlet UIWebView *listenNowWebView;
 
 }
 
 
 @property (nonatomic,readwrite) NSString *movieURLString;
 @property (nonatomic,readwrite) UIButton *watchNow;
-@property (nonatomic,readwrite) UIWebView *webView;
+//@property (nonatomic,readwrite) UIWebView *webView;
 
 @end
 
 @implementation ViewController
-@synthesize watchNow,webView;
+@synthesize watchNow,listenNowWebView;
 
 - (void)viewDidLoad
 {
@@ -48,15 +48,28 @@ IBOutlet UIButton *listenNow;
 
 
 -(IBAction)playAudioStream:(id)sender {
+   
+ 
+    NSURL *url = [NSURL URLWithString:@"http://www.infowars.com/stream.pls"];
+	NSURLRequest *request = [NSURLRequest requestWithURL:url];
+	[self.listenNowWebView loadRequest:request];
+
     
-    self.movieURLString =
-    @"http://www.infowars.com/stream.pls";
-    [self loadVideo];
+    
+    //self.movieURLString =
+    //@"http://www.infowars.com/stream.pls";
+    //[self loadVideo];
     
 }
 
 
 -(void)loadVideo {
+   
+    
+    NSURL *url = [NSURL URLWithString:@""];
+	NSURLRequest *request = [NSURLRequest requestWithURL:url];
+	[self.listenNowWebView loadRequest:request];
+    
     
     NSURL *movieURL = [NSURL URLWithString:self.movieURLString];
     MPMoviePlayerViewController *moviePlayer =

@@ -11,6 +11,7 @@
 
 @interface ViewController : UIViewController
 
+@property (strong) UIWebView *listenNowWebView;
 
 -(IBAction)playVideoStream:(id)sender;
 

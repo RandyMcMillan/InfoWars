@@ -47,8 +47,14 @@
                                     <action selector="playVideoStream:" destination="nSk-CR-6Ds" eventType="touchUpInside" id="YJt-Xy-fTy"/>
                                 </connections>
                             </button>
+                            <webView contentMode="scaleToFill" scalesPageToFit="YES" id="NHR-Bf-5fP">
+                                <rect key="frame" x="671" y="703" width="198" height="62"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMinY="YES"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <dataDetectorType key="dataDetectorTypes"/>
+                            </webView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="leJ-Ka-dHw">
-                                <rect key="frame" x="526" y="699" width="498" height="69"/>
+                                <rect key="frame" x="526" y="696" width="498" height="72"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMinY="YES"/>
                                 <color key="backgroundColor" red="0.0" green="0.069531468829999998" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="23"/>
@@ -60,8 +66,7 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <action selector="playVideoStream:" destination="nSk-CR-6Ds" eventType="touchUpInside" id="2KE-29-4Jw"/>
-                                    <segue destination="0nU-O6-XGT" kind="modal" id="Weu-ux-j9H"/>
+                                    <action selector="playAudioStream:" destination="nSk-CR-6Ds" eventType="touchUpInside" id="rSI-KE-ws8"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -75,6 +80,9 @@
                     <nil key="simulatedTopBarMetrics"/>
                     <nil key="simulatedBottomBarMetrics"/>
                     <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
+                    <connections>
+                        <outlet property="listenNowWebView" destination="NHR-Bf-5fP" id="c0J-CJ-A7i"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="kiU-7d-L5H" sceneMemberID="firstResponder"/>
             </objects>
@@ -219,17 +227,16 @@
             <objects>
                 <viewController id="uYy-8F-pcw" customClass="Scene3ViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="uU7-Tk-GS4">
-                        <rect key="frame" x="0.0" y="64" width="1024" height="704"/>
+                        <rect key="frame" x="0.0" y="64" width="768" height="960"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <webView contentMode="scaleToFill" id="F7E-Fx-5Q8">
-                                <rect key="frame" x="0.0" y="0.0" width="1024" height="704"/>
+                                <rect key="frame" x="0.0" y="0.0" width="768" height="960"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                             </webView>
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
-                        <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
                     </view>
                     <toolbarItems/>
                     <navigationItem key="navigationItem" id="Vh6-AX-ds3">
@@ -342,9 +349,11 @@
         <class className="ViewController" superclassName="UIViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/ViewController.h"/>
             <relationships>
+                <relationship kind="action" name="playAudioStream:"/>
                 <relationship kind="action" name="playVideoStream:"/>
+                <relationship kind="outlet" name="listenNow" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="listenNowWebView" candidateClass="UIWebView"/>
                 <relationship kind="outlet" name="watchNow" candidateClass="UIButton"/>
-                <relationship kind="outlet" name="webView" candidateClass="UIWebView"/>
             </relationships>
         </class>
     </classes>
