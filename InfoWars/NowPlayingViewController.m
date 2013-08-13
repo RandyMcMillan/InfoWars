@@ -63,7 +63,7 @@ NSString * const HD4 = @"http://stream.wmnf.org:8000/wmnf_hd4";
 	[button.layer removeAllAnimations];
 	if (!image)
 	{
-		//[button setImage:[UIImage imageNamed:@"playbutton.png"] forState:0];
+		[button setImage:[UIImage imageNamed:@"playbutton.png"] forState:0];
 	}
 	else
 	{
@@ -111,7 +111,7 @@ NSString * const HD4 = @"http://stream.wmnf.org:8000/wmnf_hd4";
 	if (!streamer) {
 		[levelMeterView updateMeterWithLeftValue:0.0 
 									  rightValue:0.0];
-		//[self setButtonImage:[UIImage imageNamed:@"playbutton.png"]];
+		[self setButtonImage:[UIImage imageNamed:@"playbutton.png"]];
 	}
 	else 
 		[self playbackStateChanged:NULL];
