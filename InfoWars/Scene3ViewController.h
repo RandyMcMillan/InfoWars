@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface Scene2ViewController : UIViewController
+@interface Scene3ViewController : UIViewController
 
 
 - (IBAction)cancel:(id)sender;

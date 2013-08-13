@@ -8,6 +8,7 @@
 
 #import "ViewController.h"
 #import "Reachability.h"
+#import "Scene2ViewController.h"
 
 @interface ViewController () {
 
@@ -56,10 +57,31 @@ IBOutlet UIWebView *webView;
     
 }
 
+
+
+
+
+
+-(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    
+    
+    //if ([segue.identifier isEqualToString:@"Scene2ViewController"]) {
+        
+        //        UITableViewCell *cell = (UITableViewCell *)sender;
+        //NSIndexPath *ip = [self.tableView indexPathForCell:cell];
+        //Person *p = [self.people objectAtIndex:ip.row];
+        
+    //  Scene2ViewController  *scene2 = (Scene2ViewController *)segue.destinationViewController;
+    //  [scene2 loadURL:@"http://infowars.com"];
+        
+        
+    //}
+    
+    
+}
+
+
 - (void)startReach {
-    
-    
-    
     
     [[NSNotificationCenter defaultCenter] addObserver:self
                                              selector:@selector(reachabilityChanged:)
