@@ -44,11 +44,19 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <action selector="playVideoStream:" destination="2" eventType="touchUpInside" id="4Pp-Am-IpT"/>
+                                    <action selector="playVideoStream:" destination="2" eventType="touchUpInside" id="YHX-ia-VKG"/>
                                 </connections>
                             </button>
+                            <webView contentMode="scaleToFill" id="vOV-lD-g4e">
+                                <rect key="frame" x="407" y="287" width="62" height="25"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMinY="YES"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <connections>
+                                    <outlet property="delegate" destination="2" id="WeH-oq-z0d"/>
+                                </connections>
+                            </webView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="19d-Zt-5f1">
-                                <rect key="frame" x="240" y="277" width="240" height="42"/>
+                                <rect key="frame" x="240" y="276" width="240" height="42"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMinY="YES"/>
                                 <color key="backgroundColor" red="0.0" green="0.069531468829012538" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
@@ -60,10 +68,13 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <action selector="playAudioStream:" destination="2" eventType="touchUpInside" id="wBH-Rs-0r3"/>
-                                    <action selector="playVideoStream:" destination="2" eventType="touchUpInside" id="xWA-cG-4OJ"/>
+                                    <action selector="playAudioStream:" destination="2" eventType="touchUpInside" id="glN-WF-HVF"/>
                                 </connections>
                             </button>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" style="whiteLarge" id="q8Q-mL-gq6">
+                                <rect key="frame" x="221" y="142" width="37" height="37"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </activityIndicatorView>
                         </subviews>
                         <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                         <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
@@ -76,7 +87,10 @@
                     <nil key="simulatedBottomBarMetrics"/>
                     <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
                     <connections>
-                        <outlet property="listenNow" destination="19d-Zt-5f1" id="Q94-xT-1py"/>
+                        <outlet property="listenNow" destination="19d-Zt-5f1" id="48W-k7-hiP"/>
+                        <outlet property="listenNowWebView" destination="vOV-lD-g4e" id="zSE-Vs-4iE"/>
+                        <outlet property="myIndicator" destination="q8Q-mL-gq6" id="JuZ-9r-mIT"/>
+                        <outlet property="watchNow" destination="wbg-Ns-QK9" id="JW7-A4-eIx"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4" sceneMemberID="firstResponder"/>
@@ -340,8 +354,9 @@
                 <relationship kind="action" name="playAudioStream:"/>
                 <relationship kind="action" name="playVideoStream:"/>
                 <relationship kind="outlet" name="listenNow" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="listenNowWebView" candidateClass="UIWebView"/>
+                <relationship kind="outlet" name="myIndicator" candidateClass="UIActivityIndicatorView"/>
                 <relationship kind="outlet" name="watchNow" candidateClass="UIButton"/>
-                <relationship kind="outlet" name="webView" candidateClass="UIWebView"/>
             </relationships>
         </class>
     </classes>

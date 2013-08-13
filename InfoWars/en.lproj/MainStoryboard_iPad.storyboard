@@ -52,6 +52,9 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMinY="YES"/>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <dataDetectorType key="dataDetectorTypes"/>
+                                <connections>
+                                    <outlet property="delegate" destination="nSk-CR-6Ds" id="Zzm-Ua-JGq"/>
+                                </connections>
                             </webView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="leJ-Ka-dHw">
                                 <rect key="frame" x="526" y="696" width="498" height="72"/>
@@ -69,6 +72,10 @@
                                     <action selector="playAudioStream:" destination="nSk-CR-6Ds" eventType="touchUpInside" id="rSI-KE-ws8"/>
                                 </connections>
                             </button>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" style="whiteLarge" id="hli-da-Oqd">
+                                <rect key="frame" x="493" y="366" width="37" height="37"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </activityIndicatorView>
                         </subviews>
                         <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                         <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
@@ -83,6 +90,7 @@
                     <connections>
                         <outlet property="listenNow" destination="leJ-Ka-dHw" id="Yv9-Fv-wiq"/>
                         <outlet property="listenNowWebView" destination="NHR-Bf-5fP" id="c0J-CJ-A7i"/>
+                        <outlet property="myIndicator" destination="hli-da-Oqd" id="UhJ-6C-Gdt"/>
                         <outlet property="watchNow" destination="gGT-y9-KG7" id="Nvq-Ut-bCh"/>
                     </connections>
                 </viewController>
@@ -355,6 +363,7 @@
                 <relationship kind="action" name="playVideoStream:"/>
                 <relationship kind="outlet" name="listenNow" candidateClass="UIButton"/>
                 <relationship kind="outlet" name="listenNowWebView" candidateClass="UIWebView"/>
+                <relationship kind="outlet" name="myIndicator" candidateClass="UIActivityIndicatorView"/>
                 <relationship kind="outlet" name="watchNow" candidateClass="UIButton"/>
             </relationships>
         </class>

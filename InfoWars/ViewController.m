@@ -14,28 +14,45 @@
 	IBOutlet UIButton	*watchNow;
 	IBOutlet UIButton	*listenNow;
 	IBOutlet UIWebView	*listenNowWebView;
+    IBOutlet UIActivityIndicatorView *myIndicator;
 }
 
 @property (nonatomic, readwrite) NSString	*movieURLString;
 @property (nonatomic, readwrite) UIButton	*watchNow;
 @property (nonatomic, readwrite) UIButton	*listenNow;
+
+@property (strong) UIActivityIndicatorView *myIndicator;
+
 // @property (nonatomic,readwrite) UIWebView *webView;
 
 @end
 
 @implementation ViewController
-@synthesize watchNow, listenNow, listenNowWebView;
+@synthesize watchNow, listenNow, listenNowWebView,myIndicator;
 
+
+-(void)viewWillAppear:(BOOL)animated {
+
+    NSLog(@"viewWillAppear");
+
+}
 - (void)viewDidLoad
 {
 	[super viewDidLoad];
 	[self startReach];
 
+    
+    self.myIndicator.alpha = 0.0;
+    [self.myIndicator stopAnimating];
+    
+    
 	// Do any additional setup after loading the view, typically from a nib.
 }
 
 - (IBAction)playVideoStream:(id)sender
 {
+    
+    NSLog(@"playVideoStream");
 	self.movieURLString =
 		@"http://rightbrainmedia.mpl.miisolutions.net/rightbrainmedia-originpull-2/_definst_/mp4:247daily1/playlist.m3u8";
 	[self loadVideo];
@@ -43,6 +60,13 @@
 
 - (IBAction)playAudioStream:(id)sender
 {
+   
+    
+    self.myIndicator.alpha = 1.0;
+    [self.myIndicator startAnimating];
+
+    NSLog(@"playAudioStream");
+
 	NSURL			*url		= [NSURL URLWithString:@"http://www.infowars.com/stream.pls"];
 	NSURLRequest	*request	= [NSURLRequest requestWithURL:url];
 
@@ -61,6 +85,102 @@
 		[[MPMoviePlayerViewController alloc] initWithContentURL:movieURL];
 	[self presentMoviePlayerViewControllerAnimated:moviePlayer];
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//UIWebViewDelegate Methods
+
+
+- (void)webViewDidStartLoad:(UIWebView *)webView {
+
+    
+    NSLog(@"webViewDidStartLoad");
+    self.myIndicator.hidden = FALSE;
+
+}
+
+- (void)webViewDidFinishLoad:(UIWebView *)webView {
+
+    NSLog(@"webViewDidFinishLoad");
+    self.myIndicator.hidden = TRUE;
+
+}
+
+- (void)webView:(UIWebView *)webView didFailLoadWithError:(NSError *)error {
+
+    
+    NSLog(@"webView error %@",error);
+    
+    
+    
+    [UIActivityIndicatorView animateWithDuration :3.0
+                       delay				:0.5
+                     options				:UIViewAnimationCurveEaseInOut
+                   animations			:^{
+                       self.myIndicator.alpha = 0.0;
+                   }
+                   completion			:^(BOOL finished) {
+                   
+                   
+                   
+    self.myIndicator.hidden = TRUE;
+                       
+                   }
+     ];
+
+    
+    
+    //    self.myIndicator.hidden = TRUE;
+ 
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {}
 

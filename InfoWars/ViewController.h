@@ -9,10 +9,11 @@
 #import <UIKit/UIKit.h>
 #import <MediaPlayer/MediaPlayer.h>
 
-@interface ViewController : UIViewController
+@interface ViewController : UIViewController <UIWebViewDelegate>
 
 @property (strong)UIWebView * listenNowWebView;
 
 - (IBAction)playVideoStream:(id)sender;
+- (IBAction)playAudioStream:(id)sender;
 
 @end
