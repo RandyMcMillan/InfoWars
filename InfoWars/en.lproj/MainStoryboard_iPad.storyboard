@@ -81,7 +81,9 @@
                     <nil key="simulatedBottomBarMetrics"/>
                     <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
                     <connections>
+                        <outlet property="listenNow" destination="leJ-Ka-dHw" id="Yv9-Fv-wiq"/>
                         <outlet property="listenNowWebView" destination="NHR-Bf-5fP" id="c0J-CJ-A7i"/>
+                        <outlet property="watchNow" destination="gGT-y9-KG7" id="Nvq-Ut-bCh"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="kiU-7d-L5H" sceneMemberID="firstResponder"/>
