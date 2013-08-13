@@ -69,6 +69,10 @@
     //NOTE set up if then logic for devices
     //for better control
     
+    //Reference AudioStream fork for config
+    // need to be better support for ipad vs iphone
+    // preserve main screen for other user activity
+    
 	NSURL			*url		= [NSURL URLWithString:@"http://www.infowars.com/stream.pls"];
 	NSURLRequest	*request	= [NSURLRequest requestWithURL:url];
 
@@ -198,12 +202,34 @@
 											selector	:@selector(reachabilityChanged:)
 											name		:kReachabilityChangedNotification
 											object		:nil];
+    
+    //	Reachability *rightBrainReach =
+    //[Reachability reachabilityWithHostname:@"http://miisolutions.net/rightbrainmedia-originpull-2/_definst_/mp4:247daily1/playlist.m3u8"];
 
 	Reachability *rightBrainReach =
-		[Reachability reachabilityWithHostname:@"http://rightbrainmedia.mpl.miisolutions.net"];
+		[Reachability reachabilityWithHostname:@"http://rightbrainmedia.mpl.miisolutions.net/rightbrainmedia-originpull-2/_definst_/mp4:247daily1/playlist.m3u8"];
+    
+    NSLog(@"rightBrainReach.isReachable = %@",
+          rightBrainReach.isReachable ? @"Yes" : @"No");
 
-	Reachability *infoWarsStream =
+    Reachability *reachWithIntConnection = [Reachability reachabilityForInternetConnection];
+    Reachability *reachWithWIFI = [Reachability reachabilityForLocalWiFi];
+    
+    
+    //Create switches based on this boolean
+    //Create switches based on this boolean
+    NSLog(@"reachWithIntConnection.isReachableViaWiFi = %@",
+            reachWithIntConnection.isReachableViaWiFi ? @"Yes" : @"No");
+    
+    NSLog(@"reachWithWIFI.isReachableViaWiFi = %@",
+            reachWithWIFI.isReachableViaWiFi ? @"Yes" : @"No");
+    
+    
+    Reachability *infoWarsStream =
 		[Reachability reachabilityWithHostname:@"http://www.infowars.com/stream.pls"];
+
+    NSLog(@"infoWarsStream.isReachable = %@",
+          infoWarsStream.isReachable ? @"Yes" : @"No");
 
 	rightBrainReach.reachableBlock = ^(Reachability *reachability)
 	{
@@ -245,8 +271,8 @@
 		[self.watchNow setTitle:@"Watch Now" forState:UIControlStateNormal];
 		[self.listenNow setTitle:@"Listen Now" forState:UIControlStateNormal];
 	} else {
-		[self.watchNow setTitle:@"Watch Now" forState:UIControlStateNormal];
-		[self.listenNow setTitle:@"Listen Now" forState:UIControlStateNormal];
+		[self.watchNow  setTitle:@"Please connect to internet" forState:UIControlStateNormal];
+		[self.listenNow setTitle:@"Please connect to internet" forState:UIControlStateNormal];
 	}
 }
 
