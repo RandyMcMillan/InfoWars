@@ -60,6 +60,7 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
+                                    <action selector="playAudioStream:" destination="nSk-CR-6Ds" eventType="touchUpInside" id="nOR-Pv-cKb"/>
                                     <action selector="playVideoStream:" destination="nSk-CR-6Ds" eventType="touchUpInside" id="2KE-29-4Jw"/>
                                 </connections>
                             </button>
@@ -196,9 +197,7 @@
             <source key="sourceIdentifier" type="project" relativePath="./Classes/NowPlayingViewController.h"/>
             <relationships>
                 <relationship kind="action" name="buttonPressed:"/>
-                <relationship kind="action" name="callButtonPressed:"/>
                 <relationship kind="action" name="cancel:"/>
-                <relationship kind="action" name="emailButtonPressed:"/>
                 <relationship kind="action" name="sliderMoved:" candidateClass="UISlider"/>
                 <relationship kind="outlet" name="button" candidateClass="UIButton"/>
                 <relationship kind="outlet" name="callButton" candidateClass="UIButton"/>
