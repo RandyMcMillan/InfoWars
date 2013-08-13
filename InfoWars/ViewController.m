@@ -14,7 +14,8 @@
 
 
 IBOutlet UIButton *watchNow;
-IBOutlet UIWebView *webView;
+IBOutlet UIButton *listenNow;
+    IBOutlet UIWebView *webView;
 
 }
 
@@ -41,6 +42,15 @@ IBOutlet UIWebView *webView;
     
     self.movieURLString =
     @"http://rightbrainmedia.mpl.miisolutions.net/rightbrainmedia-originpull-2/_definst_/mp4:247daily1/playlist.m3u8";
+    [self loadVideo];
+    
+}
+
+
+-(IBAction)playAudioStream:(id)sender {
+    
+    self.movieURLString =
+    @"http://www.infowars.com/stream.pls";
     [self loadVideo];
     
 }
