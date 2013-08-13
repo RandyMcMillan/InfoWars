@@ -51,6 +51,11 @@
 @property (retain, nonatomic) NSArray* channelList;
 @property (retain, nonatomic) NSString* currentChannel;
 
+
+//@property (nonatomic) BOOL uiIsVisible;
+
+
+
 - (IBAction)buttonPressed:(id)sender;
 - (void)spinButton;
 - (void)forceUIUpdate;

@@ -13,6 +13,9 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
+    
+    self.uiIsVisible = YES;
+
     // Override point for customization after application launch.
     return YES;
 }

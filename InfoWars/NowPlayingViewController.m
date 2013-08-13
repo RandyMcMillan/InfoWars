@@ -228,7 +228,10 @@ NSString * const HD4 = @"http://stream.wmnf.org:8000/wmnf_hd4";
 - (void)viewDidLoad
 {
 	[super viewDidLoad];
+   
     
+    //self.uiIsVisible = YES;
+
     self.channelList = [[NSArray alloc] initWithObjects:@"http://stream.wmnf.org:8000/wmnf_high_quality",@"http://131.247.176.1:8000/stream",@"http://stream.wmnf.org:8000/wmnf_hd3",@"http://stream.wmnf.org:8000/wmnf_hd4", nil];
     currentChannel = 0;
 	
@@ -247,9 +250,11 @@ NSString * const HD4 = @"http://stream.wmnf.org:8000/wmnf_hd4";
     [[AVAudioSession sharedInstance]
      setCategory: AVAudioSessionCategoryPlayback
      error: &setCategoryErr];
-    //    [[AVAudioSessionsharedInstance]
-    //     setActive: YES
-    //     error: &activationErr];'
+    
+    //was commented out
+    [[AVAudioSession sharedInstance]
+     setActive: YES
+     error: &activationErr];
 
 
 
@@ -268,6 +273,16 @@ NSString * const HD4 = @"http://stream.wmnf.org:8000/wmnf_hd4";
 	 object:self];
 	[[NSNotificationCenter defaultCenter]
 	 postNotification:notification];
+}
+
+- (void)viewDidDisappear:(BOOL)animated {
+
+    
+    
+    AppDelegate *appDelegate = [[UIApplication sharedApplication] delegate];
+    //self.uiIsVisible = NO;
+    appDelegate.uiIsVisible = NO;
+    
 }
 
 - (BOOL)canBecomeFirstResponder {
@@ -380,7 +395,8 @@ NSString * const HD4 = @"http://stream.wmnf.org:8000/wmnf_hd4";
 	if ([streamer isWaiting])
 	{
 		if (appDelegate.uiIsVisible) {
-			[levelMeterView updateMeterWithLeftValue:0.0 
+		//if (self.uiIsVisible) {
+			[levelMeterView updateMeterWithLeftValue:0.0
                                           rightValue:0.0];
 			[streamer setMeteringEnabled:NO];
 			[self setButtonImage:[UIImage imageNamed:@"loadingbutton.png"]];
@@ -389,13 +405,15 @@ NSString * const HD4 = @"http://stream.wmnf.org:8000/wmnf_hd4";
 	else if ([streamer isPlaying])
 	{
 		if (appDelegate.uiIsVisible) {
+		//if (self.uiIsVisible) {
 			[streamer setMeteringEnabled:YES];
 			[self setButtonImage:[UIImage imageNamed:@"stopbutton.png"]];
 		}
 	}
 	else if ([streamer isPaused]) {
 		if (appDelegate.uiIsVisible) {
-			[levelMeterView updateMeterWithLeftValue:0.0 
+		//if (self.uiIsVisible) {
+			[levelMeterView updateMeterWithLeftValue:0.0
                                           rightValue:0.0];
 			[streamer setMeteringEnabled:NO];
 			[self setButtonImage:[UIImage imageNamed:@"pausebutton.png"]];
@@ -404,7 +422,8 @@ NSString * const HD4 = @"http://stream.wmnf.org:8000/wmnf_hd4";
 	else if ([streamer isIdle])
 	{
 		if (appDelegate.uiIsVisible) {
-			[levelMeterView updateMeterWithLeftValue:0.0 
+		//if (self.uiIsVisible) {
+			[levelMeterView updateMeterWithLeftValue:0.0
                                           rightValue:0.0];
 			[self setButtonImage:[UIImage imageNamed:@"playbutton.png"]];
 		}
@@ -464,6 +483,7 @@ NSString * const HD4 = @"http://stream.wmnf.org:8000/wmnf_hd4";
 	// only update the UI if in foreground
 	AppDelegate *appDelegate = [[UIApplication sharedApplication] delegate];
 	if (appDelegate.uiIsVisible) {
+	//if (self.uiIsVisible) {
 		metadataArtist.text = streamArtist;
 		metadataTitle.text = streamTitle;
 		metadataAlbum.text = streamAlbum;
@@ -514,7 +534,8 @@ NSString * const HD4 = @"http://stream.wmnf.org:8000/wmnf_hd4";
 - (void)updateLevelMeters:(NSTimer *)timer {
 	AppDelegate *appDelegate = (AppDelegate *)[[UIApplication sharedApplication] delegate];
 	if([streamer isMeteringEnabled] && appDelegate.uiIsVisible) {
-		[levelMeterView updateMeterWithLeftValue:[streamer averagePowerForChannel:0] 
+	//if([streamer isMeteringEnabled] && self.uiIsVisible) {
+		[levelMeterView updateMeterWithLeftValue:[streamer averagePowerForChannel:0]
 									  rightValue:[streamer averagePowerForChannel:([streamer numberOfChannels] > 1 ? 1 : 0)]];
 	}
 }
@@ -526,7 +547,7 @@ NSString * const HD4 = @"http://stream.wmnf.org:8000/wmnf_hd4";
 
     [streamer stop];
     [self destroyStreamer];
-    AppDelegate *appDelegate = [[UIApplication sharedApplication] delegate];
+    //AppDelegate *appDelegate = [[UIApplication sharedApplication] delegate];
     //appDelegate.tabBarController.selectedIndex = 0;
 	[self createStreamer:[channelList objectAtIndex:channelIndex]];
     [streamer start];
@@ -575,7 +596,7 @@ NSString * const HD4 = @"http://stream.wmnf.org:8000/wmnf_hd4";
 - (BOOL)textFieldShouldReturn:(UITextField *)sender
 {
 	[sender resignFirstResponder];
-	[self createStreamer];
+	//[self createStreamer];
 	return YES;
 }
 

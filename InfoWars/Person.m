@@ -17,7 +17,7 @@
     self.fname = aFname;
     self.sname = aSname;
     self.favoriteColor = col;
-    self.age = aAge;
+    //self.age = aAge;
     
     return self;
 };
