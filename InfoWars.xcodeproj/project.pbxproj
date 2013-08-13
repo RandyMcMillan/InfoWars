@@ -23,11 +23,25 @@
 		48F3B52417B81BE900A52433 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 48F3B4FB17B81BE900A52433 /* UIKit.framework */; };
 		48F3B52517B81BE900A52433 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 48F3B4FD17B81BE900A52433 /* Foundation.framework */; };
 		48F3B52D17B81BE900A52433 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 48F3B52B17B81BE900A52433 /* InfoPlist.strings */; };
-		48F3B53017B81BE900A52433 /* StoryBoardTutorialTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 48F3B52F17B81BE900A52433 /* StoryBoardTutorialTests.m */; };
+		48F3B53017B81BE900A52433 /* InfoWarsTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 48F3B52F17B81BE900A52433 /* InfoWarsTests.m */; };
 		48F3B53B17B81E0300A52433 /* Scene2ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 48F3B53A17B81E0300A52433 /* Scene2ViewController.m */; };
 		48F3B53E17B81FD300A52433 /* ContactListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 48F3B53D17B81FD300A52433 /* ContactListViewController.m */; };
 		48F3B54117B823E100A52433 /* Person.m in Sources */ = {isa = PBXBuildFile; fileRef = 48F3B54017B823E100A52433 /* Person.m */; };
 		48F3B54417B82D8600A52433 /* PersonDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 48F3B54317B82D8600A52433 /* PersonDetailViewController.m */; };
+		48F897C817B9AE96000C95A1 /* Reachability.m in Sources */ = {isa = PBXBuildFile; fileRef = 48F897C717B9AE96000C95A1 /* Reachability.m */; };
+		48F897C917B9AE96000C95A1 /* Reachability.m in Sources */ = {isa = PBXBuildFile; fileRef = 48F897C717B9AE96000C95A1 /* Reachability.m */; };
+		48F897CB17B9AF0E000C95A1 /* MediaPlayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 48F897CA17B9AF0E000C95A1 /* MediaPlayer.framework */; };
+		48F897CD17B9AF20000C95A1 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 48F897CC17B9AF20000C95A1 /* SystemConfiguration.framework */; };
+		48F897D417B9B0DE000C95A1 /* FooterBkGrnd.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 48F897CF17B9B0DE000C95A1 /* FooterBkGrnd.jpg */; };
+		48F897D517B9B0DE000C95A1 /* FooterBkGrnd.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 48F897CF17B9B0DE000C95A1 /* FooterBkGrnd.jpg */; };
+		48F897D617B9B0DE000C95A1 /* Header.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 48F897D017B9B0DE000C95A1 /* Header.jpg */; };
+		48F897D717B9B0DE000C95A1 /* Header.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 48F897D017B9B0DE000C95A1 /* Header.jpg */; };
+		48F897D817B9B0DE000C95A1 /* header4.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 48F897D117B9B0DE000C95A1 /* header4.jpg */; };
+		48F897D917B9B0DE000C95A1 /* header4.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 48F897D117B9B0DE000C95A1 /* header4.jpg */; };
+		48F897DA17B9B0DE000C95A1 /* jonesgaze.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 48F897D217B9B0DE000C95A1 /* jonesgaze.jpg */; };
+		48F897DB17B9B0DE000C95A1 /* jonesgaze.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 48F897D217B9B0DE000C95A1 /* jonesgaze.jpg */; };
+		48F897DC17B9B0DE000C95A1 /* ListenNow.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 48F897D317B9B0DE000C95A1 /* ListenNow.jpg */; };
+		48F897DD17B9B0DE000C95A1 /* ListenNow.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 48F897D317B9B0DE000C95A1 /* ListenNow.jpg */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,19 +50,19 @@
 			containerPortal = 48F3B4F017B81BE900A52433 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = 48F3B4F717B81BE900A52433;
-			remoteInfo = StoryBoardTutorial;
+			remoteInfo = InfoWars;
 		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		48F3B4F817B81BE900A52433 /* StoryBoardTutorial.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = StoryBoardTutorial.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		48F3B4F817B81BE900A52433 /* InfoWars.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = InfoWars.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		48F3B4FB17B81BE900A52433 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		48F3B4FD17B81BE900A52433 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		48F3B4FF17B81BE900A52433 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
-		48F3B50317B81BE900A52433 /* StoryBoardTutorial-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "StoryBoardTutorial-Info.plist"; sourceTree = "<group>"; };
+		48F3B50317B81BE900A52433 /* InfoWars-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "InfoWars-Info.plist"; sourceTree = "<group>"; };
 		48F3B50517B81BE900A52433 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		48F3B50717B81BE900A52433 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		48F3B50917B81BE900A52433 /* StoryBoardTutorial-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "StoryBoardTutorial-Prefix.pch"; sourceTree = "<group>"; };
+		48F3B50917B81BE900A52433 /* InfoWars-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "InfoWars-Prefix.pch"; sourceTree = "<group>"; };
 		48F3B50A17B81BE900A52433 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		48F3B50B17B81BE900A52433 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		48F3B50D17B81BE900A52433 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
@@ -58,12 +72,12 @@
 		48F3B51717B81BE900A52433 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard_iPad.storyboard; sourceTree = "<group>"; };
 		48F3B51917B81BE900A52433 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		48F3B51A17B81BE900A52433 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
-		48F3B52117B81BE900A52433 /* StoryBoardTutorialTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = StoryBoardTutorialTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
+		48F3B52117B81BE900A52433 /* InfoWarsTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = InfoWarsTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
 		48F3B52217B81BE900A52433 /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
-		48F3B52A17B81BE900A52433 /* StoryBoardTutorialTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "StoryBoardTutorialTests-Info.plist"; sourceTree = "<group>"; };
+		48F3B52A17B81BE900A52433 /* InfoWarsTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "InfoWarsTests-Info.plist"; sourceTree = "<group>"; };
 		48F3B52C17B81BE900A52433 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		48F3B52E17B81BE900A52433 /* StoryBoardTutorialTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = StoryBoardTutorialTests.h; sourceTree = "<group>"; };
-		48F3B52F17B81BE900A52433 /* StoryBoardTutorialTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = StoryBoardTutorialTests.m; sourceTree = "<group>"; };
+		48F3B52E17B81BE900A52433 /* InfoWarsTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = InfoWarsTests.h; sourceTree = "<group>"; };
+		48F3B52F17B81BE900A52433 /* InfoWarsTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = InfoWarsTests.m; sourceTree = "<group>"; };
 		48F3B53917B81E0300A52433 /* Scene2ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Scene2ViewController.h; sourceTree = "<group>"; };
 		48F3B53A17B81E0300A52433 /* Scene2ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Scene2ViewController.m; sourceTree = "<group>"; };
 		48F3B53C17B81FD300A52433 /* ContactListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ContactListViewController.h; sourceTree = "<group>"; };
@@ -72,6 +86,15 @@
 		48F3B54017B823E100A52433 /* Person.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Person.m; sourceTree = "<group>"; };
 		48F3B54217B82D8600A52433 /* PersonDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PersonDetailViewController.h; sourceTree = "<group>"; };
 		48F3B54317B82D8600A52433 /* PersonDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PersonDetailViewController.m; sourceTree = "<group>"; };
+		48F897C617B9AE96000C95A1 /* Reachability.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Reachability.h; sourceTree = "<group>"; };
+		48F897C717B9AE96000C95A1 /* Reachability.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Reachability.m; sourceTree = "<group>"; };
+		48F897CA17B9AF0E000C95A1 /* MediaPlayer.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MediaPlayer.framework; path = System/Library/Frameworks/MediaPlayer.framework; sourceTree = SDKROOT; };
+		48F897CC17B9AF20000C95A1 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		48F897CF17B9B0DE000C95A1 /* FooterBkGrnd.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = FooterBkGrnd.jpg; sourceTree = "<group>"; };
+		48F897D017B9B0DE000C95A1 /* Header.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Header.jpg; sourceTree = "<group>"; };
+		48F897D117B9B0DE000C95A1 /* header4.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = header4.jpg; sourceTree = "<group>"; };
+		48F897D217B9B0DE000C95A1 /* jonesgaze.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = jonesgaze.jpg; sourceTree = "<group>"; };
+		48F897D317B9B0DE000C95A1 /* ListenNow.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = ListenNow.jpg; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,6 +102,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				48F897CD17B9AF20000C95A1 /* SystemConfiguration.framework in Frameworks */,
+				48F897CB17B9AF0E000C95A1 /* MediaPlayer.framework in Frameworks */,
 				48F3B4FC17B81BE900A52433 /* UIKit.framework in Frameworks */,
 				48F3B4FE17B81BE900A52433 /* Foundation.framework in Frameworks */,
 				48F3B50017B81BE900A52433 /* CoreGraphics.framework in Frameworks */,
@@ -101,8 +126,10 @@
 		48F3B4EF17B81BE900A52433 = {
 			isa = PBXGroup;
 			children = (
-				48F3B50117B81BE900A52433 /* StoryBoardTutorial */,
-				48F3B52817B81BE900A52433 /* StoryBoardTutorialTests */,
+				48F897CC17B9AF20000C95A1 /* SystemConfiguration.framework */,
+				48F897CA17B9AF0E000C95A1 /* MediaPlayer.framework */,
+				48F3B50117B81BE900A52433 /* InfoWars */,
+				48F3B52817B81BE900A52433 /* InfoWarsTests */,
 				48F3B4FA17B81BE900A52433 /* Frameworks */,
 				48F3B4F917B81BE900A52433 /* Products */,
 			);
@@ -111,8 +138,8 @@
 		48F3B4F917B81BE900A52433 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				48F3B4F817B81BE900A52433 /* StoryBoardTutorial.app */,
-				48F3B52117B81BE900A52433 /* StoryBoardTutorialTests.octest */,
+				48F3B4F817B81BE900A52433 /* InfoWars.app */,
+				48F3B52117B81BE900A52433 /* InfoWarsTests.octest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -128,7 +155,7 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		48F3B50117B81BE900A52433 /* StoryBoardTutorial */ = {
+		48F3B50117B81BE900A52433 /* InfoWars */ = {
 			isa = PBXGroup;
 			children = (
 				48F3B50A17B81BE900A52433 /* AppDelegate.h */,
@@ -147,16 +174,19 @@
 				48F3B51A17B81BE900A52433 /* ViewController.m */,
 				48F3B50217B81BE900A52433 /* Supporting Files */,
 			);
-			path = StoryBoardTutorial;
+			path = InfoWars;
 			sourceTree = "<group>";
 		};
 		48F3B50217B81BE900A52433 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				48F3B50317B81BE900A52433 /* StoryBoardTutorial-Info.plist */,
+				48F897CE17B9B0DE000C95A1 /* Images */,
+				48F897C617B9AE96000C95A1 /* Reachability.h */,
+				48F897C717B9AE96000C95A1 /* Reachability.m */,
+				48F3B50317B81BE900A52433 /* InfoWars-Info.plist */,
 				48F3B50417B81BE900A52433 /* InfoPlist.strings */,
 				48F3B50717B81BE900A52433 /* main.m */,
-				48F3B50917B81BE900A52433 /* StoryBoardTutorial-Prefix.pch */,
+				48F3B50917B81BE900A52433 /* InfoWars-Prefix.pch */,
 				48F3B50D17B81BE900A52433 /* Default.png */,
 				48F3B50F17B81BE900A52433 /* Default@2x.png */,
 				48F3B51117B81BE900A52433 /* Default-568h@2x.png */,
@@ -164,31 +194,43 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		48F3B52817B81BE900A52433 /* StoryBoardTutorialTests */ = {
+		48F3B52817B81BE900A52433 /* InfoWarsTests */ = {
 			isa = PBXGroup;
 			children = (
-				48F3B52E17B81BE900A52433 /* StoryBoardTutorialTests.h */,
-				48F3B52F17B81BE900A52433 /* StoryBoardTutorialTests.m */,
+				48F3B52E17B81BE900A52433 /* InfoWarsTests.h */,
+				48F3B52F17B81BE900A52433 /* InfoWarsTests.m */,
 				48F3B52917B81BE900A52433 /* Supporting Files */,
 			);
-			path = StoryBoardTutorialTests;
+			path = InfoWarsTests;
 			sourceTree = "<group>";
 		};
 		48F3B52917B81BE900A52433 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				48F3B52A17B81BE900A52433 /* StoryBoardTutorialTests-Info.plist */,
+				48F3B52A17B81BE900A52433 /* InfoWarsTests-Info.plist */,
 				48F3B52B17B81BE900A52433 /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		48F897CE17B9B0DE000C95A1 /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				48F897CF17B9B0DE000C95A1 /* FooterBkGrnd.jpg */,
+				48F897D017B9B0DE000C95A1 /* Header.jpg */,
+				48F897D117B9B0DE000C95A1 /* header4.jpg */,
+				48F897D217B9B0DE000C95A1 /* jonesgaze.jpg */,
+				48F897D317B9B0DE000C95A1 /* ListenNow.jpg */,
+			);
+			path = Images;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		48F3B4F717B81BE900A52433 /* StoryBoardTutorial */ = {
+		48F3B4F717B81BE900A52433 /* InfoWars */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 48F3B53317B81BE900A52433 /* Build configuration list for PBXNativeTarget "StoryBoardTutorial" */;
+			buildConfigurationList = 48F3B53317B81BE900A52433 /* Build configuration list for PBXNativeTarget "InfoWars" */;
 			buildPhases = (
 				48F3B4F417B81BE900A52433 /* Sources */,
 				48F3B4F517B81BE900A52433 /* Frameworks */,
@@ -198,14 +240,14 @@
 			);
 			dependencies = (
 			);
-			name = StoryBoardTutorial;
-			productName = StoryBoardTutorial;
-			productReference = 48F3B4F817B81BE900A52433 /* StoryBoardTutorial.app */;
+			name = InfoWars;
+			productName = InfoWars;
+			productReference = 48F3B4F817B81BE900A52433 /* InfoWars.app */;
 			productType = "com.apple.product-type.application";
 		};
-		48F3B52017B81BE900A52433 /* StoryBoardTutorialTests */ = {
+		48F3B52017B81BE900A52433 /* InfoWarsTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 48F3B53617B81BE900A52433 /* Build configuration list for PBXNativeTarget "StoryBoardTutorialTests" */;
+			buildConfigurationList = 48F3B53617B81BE900A52433 /* Build configuration list for PBXNativeTarget "InfoWarsTests" */;
 			buildPhases = (
 				48F3B51C17B81BE900A52433 /* Sources */,
 				48F3B51D17B81BE900A52433 /* Frameworks */,
@@ -217,9 +259,9 @@
 			dependencies = (
 				48F3B52717B81BE900A52433 /* PBXTargetDependency */,
 			);
-			name = StoryBoardTutorialTests;
-			productName = StoryBoardTutorialTests;
-			productReference = 48F3B52117B81BE900A52433 /* StoryBoardTutorialTests.octest */;
+			name = InfoWarsTests;
+			productName = InfoWarsTests;
+			productReference = 48F3B52117B81BE900A52433 /* InfoWarsTests.octest */;
 			productType = "com.apple.product-type.bundle";
 		};
 /* End PBXNativeTarget section */
@@ -231,7 +273,7 @@
 				LastUpgradeCheck = 0460;
 				ORGANIZATIONNAME = "Randy McMillan";
 			};
-			buildConfigurationList = 48F3B4F317B81BE900A52433 /* Build configuration list for PBXProject "StoryBoardTutorial" */;
+			buildConfigurationList = 48F3B4F317B81BE900A52433 /* Build configuration list for PBXProject "InfoWars" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -243,8 +285,8 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				48F3B4F717B81BE900A52433 /* StoryBoardTutorial */,
-				48F3B52017B81BE900A52433 /* StoryBoardTutorialTests */,
+				48F3B4F717B81BE900A52433 /* InfoWars */,
+				48F3B52017B81BE900A52433 /* InfoWarsTests */,
 			);
 		};
 /* End PBXProject section */
@@ -260,6 +302,11 @@
 				48F3B51217B81BE900A52433 /* Default-568h@2x.png in Resources */,
 				48F3B51517B81BE900A52433 /* MainStoryboard_iPhone.storyboard in Resources */,
 				48F3B51817B81BE900A52433 /* MainStoryboard_iPad.storyboard in Resources */,
+				48F897D417B9B0DE000C95A1 /* FooterBkGrnd.jpg in Resources */,
+				48F897D617B9B0DE000C95A1 /* Header.jpg in Resources */,
+				48F897D817B9B0DE000C95A1 /* header4.jpg in Resources */,
+				48F897DA17B9B0DE000C95A1 /* jonesgaze.jpg in Resources */,
+				48F897DC17B9B0DE000C95A1 /* ListenNow.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -268,6 +315,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				48F3B52D17B81BE900A52433 /* InfoPlist.strings in Resources */,
+				48F897D517B9B0DE000C95A1 /* FooterBkGrnd.jpg in Resources */,
+				48F897D717B9B0DE000C95A1 /* Header.jpg in Resources */,
+				48F897D917B9B0DE000C95A1 /* header4.jpg in Resources */,
+				48F897DB17B9B0DE000C95A1 /* jonesgaze.jpg in Resources */,
+				48F897DD17B9B0DE000C95A1 /* ListenNow.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -301,6 +353,7 @@
 				48F3B53E17B81FD300A52433 /* ContactListViewController.m in Sources */,
 				48F3B54117B823E100A52433 /* Person.m in Sources */,
 				48F3B54417B82D8600A52433 /* PersonDetailViewController.m in Sources */,
+				48F897C817B9AE96000C95A1 /* Reachability.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -308,7 +361,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				48F3B53017B81BE900A52433 /* StoryBoardTutorialTests.m in Sources */,
+				48F3B53017B81BE900A52433 /* InfoWarsTests.m in Sources */,
+				48F897C917B9AE96000C95A1 /* Reachability.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -317,7 +371,7 @@
 /* Begin PBXTargetDependency section */
 		48F3B52717B81BE900A52433 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 48F3B4F717B81BE900A52433 /* StoryBoardTutorial */;
+			target = 48F3B4F717B81BE900A52433 /* InfoWars */;
 			targetProxy = 48F3B52617B81BE900A52433 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -420,8 +474,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "StoryBoardTutorial/StoryBoardTutorial-Prefix.pch";
-				INFOPLIST_FILE = "StoryBoardTutorial/StoryBoardTutorial-Info.plist";
+				GCC_PREFIX_HEADER = "InfoWars/InfoWars-Prefix.pch";
+				INFOPLIST_FILE = "InfoWars/InfoWars-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -431,8 +485,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "StoryBoardTutorial/StoryBoardTutorial-Prefix.pch";
-				INFOPLIST_FILE = "StoryBoardTutorial/StoryBoardTutorial-Info.plist";
+				GCC_PREFIX_HEADER = "InfoWars/InfoWars-Prefix.pch";
+				INFOPLIST_FILE = "InfoWars/InfoWars-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -441,14 +495,14 @@
 		48F3B53717B81BE900A52433 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/StoryBoardTutorial.app/StoryBoardTutorial";
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/InfoWars.app/InfoWars";
 				FRAMEWORK_SEARCH_PATHS = (
 					"\"$(SDKROOT)/Developer/Library/Frameworks\"",
 					"\"$(DEVELOPER_LIBRARY_DIR)/Frameworks\"",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "StoryBoardTutorial/StoryBoardTutorial-Prefix.pch";
-				INFOPLIST_FILE = "StoryBoardTutorialTests/StoryBoardTutorialTests-Info.plist";
+				GCC_PREFIX_HEADER = "InfoWars/InfoWars-Prefix.pch";
+				INFOPLIST_FILE = "InfoWarsTests/InfoWarsTests-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUNDLE_LOADER)";
 				WRAPPER_EXTENSION = octest;
@@ -458,14 +512,14 @@
 		48F3B53817B81BE900A52433 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/StoryBoardTutorial.app/StoryBoardTutorial";
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/InfoWars.app/InfoWars";
 				FRAMEWORK_SEARCH_PATHS = (
 					"\"$(SDKROOT)/Developer/Library/Frameworks\"",
 					"\"$(DEVELOPER_LIBRARY_DIR)/Frameworks\"",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "StoryBoardTutorial/StoryBoardTutorial-Prefix.pch";
-				INFOPLIST_FILE = "StoryBoardTutorialTests/StoryBoardTutorialTests-Info.plist";
+				GCC_PREFIX_HEADER = "InfoWars/InfoWars-Prefix.pch";
+				INFOPLIST_FILE = "InfoWarsTests/InfoWarsTests-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUNDLE_LOADER)";
 				WRAPPER_EXTENSION = octest;
@@ -475,7 +529,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		48F3B4F317B81BE900A52433 /* Build configuration list for PBXProject "StoryBoardTutorial" */ = {
+		48F3B4F317B81BE900A52433 /* Build configuration list for PBXProject "InfoWars" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				48F3B53117B81BE900A52433 /* Debug */,
@@ -484,21 +538,23 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		48F3B53317B81BE900A52433 /* Build configuration list for PBXNativeTarget "StoryBoardTutorial" */ = {
+		48F3B53317B81BE900A52433 /* Build configuration list for PBXNativeTarget "InfoWars" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				48F3B53417B81BE900A52433 /* Debug */,
 				48F3B53517B81BE900A52433 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
-		48F3B53617B81BE900A52433 /* Build configuration list for PBXNativeTarget "StoryBoardTutorialTests" */ = {
+		48F3B53617B81BE900A52433 /* Build configuration list for PBXNativeTarget "InfoWarsTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				48F3B53717B81BE900A52433 /* Debug */,
 				48F3B53817B81BE900A52433 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

@@ -1,14 +1,14 @@
 //
-//  StoryBoardTutorialTests.m
-//  StoryBoardTutorialTests
+//  InfoWarsTests.m
+//  InfoWarsTests
 //
 //  Created by Randy McMillan on 8/11/13.
 //  Copyright (c) 2013 Randy McMillan. All rights reserved.
 //
 
-#import "StoryBoardTutorialTests.h"
+#import "InfoWarsTests.h"
 
-@implementation StoryBoardTutorialTests
+@implementation InfoWarsTests
 
 - (void)setUp
 {
@@ -26,7 +26,7 @@
 
 - (void)testExample
 {
-    STFail(@"Unit tests are not implemented yet in StoryBoardTutorialTests");
+    STFail(@"Unit tests are not implemented yet in InfoWarsTests");
 }
 
 @end
