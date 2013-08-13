@@ -8,7 +8,6 @@
 
 #import "ViewController.h"
 #import "Reachability.h"
-// #import "Scene2ViewController.h"
 
 @interface ViewController () {
 	IBOutlet UIButton	*watchNow;
@@ -67,10 +66,19 @@
 
     NSLog(@"playAudioStream");
 
+    //NOTE set up if then logic for devices
+    //for better control
+    
 	NSURL			*url		= [NSURL URLWithString:@"http://www.infowars.com/stream.pls"];
 	NSURLRequest	*request	= [NSURLRequest requestWithURL:url];
 
 	[self.listenNowWebView loadRequest:request];
+    
+    
+    
+    ///for iphone
+    //self.movieURLString = @"http://www.infowars.com/stream.pls";
+	//[self loadVideo];
 }
 
 - (void)loadVideo
