@@ -10,10 +10,10 @@
 #import "Reachability.h"
 
 @interface ViewController () {
-	IBOutlet UIButton	*watchNow;
-	IBOutlet UIButton	*listenNow;
-	IBOutlet UIWebView	*listenNowWebView;
-    IBOutlet UIActivityIndicatorView *myIndicator;
+	IBOutlet UIButton					*watchNow;
+	IBOutlet UIButton					*listenNow;
+	IBOutlet UIWebView					*listenNowWebView;
+	IBOutlet UIActivityIndicatorView	*myIndicator;
 }
 
 @property (nonatomic, readwrite) NSString	*movieURLString;
@@ -27,31 +27,27 @@
 @end
 
 @implementation ViewController
-@synthesize watchNow, listenNow, listenNowWebView,myIndicator;
+@synthesize watchNow, listenNow, listenNowWebView, myIndicator;
 
-
--(void)viewWillAppear:(BOOL)animated {
-
-    NSLog(@"viewWillAppear");
-
+- (void)viewWillAppear:(BOOL)animated
+{
+	NSLog(@"viewWillAppear");
 }
+
 - (void)viewDidLoad
 {
 	[super viewDidLoad];
 	[self startReach];
 
-    
-    self.myIndicator.alpha = 0.0;
-    [self.myIndicator stopAnimating];
-    
-    
+	self.myIndicator.alpha = 0.0;
+	[self.myIndicator stopAnimating];
+
 	// Do any additional setup after loading the view, typically from a nib.
 }
 
 - (IBAction)playVideoStream:(id)sender
 {
-    
-    NSLog(@"playVideoStream");
+	NSLog(@"playVideoStream");
 	self.movieURLString =
 		@"http://rightbrainmedia.mpl.miisolutions.net/rightbrainmedia-originpull-2/_definst_/mp4:247daily1/playlist.m3u8";
 	[self loadVideo];
@@ -59,30 +55,26 @@
 
 - (IBAction)playAudioStream:(id)sender
 {
-   
-    
-    self.myIndicator.alpha = 1.0;
-    [self.myIndicator startAnimating];
+	self.myIndicator.alpha = 1.0;
+	[self.myIndicator startAnimating];
 
-    NSLog(@"playAudioStream");
+	NSLog(@"playAudioStream");
 
-    //NOTE set up if then logic for devices
-    //for better control
-    
-    //Reference AudioStream fork for config
-    // need to be better support for ipad vs iphone
-    // preserve main screen for other user activity
-    
+	// NOTE set up if then logic for devices
+	// for better control
+
+	// Reference AudioStream fork for config
+	// need to be better support for ipad vs iphone
+	// preserve main screen for other user activity
+
 	NSURL			*url		= [NSURL URLWithString:@"http://www.infowars.com/stream.pls"];
 	NSURLRequest	*request	= [NSURLRequest requestWithURL:url];
 
 	[self.listenNowWebView loadRequest:request];
-    
-    
-    
-    ///for iphone
-    //self.movieURLString = @"http://www.infowars.com/stream.pls";
-	//[self loadVideo];
+
+	///for iphone
+	// self.movieURLString = @"http://www.infowars.com/stream.pls";
+	// [self loadVideo];
 }
 
 - (void)loadVideo
@@ -99,100 +91,49 @@
 }
 
 
+//Further error handling refs
+///https://github.com/ardalahmet/UIWebViewHttpStatusCodeHandling/
+// UIWebViewDelegate Methods
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-//UIWebViewDelegate Methods
-
-
-- (void)webViewDidStartLoad:(UIWebView *)webView {
-
-    
-    NSLog(@"webViewDidStartLoad");
-    self.myIndicator.hidden = FALSE;
-
+- (void)webViewDidStartLoad:(UIWebView *)webView
+{
+	NSLog(@"webViewDidStartLoad");
+	self.myIndicator.hidden = FALSE;
 }
 
-- (void)webViewDidFinishLoad:(UIWebView *)webView {
-
-    NSLog(@"webViewDidFinishLoad");
-    self.myIndicator.hidden = TRUE;
-
+- (void)webViewDidFinishLoad:(UIWebView *)webView
+{
+	NSLog(@"webViewDidFinishLoad");
+	self.myIndicator.hidden = TRUE;
 }
 
-- (void)webView:(UIWebView *)webView didFailLoadWithError:(NSError *)error {
+- (void)webView:(UIWebView *)webView didFailLoadWithError:(NSError *)error
+{
+	NSLog(@"webView error %@", error);
 
-    
-    NSLog(@"webView error %@",error);
-    
-    
-    
-    [UIActivityIndicatorView animateWithDuration :3.0
-                       delay				:0.5
-                     options				:UIViewAnimationCurveEaseInOut
-                   animations			:^{
-                       self.myIndicator.alpha = 0.0;
-                   }
-                   completion			:^(BOOL finished) {
-                   
-                   
-                   
-    self.myIndicator.hidden = TRUE;
-                       
-                   }
-     ];
+	[UIActivityIndicatorView	animateWithDuration :3.0
+								delay				:0.5
+								options				:UIViewAnimationCurveEaseInOut
+								animations			:^{
+		self.myIndicator.alpha = 0.0;
+	}
 
-    
-    
-    //    self.myIndicator.hidden = TRUE;
- 
+								completion			:^(BOOL finished) {
+		self.myIndicator.hidden = TRUE;
+	}
+
+	];
+
+	//    self.myIndicator.hidden = TRUE;
+
+	/*
+	 *   UIAlertView *connectionError = [[UIAlertView alloc] initWithTitle:@"Connection error"
+	 *                                                     message:@"error" delegate:self
+	 *                                                     cancelButtonTitle:@"OK"
+	 *                                                     otherButtonTitles:nil];
+	 *   [connectionError show];
+	 */
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {}
 
@@ -202,34 +143,32 @@
 											selector	:@selector(reachabilityChanged:)
 											name		:kReachabilityChangedNotification
 											object		:nil];
-    
-    //	Reachability *rightBrainReach =
-    //[Reachability reachabilityWithHostname:@"http://miisolutions.net/rightbrainmedia-originpull-2/_definst_/mp4:247daily1/playlist.m3u8"];
+
+	//	Reachability *rightBrainReach =
+	// [Reachability reachabilityWithHostname:@"http://miisolutions.net/rightbrainmedia-originpull-2/_definst_/mp4:247daily1/playlist.m3u8"];
 
 	Reachability *rightBrainReach =
 		[Reachability reachabilityWithHostname:@"http://rightbrainmedia.mpl.miisolutions.net/rightbrainmedia-originpull-2/_definst_/mp4:247daily1/playlist.m3u8"];
-    
-    NSLog(@"rightBrainReach.isReachable = %@",
-          rightBrainReach.isReachable ? @"Yes" : @"No");
 
-    Reachability *reachWithIntConnection = [Reachability reachabilityForInternetConnection];
-    Reachability *reachWithWIFI = [Reachability reachabilityForLocalWiFi];
-    
-    
-    //Create switches based on this boolean
-    //Create switches based on this boolean
-    NSLog(@"reachWithIntConnection.isReachableViaWiFi = %@",
-            reachWithIntConnection.isReachableViaWiFi ? @"Yes" : @"No");
-    
-    NSLog(@"reachWithWIFI.isReachableViaWiFi = %@",
-            reachWithWIFI.isReachableViaWiFi ? @"Yes" : @"No");
-    
-    
-    Reachability *infoWarsStream =
+	NSLog(@"rightBrainReach.isReachable = %@",
+		rightBrainReach.isReachable ? @"Yes" : @"No");
+
+	Reachability	*reachWithIntConnection = [Reachability reachabilityForInternetConnection];
+	Reachability	*reachWithWIFI			= [Reachability reachabilityForLocalWiFi];
+
+	// Create switches based on this boolean
+	// Create switches based on this boolean
+	NSLog(@"reachWithIntConnection.isReachableViaWiFi = %@",
+		reachWithIntConnection.isReachableViaWiFi ? @"Yes" : @"No");
+
+	NSLog(@"reachWithWIFI.isReachableViaWiFi = %@",
+		reachWithWIFI.isReachableViaWiFi ? @"Yes" : @"No");
+
+	Reachability *infoWarsStream =
 		[Reachability reachabilityWithHostname:@"http://www.infowars.com/stream.pls"];
 
-    NSLog(@"infoWarsStream.isReachable = %@",
-          infoWarsStream.isReachable ? @"Yes" : @"No");
+	NSLog(@"infoWarsStream.isReachable = %@",
+		infoWarsStream.isReachable ? @"Yes" : @"No");
 
 	rightBrainReach.reachableBlock = ^(Reachability *reachability)
 	{
@@ -241,7 +180,7 @@
 	rightBrainReach.unreachableBlock = ^(Reachability *reachability)
 	{
 		dispatch_async(dispatch_get_main_queue(), ^{
-				[self.watchNow setTitle:@"Please Connect to WIFI" forState:UIControlStateNormal];
+				[self.watchNow setTitle:@"Connect to WIFI" forState:UIControlStateNormal];
 			});
 	};
 
@@ -255,7 +194,7 @@
 	infoWarsStream.unreachableBlock = ^(Reachability *reachability)
 	{
 		dispatch_async(dispatch_get_main_queue(), ^{
-				[self.listenNow setTitle:@"Please Connect to WIFI" forState:UIControlStateNormal];
+				[self.listenNow setTitle:@"Connect to WIFI" forState:UIControlStateNormal];
 			});
 	};
 
@@ -271,8 +210,8 @@
 		[self.watchNow setTitle:@"Watch Now" forState:UIControlStateNormal];
 		[self.listenNow setTitle:@"Listen Now" forState:UIControlStateNormal];
 	} else {
-		[self.watchNow  setTitle:@"Please connect to internet" forState:UIControlStateNormal];
-		[self.listenNow setTitle:@"Please connect to internet" forState:UIControlStateNormal];
+		[self.watchNow setTitle:@"Watch Now" forState:UIControlStateNormal];
+		[self.listenNow setTitle:@"Listen Now" forState:UIControlStateNormal];
 	}
 }
 

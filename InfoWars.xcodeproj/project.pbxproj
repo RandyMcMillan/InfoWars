@@ -15,6 +15,10 @@
 		4861DE4317B9C5A10072CCE3 /* Default-Portrait@2x~ipad.png in Resources */ = {isa = PBXBuildFile; fileRef = 4861DE4217B9C5A10072CCE3 /* Default-Portrait@2x~ipad.png */; };
 		4861DE4517B9C6610072CCE3 /* Default-Landscape~ipad.png in Resources */ = {isa = PBXBuildFile; fileRef = 4861DE4417B9C6610072CCE3 /* Default-Landscape~ipad.png */; };
 		4861DE4717B9C6660072CCE3 /* Default-Landscape@2x~ipad.png in Resources */ = {isa = PBXBuildFile; fileRef = 4861DE4617B9C6660072CCE3 /* Default-Landscape@2x~ipad.png */; };
+		48F3164817BAF82E00F54E81 /* 57x57.png in Resources */ = {isa = PBXBuildFile; fileRef = 48F3164717BAF82E00F54E81 /* 57x57.png */; };
+		48F3164A17BAF85600F54E81 /* 114x114.png in Resources */ = {isa = PBXBuildFile; fileRef = 48F3164917BAF85600F54E81 /* 114x114.png */; };
+		48F3164C17BAF88000F54E81 /* 72x72.png in Resources */ = {isa = PBXBuildFile; fileRef = 48F3164B17BAF88000F54E81 /* 72x72.png */; };
+		48F3164E17BAF8DA00F54E81 /* 144x144.png in Resources */ = {isa = PBXBuildFile; fileRef = 48F3164D17BAF8DA00F54E81 /* 144x144.png */; };
 		48F3B4FC17B81BE900A52433 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 48F3B4FB17B81BE900A52433 /* UIKit.framework */; };
 		48F3B4FE17B81BE900A52433 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 48F3B4FD17B81BE900A52433 /* Foundation.framework */; };
 		48F3B50017B81BE900A52433 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 48F3B4FF17B81BE900A52433 /* CoreGraphics.framework */; };
@@ -69,6 +73,10 @@
 		4861DE4217B9C5A10072CCE3 /* Default-Portrait@2x~ipad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-Portrait@2x~ipad.png"; sourceTree = "<group>"; };
 		4861DE4417B9C6610072CCE3 /* Default-Landscape~ipad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-Landscape~ipad.png"; sourceTree = "<group>"; };
 		4861DE4617B9C6660072CCE3 /* Default-Landscape@2x~ipad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-Landscape@2x~ipad.png"; sourceTree = "<group>"; };
+		48F3164717BAF82E00F54E81 /* 57x57.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 57x57.png; sourceTree = "<group>"; };
+		48F3164917BAF85600F54E81 /* 114x114.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 114x114.png; sourceTree = "<group>"; };
+		48F3164B17BAF88000F54E81 /* 72x72.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 72x72.png; sourceTree = "<group>"; };
+		48F3164D17BAF8DA00F54E81 /* 144x144.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 144x144.png; sourceTree = "<group>"; };
 		48F3B4F817B81BE900A52433 /* InfoWars.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = InfoWars.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		48F3B4FB17B81BE900A52433 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		48F3B4FD17B81BE900A52433 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -137,6 +145,10 @@
 		48F3B4EF17B81BE900A52433 = {
 			isa = PBXGroup;
 			children = (
+				48F3164D17BAF8DA00F54E81 /* 144x144.png */,
+				48F3164B17BAF88000F54E81 /* 72x72.png */,
+				48F3164917BAF85600F54E81 /* 114x114.png */,
+				48F3164717BAF82E00F54E81 /* 57x57.png */,
 				4861DE4617B9C6660072CCE3 /* Default-Landscape@2x~ipad.png */,
 				4861DE4417B9C6610072CCE3 /* Default-Landscape~ipad.png */,
 				4861DE4217B9C5A10072CCE3 /* Default-Portrait@2x~ipad.png */,
@@ -328,6 +340,10 @@
 				4861DE4317B9C5A10072CCE3 /* Default-Portrait@2x~ipad.png in Resources */,
 				4861DE4517B9C6610072CCE3 /* Default-Landscape~ipad.png in Resources */,
 				4861DE4717B9C6660072CCE3 /* Default-Landscape@2x~ipad.png in Resources */,
+				48F3164817BAF82E00F54E81 /* 57x57.png in Resources */,
+				48F3164A17BAF85600F54E81 /* 114x114.png in Resources */,
+				48F3164C17BAF88000F54E81 /* 72x72.png in Resources */,
+				48F3164E17BAF8DA00F54E81 /* 144x144.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
