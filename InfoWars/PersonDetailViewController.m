@@ -34,7 +34,7 @@
     
     self.fnameLabel.text = self.person.fname;
     self.snameLabel.text = self.person.sname;
-    //self.ageLabel.text = [NSString stringWithFormat:@"%i",self.person.age];
+    self.ageLabel.text = [NSString stringWithFormat:@"%i",self.person.age];
     
     [self.view setBackgroundColor:[UIColor redColor]];//person.favoriteColor];
     
