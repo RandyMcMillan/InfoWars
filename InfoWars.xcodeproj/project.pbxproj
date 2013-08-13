@@ -26,6 +26,31 @@
 		48F3161B17BA9E3D00F54E81 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 48F3161A17BA9E3D00F54E81 /* AudioToolbox.framework */; };
 		48F3161D17BA9E4900F54E81 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 48F3161C17BA9E4900F54E81 /* CFNetwork.framework */; };
 		48F3161F17BA9E5400F54E81 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 48F3161E17BA9E5400F54E81 /* QuartzCore.framework */; };
+		48F3162B17BAA3A400F54E81 /* logo.png in Resources */ = {isa = PBXBuildFile; fileRef = 48F3162017BAA3A400F54E81 /* logo.png */; };
+		48F3162C17BAA3A400F54E81 /* logo.png in Resources */ = {isa = PBXBuildFile; fileRef = 48F3162017BAA3A400F54E81 /* logo.png */; };
+		48F3162D17BAA3A400F54E81 /* 194-note-2.png in Resources */ = {isa = PBXBuildFile; fileRef = 48F3162117BAA3A400F54E81 /* 194-note-2.png */; };
+		48F3162E17BAA3A400F54E81 /* 194-note-2.png in Resources */ = {isa = PBXBuildFile; fileRef = 48F3162117BAA3A400F54E81 /* 194-note-2.png */; };
+		48F3162F17BAA3A400F54E81 /* 275-broadcast.png in Resources */ = {isa = PBXBuildFile; fileRef = 48F3162217BAA3A400F54E81 /* 275-broadcast.png */; };
+		48F3163017BAA3A400F54E81 /* 275-broadcast.png in Resources */ = {isa = PBXBuildFile; fileRef = 48F3162217BAA3A400F54E81 /* 275-broadcast.png */; };
+		48F3163117BAA3A400F54E81 /* loadingbutton.png in Resources */ = {isa = PBXBuildFile; fileRef = 48F3162317BAA3A400F54E81 /* loadingbutton.png */; };
+		48F3163217BAA3A400F54E81 /* loadingbutton.png in Resources */ = {isa = PBXBuildFile; fileRef = 48F3162317BAA3A400F54E81 /* loadingbutton.png */; };
+		48F3163317BAA3A400F54E81 /* loadingbutton@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 48F3162417BAA3A400F54E81 /* loadingbutton@2x.png */; };
+		48F3163417BAA3A400F54E81 /* loadingbutton@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 48F3162417BAA3A400F54E81 /* loadingbutton@2x.png */; };
+		48F3163517BAA3A400F54E81 /* pausebutton.png in Resources */ = {isa = PBXBuildFile; fileRef = 48F3162517BAA3A400F54E81 /* pausebutton.png */; };
+		48F3163617BAA3A400F54E81 /* pausebutton.png in Resources */ = {isa = PBXBuildFile; fileRef = 48F3162517BAA3A400F54E81 /* pausebutton.png */; };
+		48F3163717BAA3A400F54E81 /* pausebutton@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 48F3162617BAA3A400F54E81 /* pausebutton@2x.png */; };
+		48F3163817BAA3A400F54E81 /* pausebutton@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 48F3162617BAA3A400F54E81 /* pausebutton@2x.png */; };
+		48F3163917BAA3A400F54E81 /* playbutton.png in Resources */ = {isa = PBXBuildFile; fileRef = 48F3162717BAA3A400F54E81 /* playbutton.png */; };
+		48F3163A17BAA3A400F54E81 /* playbutton.png in Resources */ = {isa = PBXBuildFile; fileRef = 48F3162717BAA3A400F54E81 /* playbutton.png */; };
+		48F3163B17BAA3A400F54E81 /* playbutton@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 48F3162817BAA3A400F54E81 /* playbutton@2x.png */; };
+		48F3163C17BAA3A400F54E81 /* playbutton@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 48F3162817BAA3A400F54E81 /* playbutton@2x.png */; };
+		48F3163D17BAA3A400F54E81 /* stopbutton.png in Resources */ = {isa = PBXBuildFile; fileRef = 48F3162917BAA3A400F54E81 /* stopbutton.png */; };
+		48F3163E17BAA3A400F54E81 /* stopbutton.png in Resources */ = {isa = PBXBuildFile; fileRef = 48F3162917BAA3A400F54E81 /* stopbutton.png */; };
+		48F3163F17BAA3A400F54E81 /* stopbutton@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 48F3162A17BAA3A400F54E81 /* stopbutton@2x.png */; };
+		48F3164017BAA3A400F54E81 /* stopbutton@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 48F3162A17BAA3A400F54E81 /* stopbutton@2x.png */; };
+		48F3164217BAA48100F54E81 /* libc++abi.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 48F3164117BAA48100F54E81 /* libc++abi.dylib */; };
+		48F3164517BAA68000F54E81 /* UIDevice+Hardware.m in Sources */ = {isa = PBXBuildFile; fileRef = 48F3164417BAA68000F54E81 /* UIDevice+Hardware.m */; };
+		48F3164617BAA68000F54E81 /* UIDevice+Hardware.m in Sources */ = {isa = PBXBuildFile; fileRef = 48F3164417BAA68000F54E81 /* UIDevice+Hardware.m */; };
 		48F3B4FC17B81BE900A52433 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 48F3B4FB17B81BE900A52433 /* UIKit.framework */; };
 		48F3B4FE17B81BE900A52433 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 48F3B4FD17B81BE900A52433 /* Foundation.framework */; };
 		48F3B50017B81BE900A52433 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 48F3B4FF17B81BE900A52433 /* CoreGraphics.framework */; };
@@ -91,6 +116,20 @@
 		48F3161A17BA9E3D00F54E81 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
 		48F3161C17BA9E4900F54E81 /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
 		48F3161E17BA9E5400F54E81 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		48F3162017BAA3A400F54E81 /* logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = logo.png; sourceTree = "<group>"; };
+		48F3162117BAA3A400F54E81 /* 194-note-2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "194-note-2.png"; sourceTree = "<group>"; };
+		48F3162217BAA3A400F54E81 /* 275-broadcast.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "275-broadcast.png"; sourceTree = "<group>"; };
+		48F3162317BAA3A400F54E81 /* loadingbutton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = loadingbutton.png; sourceTree = "<group>"; };
+		48F3162417BAA3A400F54E81 /* loadingbutton@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "loadingbutton@2x.png"; sourceTree = "<group>"; };
+		48F3162517BAA3A400F54E81 /* pausebutton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pausebutton.png; sourceTree = "<group>"; };
+		48F3162617BAA3A400F54E81 /* pausebutton@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "pausebutton@2x.png"; sourceTree = "<group>"; };
+		48F3162717BAA3A400F54E81 /* playbutton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = playbutton.png; sourceTree = "<group>"; };
+		48F3162817BAA3A400F54E81 /* playbutton@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "playbutton@2x.png"; sourceTree = "<group>"; };
+		48F3162917BAA3A400F54E81 /* stopbutton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = stopbutton.png; sourceTree = "<group>"; };
+		48F3162A17BAA3A400F54E81 /* stopbutton@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "stopbutton@2x.png"; sourceTree = "<group>"; };
+		48F3164117BAA48100F54E81 /* libc++abi.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libc++abi.dylib"; path = "usr/lib/libc++abi.dylib"; sourceTree = SDKROOT; };
+		48F3164317BAA68000F54E81 /* UIDevice+Hardware.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIDevice+Hardware.h"; sourceTree = "<group>"; };
+		48F3164417BAA68000F54E81 /* UIDevice+Hardware.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIDevice+Hardware.m"; sourceTree = "<group>"; };
 		48F3B4F817B81BE900A52433 /* InfoWars.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = InfoWars.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		48F3B4FB17B81BE900A52433 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		48F3B4FD17B81BE900A52433 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -135,6 +174,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				48F3164217BAA48100F54E81 /* libc++abi.dylib in Frameworks */,
 				48F3161F17BA9E5400F54E81 /* QuartzCore.framework in Frameworks */,
 				48F3161D17BA9E4900F54E81 /* CFNetwork.framework in Frameworks */,
 				48F3161B17BA9E3D00F54E81 /* AudioToolbox.framework in Frameworks */,
@@ -164,6 +204,7 @@
 		48F3B4EF17B81BE900A52433 = {
 			isa = PBXGroup;
 			children = (
+				48F3164117BAA48100F54E81 /* libc++abi.dylib */,
 				48F3161E17BA9E5400F54E81 /* QuartzCore.framework */,
 				48F3161C17BA9E4900F54E81 /* CFNetwork.framework */,
 				48F3161A17BA9E3D00F54E81 /* AudioToolbox.framework */,
@@ -208,12 +249,14 @@
 		48F3B50117B81BE900A52433 /* InfoWars */ = {
 			isa = PBXGroup;
 			children = (
+				48F3164317BAA68000F54E81 /* UIDevice+Hardware.h */,
+				48F3164417BAA68000F54E81 /* UIDevice+Hardware.m */,
 				48F3161217BA9C7600F54E81 /* LevelMeterView.h */,
 				48F3161317BA9C7600F54E81 /* LevelMeterView.m */,
 				48F3160E17BA9C5E00F54E81 /* AudioStreamer.h */,
 				48F3160F17BA9C5E00F54E81 /* AudioStreamer.m */,
-				48F3160A17BA9BA700F54E81 /* NowPlayingViewController.m */,
 				48F3160B17BA9BA700F54E81 /* NowPlayingViewController.h */,
+				48F3160A17BA9BA700F54E81 /* NowPlayingViewController.m */,
 				48F3B50A17B81BE900A52433 /* AppDelegate.h */,
 				48F3B50B17B81BE900A52433 /* AppDelegate.m */,
 				48F3B51317B81BE900A52433 /* MainStoryboard_iPhone.storyboard */,
@@ -271,6 +314,17 @@
 		48F897CE17B9B0DE000C95A1 /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				48F3162017BAA3A400F54E81 /* logo.png */,
+				48F3162117BAA3A400F54E81 /* 194-note-2.png */,
+				48F3162217BAA3A400F54E81 /* 275-broadcast.png */,
+				48F3162317BAA3A400F54E81 /* loadingbutton.png */,
+				48F3162417BAA3A400F54E81 /* loadingbutton@2x.png */,
+				48F3162517BAA3A400F54E81 /* pausebutton.png */,
+				48F3162617BAA3A400F54E81 /* pausebutton@2x.png */,
+				48F3162717BAA3A400F54E81 /* playbutton.png */,
+				48F3162817BAA3A400F54E81 /* playbutton@2x.png */,
+				48F3162917BAA3A400F54E81 /* stopbutton.png */,
+				48F3162A17BAA3A400F54E81 /* stopbutton@2x.png */,
 				48F897CF17B9B0DE000C95A1 /* FooterBkGrnd.jpg */,
 				48F897D017B9B0DE000C95A1 /* Header.jpg */,
 				48F897D117B9B0DE000C95A1 /* header4.jpg */,
@@ -366,6 +420,17 @@
 				4861DE4317B9C5A10072CCE3 /* Default-Portrait@2x~ipad.png in Resources */,
 				4861DE4517B9C6610072CCE3 /* Default-Landscape~ipad.png in Resources */,
 				4861DE4717B9C6660072CCE3 /* Default-Landscape@2x~ipad.png in Resources */,
+				48F3162B17BAA3A400F54E81 /* logo.png in Resources */,
+				48F3162D17BAA3A400F54E81 /* 194-note-2.png in Resources */,
+				48F3162F17BAA3A400F54E81 /* 275-broadcast.png in Resources */,
+				48F3163117BAA3A400F54E81 /* loadingbutton.png in Resources */,
+				48F3163317BAA3A400F54E81 /* loadingbutton@2x.png in Resources */,
+				48F3163517BAA3A400F54E81 /* pausebutton.png in Resources */,
+				48F3163717BAA3A400F54E81 /* pausebutton@2x.png in Resources */,
+				48F3163917BAA3A400F54E81 /* playbutton.png in Resources */,
+				48F3163B17BAA3A400F54E81 /* playbutton@2x.png in Resources */,
+				48F3163D17BAA3A400F54E81 /* stopbutton.png in Resources */,
+				48F3163F17BAA3A400F54E81 /* stopbutton@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -379,6 +444,17 @@
 				48F897D917B9B0DE000C95A1 /* header4.jpg in Resources */,
 				48F897DB17B9B0DE000C95A1 /* jonesgaze.jpg in Resources */,
 				48F897DD17B9B0DE000C95A1 /* ListenNow.jpg in Resources */,
+				48F3162C17BAA3A400F54E81 /* logo.png in Resources */,
+				48F3162E17BAA3A400F54E81 /* 194-note-2.png in Resources */,
+				48F3163017BAA3A400F54E81 /* 275-broadcast.png in Resources */,
+				48F3163217BAA3A400F54E81 /* loadingbutton.png in Resources */,
+				48F3163417BAA3A400F54E81 /* loadingbutton@2x.png in Resources */,
+				48F3163617BAA3A400F54E81 /* pausebutton.png in Resources */,
+				48F3163817BAA3A400F54E81 /* pausebutton@2x.png in Resources */,
+				48F3163A17BAA3A400F54E81 /* playbutton.png in Resources */,
+				48F3163C17BAA3A400F54E81 /* playbutton@2x.png in Resources */,
+				48F3163E17BAA3A400F54E81 /* stopbutton.png in Resources */,
+				48F3164017BAA3A400F54E81 /* stopbutton@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -417,6 +493,7 @@
 				48F3160C17BA9BA700F54E81 /* NowPlayingViewController.m in Sources */,
 				48F3161017BA9C5E00F54E81 /* AudioStreamer.m in Sources */,
 				48F3161417BA9C7600F54E81 /* LevelMeterView.m in Sources */,
+				48F3164517BAA68000F54E81 /* UIDevice+Hardware.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -429,6 +506,7 @@
 				48F3160D17BA9BA700F54E81 /* NowPlayingViewController.m in Sources */,
 				48F3161117BA9C5E00F54E81 /* AudioStreamer.m in Sources */,
 				48F3161517BA9C7600F54E81 /* LevelMeterView.m in Sources */,
+				48F3164617BAA68000F54E81 /* UIDevice+Hardware.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
