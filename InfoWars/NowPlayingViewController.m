@@ -30,12 +30,6 @@ NSString * const HD4 = @"http://stream.wmnf.org:8000/wmnf_hd4";
 @synthesize currentArtist, currentTitle, channelList, currentChannel;
 
 
-- (IBAction)cancel:(id)sender {
-    
-    [self dismissViewControllerAnimated:YES completion:nil];
-    
-}
-
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
