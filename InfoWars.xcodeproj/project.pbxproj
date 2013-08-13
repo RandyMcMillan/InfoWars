@@ -15,6 +15,17 @@
 		4861DE4317B9C5A10072CCE3 /* Default-Portrait@2x~ipad.png in Resources */ = {isa = PBXBuildFile; fileRef = 4861DE4217B9C5A10072CCE3 /* Default-Portrait@2x~ipad.png */; };
 		4861DE4517B9C6610072CCE3 /* Default-Landscape~ipad.png in Resources */ = {isa = PBXBuildFile; fileRef = 4861DE4417B9C6610072CCE3 /* Default-Landscape~ipad.png */; };
 		4861DE4717B9C6660072CCE3 /* Default-Landscape@2x~ipad.png in Resources */ = {isa = PBXBuildFile; fileRef = 4861DE4617B9C6660072CCE3 /* Default-Landscape@2x~ipad.png */; };
+		48F3160C17BA9BA700F54E81 /* NowPlayingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 48F3160A17BA9BA700F54E81 /* NowPlayingViewController.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		48F3160D17BA9BA700F54E81 /* NowPlayingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 48F3160A17BA9BA700F54E81 /* NowPlayingViewController.m */; };
+		48F3161017BA9C5E00F54E81 /* AudioStreamer.m in Sources */ = {isa = PBXBuildFile; fileRef = 48F3160F17BA9C5E00F54E81 /* AudioStreamer.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		48F3161117BA9C5E00F54E81 /* AudioStreamer.m in Sources */ = {isa = PBXBuildFile; fileRef = 48F3160F17BA9C5E00F54E81 /* AudioStreamer.m */; };
+		48F3161417BA9C7600F54E81 /* LevelMeterView.m in Sources */ = {isa = PBXBuildFile; fileRef = 48F3161317BA9C7600F54E81 /* LevelMeterView.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		48F3161517BA9C7600F54E81 /* LevelMeterView.m in Sources */ = {isa = PBXBuildFile; fileRef = 48F3161317BA9C7600F54E81 /* LevelMeterView.m */; };
+		48F3161717BA9E1700F54E81 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 48F3161617BA9E1700F54E81 /* AVFoundation.framework */; };
+		48F3161917BA9E3000F54E81 /* CoreMedia.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 48F3161817BA9E3000F54E81 /* CoreMedia.framework */; };
+		48F3161B17BA9E3D00F54E81 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 48F3161A17BA9E3D00F54E81 /* AudioToolbox.framework */; };
+		48F3161D17BA9E4900F54E81 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 48F3161C17BA9E4900F54E81 /* CFNetwork.framework */; };
+		48F3161F17BA9E5400F54E81 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 48F3161E17BA9E5400F54E81 /* QuartzCore.framework */; };
 		48F3B4FC17B81BE900A52433 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 48F3B4FB17B81BE900A52433 /* UIKit.framework */; };
 		48F3B4FE17B81BE900A52433 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 48F3B4FD17B81BE900A52433 /* Foundation.framework */; };
 		48F3B50017B81BE900A52433 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 48F3B4FF17B81BE900A52433 /* CoreGraphics.framework */; };
@@ -69,6 +80,17 @@
 		4861DE4217B9C5A10072CCE3 /* Default-Portrait@2x~ipad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-Portrait@2x~ipad.png"; sourceTree = "<group>"; };
 		4861DE4417B9C6610072CCE3 /* Default-Landscape~ipad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-Landscape~ipad.png"; sourceTree = "<group>"; };
 		4861DE4617B9C6660072CCE3 /* Default-Landscape@2x~ipad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-Landscape@2x~ipad.png"; sourceTree = "<group>"; };
+		48F3160A17BA9BA700F54E81 /* NowPlayingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NowPlayingViewController.m; sourceTree = "<group>"; };
+		48F3160B17BA9BA700F54E81 /* NowPlayingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NowPlayingViewController.h; sourceTree = "<group>"; };
+		48F3160E17BA9C5E00F54E81 /* AudioStreamer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AudioStreamer.h; sourceTree = "<group>"; };
+		48F3160F17BA9C5E00F54E81 /* AudioStreamer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AudioStreamer.m; sourceTree = "<group>"; };
+		48F3161217BA9C7600F54E81 /* LevelMeterView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LevelMeterView.h; sourceTree = "<group>"; };
+		48F3161317BA9C7600F54E81 /* LevelMeterView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LevelMeterView.m; sourceTree = "<group>"; };
+		48F3161617BA9E1700F54E81 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		48F3161817BA9E3000F54E81 /* CoreMedia.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMedia.framework; path = System/Library/Frameworks/CoreMedia.framework; sourceTree = SDKROOT; };
+		48F3161A17BA9E3D00F54E81 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
+		48F3161C17BA9E4900F54E81 /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
+		48F3161E17BA9E5400F54E81 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		48F3B4F817B81BE900A52433 /* InfoWars.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = InfoWars.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		48F3B4FB17B81BE900A52433 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		48F3B4FD17B81BE900A52433 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -113,6 +135,11 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				48F3161F17BA9E5400F54E81 /* QuartzCore.framework in Frameworks */,
+				48F3161D17BA9E4900F54E81 /* CFNetwork.framework in Frameworks */,
+				48F3161B17BA9E3D00F54E81 /* AudioToolbox.framework in Frameworks */,
+				48F3161917BA9E3000F54E81 /* CoreMedia.framework in Frameworks */,
+				48F3161717BA9E1700F54E81 /* AVFoundation.framework in Frameworks */,
 				48F897CD17B9AF20000C95A1 /* SystemConfiguration.framework in Frameworks */,
 				48F897CB17B9AF0E000C95A1 /* MediaPlayer.framework in Frameworks */,
 				48F3B4FC17B81BE900A52433 /* UIKit.framework in Frameworks */,
@@ -137,6 +164,11 @@
 		48F3B4EF17B81BE900A52433 = {
 			isa = PBXGroup;
 			children = (
+				48F3161E17BA9E5400F54E81 /* QuartzCore.framework */,
+				48F3161C17BA9E4900F54E81 /* CFNetwork.framework */,
+				48F3161A17BA9E3D00F54E81 /* AudioToolbox.framework */,
+				48F3161817BA9E3000F54E81 /* CoreMedia.framework */,
+				48F3161617BA9E1700F54E81 /* AVFoundation.framework */,
 				4861DE4617B9C6660072CCE3 /* Default-Landscape@2x~ipad.png */,
 				4861DE4417B9C6610072CCE3 /* Default-Landscape~ipad.png */,
 				4861DE4217B9C5A10072CCE3 /* Default-Portrait@2x~ipad.png */,
@@ -176,6 +208,12 @@
 		48F3B50117B81BE900A52433 /* InfoWars */ = {
 			isa = PBXGroup;
 			children = (
+				48F3161217BA9C7600F54E81 /* LevelMeterView.h */,
+				48F3161317BA9C7600F54E81 /* LevelMeterView.m */,
+				48F3160E17BA9C5E00F54E81 /* AudioStreamer.h */,
+				48F3160F17BA9C5E00F54E81 /* AudioStreamer.m */,
+				48F3160A17BA9BA700F54E81 /* NowPlayingViewController.m */,
+				48F3160B17BA9BA700F54E81 /* NowPlayingViewController.h */,
 				48F3B50A17B81BE900A52433 /* AppDelegate.h */,
 				48F3B50B17B81BE900A52433 /* AppDelegate.m */,
 				48F3B51317B81BE900A52433 /* MainStoryboard_iPhone.storyboard */,
@@ -376,6 +414,9 @@
 				48F3B54417B82D8600A52433 /* PersonDetailViewController.m in Sources */,
 				48F897C817B9AE96000C95A1 /* Reachability.m in Sources */,
 				4861DE3917B9BE490072CCE3 /* Scene3ViewController.m in Sources */,
+				48F3160C17BA9BA700F54E81 /* NowPlayingViewController.m in Sources */,
+				48F3161017BA9C5E00F54E81 /* AudioStreamer.m in Sources */,
+				48F3161417BA9C7600F54E81 /* LevelMeterView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -385,6 +426,9 @@
 			files = (
 				48F3B53017B81BE900A52433 /* InfoWarsTests.m in Sources */,
 				48F897C917B9AE96000C95A1 /* Reachability.m in Sources */,
+				48F3160D17BA9BA700F54E81 /* NowPlayingViewController.m in Sources */,
+				48F3161117BA9C5E00F54E81 /* AudioStreamer.m in Sources */,
+				48F3161517BA9C7600F54E81 /* LevelMeterView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

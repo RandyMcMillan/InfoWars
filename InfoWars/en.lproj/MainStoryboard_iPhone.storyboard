@@ -83,97 +83,6 @@
             </objects>
             <point key="canvasLocation" x="38" y="33"/>
         </scene>
-        <!--Contact List View Controller-->
-        <scene sceneID="qx9-LY-rwb">
-            <objects>
-                <tableViewController id="og1-vP-Die" customClass="ContactListViewController" sceneMemberID="viewController">
-                    <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="L6l-ud-nVt">
-                        <rect key="frame" x="0.0" y="64" width="320" height="416"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <prototypes>
-                            <tableViewCell contentMode="scaleToFill" restorationIdentifier="" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Cell" id="Bne-hr-fGu">
-                                <rect key="frame" x="0.0" y="22" width="320" height="44"/>
-                                <autoresizingMask key="autoresizingMask"/>
-                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
-                                    <rect key="frame" x="0.0" y="0.0" width="300" height="43"/>
-                                    <autoresizingMask key="autoresizingMask"/>
-                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                </view>
-                                <connections>
-                                    <segue destination="W3h-rC-iTt" kind="push" identifier="PersonDetailSegue" id="aq7-z7-2CD"/>
-                                </connections>
-                            </tableViewCell>
-                        </prototypes>
-                        <connections>
-                            <outlet property="dataSource" destination="og1-vP-Die" id="pjd-1Z-oKr"/>
-                            <outlet property="delegate" destination="og1-vP-Die" id="E0K-Cu-fPd"/>
-                        </connections>
-                    </tableView>
-                    <navigationItem key="navigationItem" id="5zl-3E-BXA"/>
-                </tableViewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="gYS-xj-Sxb" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1177" y="1021"/>
-        </scene>
-        <!--Person Detail View Controller-->
-        <scene sceneID="owf-KR-Tn7">
-            <objects>
-                <viewController storyboardIdentifier="PersonDetailSegue" id="W3h-rC-iTt" customClass="PersonDetailViewController" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="ogx-zs-Jwr">
-                        <rect key="frame" x="0.0" y="64" width="320" height="416"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                        <subviews>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="TVS-jl-vwP">
-                                <rect key="frame" x="35" y="32" width="42" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Tnx-XR-2Vb">
-                                <rect key="frame" x="35" y="59" width="42" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="nrR-lx-Dc1">
-                                <rect key="frame" x="35" y="97" width="42" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Mb4-rp-MDJ">
-                                <rect key="frame" x="35" y="125" width="42" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="jUs-qC-mW8">
-                                <rect key="frame" x="35" y="161" width="42" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="AjS-LL-bBw">
-                                <rect key="frame" x="35" y="193" width="42" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                        </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
-                    </view>
-                    <navigationItem key="navigationItem" id="BY5-TU-SDe"/>
-                    <connections>
-                        <outlet property="ageLabel" destination="AjS-LL-bBw" id="HxP-cv-gEG"/>
-                        <outlet property="fnameLabel" destination="Tnx-XR-2Vb" id="DdW-rL-z5L"/>
-                        <outlet property="snameLabel" destination="Mb4-rp-MDJ" id="9Hw-Zk-kue"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="8q7-cA-9LK" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1606" y="1021"/>
-        </scene>
         <!--Scene2 View Controller-->
         <scene sceneID="L2a-R8-Lna">
             <objects>
@@ -214,44 +123,6 @@
             </objects>
             <point key="canvasLocation" x="1295" y="33"/>
         </scene>
-        <!--Scene3 View Controller-->
-        <scene sceneID="wAJ-U7-tjo">
-            <objects>
-                <viewController id="Tuj-Yj-WE8" customClass="Scene3ViewController" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="3nZ-Cg-p9G">
-                        <rect key="frame" x="0.0" y="64" width="320" height="416"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                        <subviews>
-                            <webView contentMode="scaleToFill" id="3jT-tw-dgB">
-                                <rect key="frame" x="0.0" y="0.0" width="320" height="416"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                            </webView>
-                        </subviews>
-                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
-                    </view>
-                    <toolbarItems/>
-                    <navigationItem key="navigationItem" id="vsu-Jm-kga">
-                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="QMC-up-gwr">
-                            <connections>
-                                <action selector="cancel:" destination="Tuj-Yj-WE8" id="wpd-2J-vZ0"/>
-                            </connections>
-                        </barButtonItem>
-                        <barButtonItem key="rightBarButtonItem" title="Reload" style="done" id="N4p-tr-WFX">
-                            <connections>
-                                <action selector="reload" destination="3jT-tw-dgB" id="V4r-jr-HF0"/>
-                            </connections>
-                        </barButtonItem>
-                    </navigationItem>
-                    <nil key="simulatedBottomBarMetrics"/>
-                    <connections>
-                        <outlet property="webView" destination="3jT-tw-dgB" id="sOU-od-0zG"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="KAH-J5-7yL" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1295" y="524"/>
-        </scene>
         <!--Navigation Controller-->
         <scene sceneID="B6e-6H-zC9">
             <objects>
@@ -270,65 +141,13 @@
             </objects>
             <point key="canvasLocation" x="665" y="33"/>
         </scene>
-        <!--Navigation Controller-->
-        <scene sceneID="l4d-kL-S8l">
-            <objects>
-                <navigationController definesPresentationContext="YES" id="8Fb-62-CbC" sceneMemberID="viewController">
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="WO4-LI-BEK">
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                    <connections>
-                        <segue destination="Tuj-Yj-WE8" kind="relationship" relationship="rootViewController" id="Maa-c2-iaw"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="sVF-PX-Psp" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="665" y="524"/>
-        </scene>
-        <!--Navigation Controller - Item-->
-        <scene sceneID="IzU-gn-G3e">
-            <objects>
-                <navigationController id="BK7-wk-tWi" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="hSg-ZA-hIF"/>
-                    <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="v3l-EB-2c0">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                    <nil name="viewControllers"/>
-                    <connections>
-                        <segue destination="og1-vP-Die" kind="relationship" relationship="rootViewController" id="Esa-RP-o7e"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Fpu-d0-Ybk" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="636" y="1021"/>
-        </scene>
     </scenes>
     <resources>
         <image name="jonesgaze.jpg" width="329" height="429"/>
     </resources>
     <classes>
-        <class className="ContactListViewController" superclassName="UITableViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/ContactListViewController.h"/>
-        </class>
-        <class className="PersonDetailViewController" superclassName="ViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/PersonDetailViewController.h"/>
-            <relationships>
-                <relationship kind="outlet" name="ageLabel" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="fnameLabel" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="snameLabel" candidateClass="UILabel"/>
-            </relationships>
-        </class>
         <class className="Scene2ViewController" superclassName="UIViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/Scene2ViewController.h"/>
-            <relationships>
-                <relationship kind="action" name="cancel:"/>
-                <relationship kind="outlet" name="webView" candidateClass="UIWebView"/>
-            </relationships>
-        </class>
-        <class className="Scene3ViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/Scene3ViewController.h"/>
             <relationships>
                 <relationship kind="action" name="cancel:"/>
                 <relationship kind="outlet" name="webView" candidateClass="UIWebView"/>
