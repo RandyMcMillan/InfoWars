@@ -44,6 +44,8 @@
     NSArray *channelList;
 }
 
+- (IBAction)cancel:(id)sender;
+
 @property (retain) NSString* currentArtist;
 @property (retain) NSString* currentTitle;
 @property (retain, nonatomic) NSArray* channelList;
