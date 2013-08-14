@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface Scene2ViewController : UIViewController
+@interface Scene2ViewController : UIViewController <UIWebViewDelegate>
 
 
 - (IBAction)cancel:(id)sender;
