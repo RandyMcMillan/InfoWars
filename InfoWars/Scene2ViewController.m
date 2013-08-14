@@ -46,6 +46,14 @@
     [self loadURL:@"http://infowars.com"];
 }
 
+-(IBAction)doneButtonPressed:(id)sender {
+
+    [self.webView reload];
+
+
+}
+
+
 
 -(void)loadURL:(NSString *)string {
 
