@@ -92,9 +92,9 @@
 	NSLog(@"webView error %@", error);
     
 	[UIActivityIndicatorView	animateWithDuration :3.0
-                                        delay				:0.5
-                                      options				:UIViewAnimationCurveEaseInOut
-                                    animations			:^{
+                                delay				:0.5
+                                options				:UIViewAnimationCurveEaseInOut
+                                animations			:^{
                                         self.myIndicator.alpha = 0.0;
                                     }
      
