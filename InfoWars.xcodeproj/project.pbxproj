@@ -156,8 +156,6 @@
 				4861DE3E17B9C5830072CCE3 /* Default-568h@2x.png */,
 				4861DE3C17B9C57B0072CCE3 /* Default@2x.png */,
 				4861DE3A17B9C5760072CCE3 /* Default.png */,
-				48F897CC17B9AF20000C95A1 /* SystemConfiguration.framework */,
-				48F897CA17B9AF0E000C95A1 /* MediaPlayer.framework */,
 				48F3B50117B81BE900A52433 /* InfoWars */,
 				48F3B52817B81BE900A52433 /* InfoWarsTests */,
 				48F3B4FA17B81BE900A52433 /* Frameworks */,
@@ -177,6 +175,8 @@
 		48F3B4FA17B81BE900A52433 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				48F897CC17B9AF20000C95A1 /* SystemConfiguration.framework */,
+				48F897CA17B9AF0E000C95A1 /* MediaPlayer.framework */,
 				48F3B4FB17B81BE900A52433 /* UIKit.framework */,
 				48F3B4FD17B81BE900A52433 /* Foundation.framework */,
 				48F3B4FF17B81BE900A52433 /* CoreGraphics.framework */,
