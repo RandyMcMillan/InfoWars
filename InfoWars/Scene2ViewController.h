@@ -10,8 +10,7 @@
 
 @interface Scene2ViewController : UIViewController <UIWebViewDelegate>
 
-
 - (IBAction)cancel:(id)sender;
--(void)loadURL:(NSString *)string;
--(IBAction)doneButtonPressed:(id)sender;
+- (void)loadURL:(NSString *)string;
+- (IBAction)doneButtonPressed:(id)sender;
 @end

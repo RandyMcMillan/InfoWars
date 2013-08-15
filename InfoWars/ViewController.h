@@ -11,13 +11,13 @@
 
 @interface ViewController : UIViewController <UIWebViewDelegate>
 
-@property (nonatomic,retain)UIWebView * listenNowWebView;
-@property (nonatomic,retain)UIWebView * pageWebView;
+@property (nonatomic, retain)UIWebView * listenNowWebView;
+@property (nonatomic, retain) UIWebView *pageWebView;
 
 - (IBAction)playVideoStream:(id)sender;
 - (IBAction)playAudioStream:(id)sender;
--(IBAction)stopAudioStream:(id)sender;
--(IBAction)loadWebPage:(id)sender;
--(void)loadWebPage;
+- (IBAction)stopAudioStream:(id)sender;
+- (IBAction)loadWebPage:(id)sender;
+- (void)loadWebPage;
 
 @end

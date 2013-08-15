@@ -10,8 +10,7 @@
 
 @interface Scene3ViewController : UIViewController
 
-
 - (IBAction)cancel:(id)sender;
--(void)loadURL:(NSString *)string;
+- (void)loadURL:(NSString *)string;
 
 @end

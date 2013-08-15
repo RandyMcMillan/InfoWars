@@ -28,7 +28,7 @@
 @end
 
 @implementation ViewController
-@synthesize watchNow, listenNow, listenNowWebView,pageWebView, myIndicator;
+@synthesize watchNow, listenNow, listenNowWebView, pageWebView, myIndicator;
 
 - (void)viewWillAppear:(BOOL)animated
 {
@@ -42,7 +42,7 @@
 
 	self.myIndicator.alpha = 0.0;
 	[self.myIndicator stopAnimating];
-    [self loadWebPage];
+	[self loadWebPage];
 	// Do any additional setup after loading the view, typically from a nib.
 }
 
@@ -53,7 +53,6 @@
 		@"http://rightbrainmedia.mpl.miisolutions.net/rightbrainmedia-originpull-2/_definst_/mp4:247daily1/playlist.m3u8";
 	[self loadVideo];
 }
-
 
 - (void)loadVideo
 {
@@ -92,39 +91,35 @@
 	// [self loadVideo];
 }
 
--(IBAction)stopAudioStream:(id)sender {
-
-    
-    
-    NSURL			*url		= [NSURL URLWithString:@"http://www.infowars.com/"];
+- (IBAction)stopAudioStream:(id)sender
+{
+	NSURL			*url		= [NSURL URLWithString:@"http://www.infowars.com/"];
 	NSURLRequest	*request	= [NSURLRequest requestWithURL:url];
-    
-	[self.listenNowWebView loadRequest:request];
 
+	[self.listenNowWebView loadRequest:request];
 }
 
--(void)loadWebPage {
-
-    NSURL			*url		= [NSURL URLWithString:@"http://www.infowars.com/"];
-	NSURLRequest	*request	= [NSURLRequest requestWithURL:url];
+- (void)loadWebPage
+{
     
+    self.myIndicator.alpha = 1.0;
+	[self.myIndicator startAnimating];
+	NSURL			*url		= [NSURL URLWithString:@"http://www.infowars.com/"];
+	NSURLRequest	*request	= [NSURLRequest requestWithURL:url];
+
 	[self.pageWebView loadRequest:request];
 }
 
+- (IBAction)loadWebPage:(id)sender
+{
+	[self loadWebPage];
+	//	NSURL			*url		= [NSURL URLWithString:@"http://www.infowars.com/"];
+	// NSURLRequest	*request	= [NSURLRequest requestWithURL:url];
 
--(IBAction)loadWebPage:(id)sender {
-
-    [self loadWebPage];
-    //	NSURL			*url		= [NSURL URLWithString:@"http://www.infowars.com/"];
-	//NSURLRequest	*request	= [NSURLRequest requestWithURL:url];
-    
-	//[self.pageWebView loadRequest:request];
-
+	// [self.pageWebView loadRequest:request];
 }
 
-
-
-//Further error handling refs
+// Further error handling refs
 ///https://github.com/ardalahmet/UIWebViewHttpStatusCodeHandling/
 // UIWebViewDelegate Methods
 
@@ -136,26 +131,23 @@
 
 - (void)webViewDidFinishLoad:(UIWebView *)webView
 {
-    
-    if (webView == self.pageWebView) {
-        
-        [UIWebView	animateWithDuration :3.0
-                                            delay				:0.5
-                                          options				:UIViewAnimationCurveEaseInOut
-                                        animations			:^{
-                                            self.pageWebView.alpha = 1.0;
-                                        }
-         
-                                        completion			:^(BOOL finished) {
-                                            //self.myIndicator.hidden = TRUE;
-                                        }
-         
-         ];
+	if (webView == self.pageWebView) {
+		[UIWebView	animateWithDuration :3.0
+					delay				:0.5
+					options				:UIViewAnimationCurveEaseInOut
+					animations			:^{
+			self.pageWebView.alpha = 1.0;
+		}
 
-        
-        
-        //self.pageWebView.hidden = FALSE;
-    }
+					completion			:^(BOOL finished) {
+			// self.myIndicator.hidden = TRUE;
+		}
+
+		];
+
+		// self.pageWebView.hidden = FALSE;
+	}
+
 	NSLog(@"webViewDidFinishLoad");
 	self.myIndicator.hidden = TRUE;
 }
