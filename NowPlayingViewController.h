@@ -15,11 +15,12 @@
 #import <UIKit/UIKit.h>
 #import "AVFoundation/AVFoundation.h"
 #import "AudioToolbox/AudioToolbox.h"
+#import <MediaPlayer/MediaPlayer.h>
 
 @class AudioStreamer, LevelMeterView;
 
-@interface NowPlayingViewController : UIViewController
-{
+@interface NowPlayingViewController : UIViewController <UIWebViewDelegate> {
+    
 	IBOutlet UITextField *downloadSourceField;
 	IBOutlet UIButton *button;
 	IBOutlet UIView *volumeSlider;
@@ -64,6 +65,20 @@
 - (void)updateProgress:(NSTimer *)updatedTimer;
 - (IBAction)sliderMoved:(UISlider *)aSlider;
 - (void)changeChannel:(int)channelIndex;
+
+
+@property (nonatomic, retain)UIWebView * listenNowWebView;
+@property (nonatomic, retain) UIWebView *pageWebView;
+@property (nonatomic,retain)UIView *pageWebViewContainer;
+
+- (IBAction)playVideoStream:(id)sender;
+- (IBAction)playAudioStream:(id)sender;
+- (IBAction)stopAudioStream:(id)sender;
+- (IBAction)loadWebPage:(id)sender;
+- (void)loadWebPage;
+- (void)playAudioStream;
+
+
 
 @end
 
