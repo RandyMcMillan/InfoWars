@@ -73,7 +73,7 @@
 
 - (void)playAudioStream {
 
-    
+   /*
     self.myIndicator.alpha = 1.0;
 	[self.myIndicator startAnimating];
     
@@ -94,6 +94,9 @@
 	///for iphone
 	// self.movieURLString = @"http://www.infowars.com/stream.pls";
 	// [self loadVideo];
+    
+    
+    */
     
 
 }
