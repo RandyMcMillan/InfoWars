@@ -112,7 +112,7 @@
                                     <action selector="loadWebPage:" destination="nSk-CR-6Ds" eventType="touchUpInside" id="KNh-Xv-LSI"/>
                                 </connections>
                             </button>
-                            <view contentMode="scaleToFill" id="L9W-MU-heM">
+                            <view alpha="0.0" contentMode="scaleToFill" id="L9W-MU-heM">
                                 <rect key="frame" x="0.0" y="204" width="768" height="617"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                                 <subviews>
@@ -147,6 +147,7 @@
                         <outlet property="listenNowWebView" destination="NHR-Bf-5fP" id="c0J-CJ-A7i"/>
                         <outlet property="myIndicator" destination="hli-da-Oqd" id="UhJ-6C-Gdt"/>
                         <outlet property="pageWebView" destination="BYv-GY-JkI" id="8II-49-0xo"/>
+                        <outlet property="pageWebViewContainer" destination="L9W-MU-heM" id="AVV-Ki-mxz"/>
                         <outlet property="watchNow" destination="gGT-y9-KG7" id="Nvq-Ut-bCh"/>
                     </connections>
                 </viewController>
@@ -336,6 +337,7 @@
                 <relationship kind="outlet" name="listenNowWebView" candidateClass="UIWebView"/>
                 <relationship kind="outlet" name="myIndicator" candidateClass="UIActivityIndicatorView"/>
                 <relationship kind="outlet" name="pageWebView" candidateClass="UIWebView"/>
+                <relationship kind="outlet" name="pageWebViewContainer" candidateClass="UIView"/>
                 <relationship kind="outlet" name="watchNow" candidateClass="UIButton"/>
             </relationships>
         </class>

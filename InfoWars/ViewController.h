@@ -13,6 +13,7 @@
 
 @property (nonatomic, retain)UIWebView * listenNowWebView;
 @property (nonatomic, retain) UIWebView *pageWebView;
+@property (nonatomic,retain)UIView *pageWebViewContainer;
 
 - (IBAction)playVideoStream:(id)sender;
 - (IBAction)playAudioStream:(id)sender;

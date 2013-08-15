@@ -15,6 +15,7 @@
 	IBOutlet UIWebView					*listenNowWebView;
 	IBOutlet UIWebView					*pageWebView;
 	IBOutlet UIActivityIndicatorView	*myIndicator;
+	IBOutlet UIView	*pageWebViewContainer;
 }
 
 @property (nonatomic, readwrite) NSString	*movieURLString;
@@ -39,6 +40,8 @@
 {
 	[super viewDidLoad];
 	[self startReach];
+
+    self.pageWebView.userInteractionEnabled = FALSE;
 
 	self.myIndicator.alpha = 0.0;
 	[self.myIndicator stopAnimating];
@@ -137,10 +140,13 @@
 					options				:UIViewAnimationCurveEaseInOut
 					animations			:^{
 			self.pageWebView.alpha = 1.0;
+            self.pageWebViewContainer.alpha = 1.0;
 		}
 
 					completion			:^(BOOL finished) {
-			// self.myIndicator.hidden = TRUE;
+                        
+			self.pageWebView.userInteractionEnabled = TRUE;
+                        
 		}
 
 		];
