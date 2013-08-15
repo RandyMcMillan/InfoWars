@@ -20,10 +20,12 @@
 #import <MediaPlayer/MediaPlayer.h>
 #import <CFNetwork/CFNetwork.h>
 
-NSString * const HD1_HIGH_QUALITY = @"http://stream.wmnf.org:8000/wmnf_high_quality";
-NSString * const HD2 = @"http://131.247.176.1:8000/stream";
-NSString * const HD3 = @"http://stream.wmnf.org:8000/wmnf_hd3";
-NSString * const HD4 = @"http://stream.wmnf.org:8000/wmnf_hd4";
+//http://stream.infowars.com:80
+
+NSString * const HD1_HIGH_QUALITY = @"http://stream.infowars.com:80";
+NSString * const HD2 = @"http://stream.infowars.com:80";
+NSString * const HD3 = @"http://stream.infowars.com:80";
+NSString * const HD4 = @"http://stream.infowars.com:80";
 
 @implementation NowPlayingViewController
 
@@ -155,7 +157,7 @@ NSString * const HD4 = @"http://stream.wmnf.org:8000/wmnf_hd4";
 - (void)createStreamer:(NSString *)urlString
 {
     NSLog(@">>> Entering %s <<<", __PRETTY_FUNCTION__);
-    self.channelList = [[NSArray alloc] initWithObjects:@"http://stream.wmnf.org:8000/wmnf_high_quality",@"http://131.247.176.1:8000/stream",@"http://stream.wmnf.org:8000/wmnf_hd3",@"http://stream.wmnf.org:8000/wmnf_hd4", nil];
+    self.channelList = [[NSArray alloc] initWithObjects:@"http://stream.infowars.com:80", nil];
     
 	if (streamer)
 	{
@@ -223,7 +225,8 @@ NSString * const HD4 = @"http://stream.wmnf.org:8000/wmnf_hd4";
 {
 	[super viewDidLoad];
     
-    self.channelList = [[NSArray alloc] initWithObjects:@"http://stream.wmnf.org:8000/wmnf_high_quality",@"http://131.247.176.1:8000/stream",@"http://stream.wmnf.org:8000/wmnf_hd3",@"http://stream.wmnf.org:8000/wmnf_hd4", nil];
+    //self.channelList = [[NSArray alloc] initWithObjects:@"http://stream.wmnf.org:8000/wmnf_high_quality",@"http://131.247.176.1:8000/stream",@"http://stream.wmnf.org:8000/wmnf_hd3",@"http://stream.wmnf.org:8000/wmnf_hd4", nil];
+    self.channelList = [[NSArray alloc] initWithObjects:@"http://stream.infowars.com:80", nil];
     currentChannel = 0;
 	
 	MPVolumeView *volumeView = [[[MPVolumeView alloc] initWithFrame:volumeSlider.bounds] autorelease];
@@ -516,7 +519,7 @@ NSString * const HD4 = @"http://stream.wmnf.org:8000/wmnf_hd4";
 
 - (void)changeChannel:(int)channelIndex {
     NSLog(@">>> Entering %s <<<", __PRETTY_FUNCTION__);
-    self.channelList = [[NSArray alloc] initWithObjects:@"http://stream.wmnf.org:8000/wmnf_high_quality",@"http://131.247.176.1:8000/stream",@"http://stream.wmnf.org:8000/wmnf_hd3",@"http://stream.wmnf.org:8000/wmnf_hd4", nil];
+    self.channelList = [[NSArray alloc] initWithObjects:@"http://stream.infowars.com:80", nil];
    
     [streamer stop];
     [self destroyStreamer];
