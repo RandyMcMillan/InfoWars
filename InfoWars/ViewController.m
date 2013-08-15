@@ -13,6 +13,7 @@
 	IBOutlet UIButton					*watchNow;
 	IBOutlet UIButton					*listenNow;
 	IBOutlet UIWebView					*listenNowWebView;
+	IBOutlet UIWebView					*pageWebView;
 	IBOutlet UIActivityIndicatorView	*myIndicator;
 }
 
@@ -27,7 +28,7 @@
 @end
 
 @implementation ViewController
-@synthesize watchNow, listenNow, listenNowWebView, myIndicator;
+@synthesize watchNow, listenNow, listenNowWebView,pageWebView, myIndicator;
 
 - (void)viewWillAppear:(BOOL)animated
 {
@@ -41,7 +42,7 @@
 
 	self.myIndicator.alpha = 0.0;
 	[self.myIndicator stopAnimating];
-
+    [self loadWebPage];
 	// Do any additional setup after loading the view, typically from a nib.
 }
 
@@ -51,6 +52,20 @@
 	self.movieURLString =
 		@"http://rightbrainmedia.mpl.miisolutions.net/rightbrainmedia-originpull-2/_definst_/mp4:247daily1/playlist.m3u8";
 	[self loadVideo];
+}
+
+
+- (void)loadVideo
+{
+	NSURL			*url		= [NSURL URLWithString:@""];
+	NSURLRequest	*request	= [NSURLRequest requestWithURL:url];
+
+	[self.listenNowWebView loadRequest:request];
+
+	NSURL						*movieURL		= [NSURL URLWithString:self.movieURLString];
+	MPMoviePlayerViewController *moviePlayer	=
+		[[MPMoviePlayerViewController alloc] initWithContentURL:movieURL];
+	[self presentMoviePlayerViewControllerAnimated:moviePlayer];
 }
 
 - (IBAction)playAudioStream:(id)sender
@@ -77,18 +92,36 @@
 	// [self loadVideo];
 }
 
-- (void)loadVideo
-{
-	NSURL			*url		= [NSURL URLWithString:@""];
-	NSURLRequest	*request	= [NSURLRequest requestWithURL:url];
+-(IBAction)stopAudioStream:(id)sender {
 
+    
+    
+    NSURL			*url		= [NSURL URLWithString:@"http://www.infowars.com/"];
+	NSURLRequest	*request	= [NSURLRequest requestWithURL:url];
+    
 	[self.listenNowWebView loadRequest:request];
 
-	NSURL						*movieURL		= [NSURL URLWithString:self.movieURLString];
-	MPMoviePlayerViewController *moviePlayer	=
-		[[MPMoviePlayerViewController alloc] initWithContentURL:movieURL];
-	[self presentMoviePlayerViewControllerAnimated:moviePlayer];
 }
+
+-(void)loadWebPage {
+
+    NSURL			*url		= [NSURL URLWithString:@"http://www.infowars.com/"];
+	NSURLRequest	*request	= [NSURLRequest requestWithURL:url];
+    
+	[self.pageWebView loadRequest:request];
+}
+
+
+-(IBAction)loadWebPage:(id)sender {
+
+    [self loadWebPage];
+    //	NSURL			*url		= [NSURL URLWithString:@"http://www.infowars.com/"];
+	//NSURLRequest	*request	= [NSURLRequest requestWithURL:url];
+    
+	//[self.pageWebView loadRequest:request];
+
+}
+
 
 
 //Further error handling refs
@@ -103,6 +136,26 @@
 
 - (void)webViewDidFinishLoad:(UIWebView *)webView
 {
+    
+    if (webView == self.pageWebView) {
+        
+        [UIWebView	animateWithDuration :3.0
+                                            delay				:0.5
+                                          options				:UIViewAnimationCurveEaseInOut
+                                        animations			:^{
+                                            self.pageWebView.alpha = 1.0;
+                                        }
+         
+                                        completion			:^(BOOL finished) {
+                                            //self.myIndicator.hidden = TRUE;
+                                        }
+         
+         ];
+
+        
+        
+        //self.pageWebView.hidden = FALSE;
+    }
 	NSLog(@"webViewDidFinishLoad");
 	self.myIndicator.hidden = TRUE;
 }
