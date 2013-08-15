@@ -97,7 +97,10 @@
     
     
     */
-    
+    self.movieURLString =
+    @"http://www.infowars.com/stream.pls";
+    [self loadVideo];
+ 
 
 }
 - (IBAction)playAudioStream:(id)sender {

@@ -13,6 +13,14 @@
 		485253B917BD5DA90012F8EA /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 485253B817BD5DA90012F8EA /* AudioToolbox.framework */; };
 		485253BB17BD5DB70012F8EA /* CoreMedia.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 485253BA17BD5DB70012F8EA /* CoreMedia.framework */; };
 		485253BD17BD5DBF0012F8EA /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 485253BC17BD5DBF0012F8EA /* AVFoundation.framework */; };
+		485253C517BD5E420012F8EA /* UIDevice+Hardware.m in Sources */ = {isa = PBXBuildFile; fileRef = 485253C017BD5E420012F8EA /* UIDevice+Hardware.m */; };
+		485253C617BD5E420012F8EA /* UIDevice+Hardware.m in Sources */ = {isa = PBXBuildFile; fileRef = 485253C017BD5E420012F8EA /* UIDevice+Hardware.m */; };
+		485253C717BD5E420012F8EA /* LevelMeterView.m in Sources */ = {isa = PBXBuildFile; fileRef = 485253C217BD5E420012F8EA /* LevelMeterView.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		485253C817BD5E420012F8EA /* LevelMeterView.m in Sources */ = {isa = PBXBuildFile; fileRef = 485253C217BD5E420012F8EA /* LevelMeterView.m */; };
+		485253C917BD5E420012F8EA /* AudioStreamer.m in Sources */ = {isa = PBXBuildFile; fileRef = 485253C417BD5E420012F8EA /* AudioStreamer.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		485253CA17BD5E420012F8EA /* AudioStreamer.m in Sources */ = {isa = PBXBuildFile; fileRef = 485253C417BD5E420012F8EA /* AudioStreamer.m */; };
+		485253CD17BD5E860012F8EA /* NowPlayingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 485253CC17BD5E860012F8EA /* NowPlayingViewController.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		485253CE17BD5E860012F8EA /* NowPlayingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 485253CC17BD5E860012F8EA /* NowPlayingViewController.m */; };
 		4861DE3917B9BE490072CCE3 /* Scene3ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4861DE3817B9BE490072CCE3 /* Scene3ViewController.m */; };
 		4861DE3B17B9C5760072CCE3 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 4861DE3A17B9C5760072CCE3 /* Default.png */; };
 		4861DE3D17B9C57B0072CCE3 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 4861DE3C17B9C57B0072CCE3 /* Default@2x.png */; };
@@ -76,6 +84,14 @@
 		485253B817BD5DA90012F8EA /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
 		485253BA17BD5DB70012F8EA /* CoreMedia.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMedia.framework; path = System/Library/Frameworks/CoreMedia.framework; sourceTree = SDKROOT; };
 		485253BC17BD5DBF0012F8EA /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		485253BF17BD5E420012F8EA /* UIDevice+Hardware.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIDevice+Hardware.h"; sourceTree = "<group>"; };
+		485253C017BD5E420012F8EA /* UIDevice+Hardware.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIDevice+Hardware.m"; sourceTree = "<group>"; };
+		485253C117BD5E420012F8EA /* LevelMeterView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LevelMeterView.h; sourceTree = "<group>"; };
+		485253C217BD5E420012F8EA /* LevelMeterView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LevelMeterView.m; sourceTree = "<group>"; };
+		485253C317BD5E420012F8EA /* AudioStreamer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AudioStreamer.h; sourceTree = "<group>"; };
+		485253C417BD5E420012F8EA /* AudioStreamer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AudioStreamer.m; sourceTree = "<group>"; };
+		485253CB17BD5E860012F8EA /* NowPlayingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NowPlayingViewController.h; sourceTree = "<group>"; };
+		485253CC17BD5E860012F8EA /* NowPlayingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NowPlayingViewController.m; sourceTree = "<group>"; };
 		4861DE3717B9BE490072CCE3 /* Scene3ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Scene3ViewController.h; sourceTree = "<group>"; };
 		4861DE3817B9BE490072CCE3 /* Scene3ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Scene3ViewController.m; sourceTree = "<group>"; };
 		4861DE3A17B9C5760072CCE3 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
@@ -160,9 +176,26 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		485253BE17BD5E290012F8EA /* AudioStreamer */ = {
+			isa = PBXGroup;
+			children = (
+				48F897CE17B9B0DE000C95A1 /* Images */,
+				485253CB17BD5E860012F8EA /* NowPlayingViewController.h */,
+				485253CC17BD5E860012F8EA /* NowPlayingViewController.m */,
+				485253BF17BD5E420012F8EA /* UIDevice+Hardware.h */,
+				485253C017BD5E420012F8EA /* UIDevice+Hardware.m */,
+				485253C117BD5E420012F8EA /* LevelMeterView.h */,
+				485253C217BD5E420012F8EA /* LevelMeterView.m */,
+				485253C317BD5E420012F8EA /* AudioStreamer.h */,
+				485253C417BD5E420012F8EA /* AudioStreamer.m */,
+			);
+			name = AudioStreamer;
+			sourceTree = "<group>";
+		};
 		48F3B4EF17B81BE900A52433 = {
 			isa = PBXGroup;
 			children = (
+				485253BE17BD5E290012F8EA /* AudioStreamer */,
 				48F3164D17BAF8DA00F54E81 /* 144x144.png */,
 				48F3164B17BAF88000F54E81 /* 72x72.png */,
 				48F3164917BAF85600F54E81 /* 114x114.png */,
@@ -236,7 +269,6 @@
 		48F3B50217B81BE900A52433 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				48F897CE17B9B0DE000C95A1 /* Images */,
 				48F897C617B9AE96000C95A1 /* Reachability.h */,
 				48F897C717B9AE96000C95A1 /* Reachability.m */,
 				48F3B50317B81BE900A52433 /* InfoWars-Info.plist */,
@@ -275,7 +307,8 @@
 				48F897D217B9B0DE000C95A1 /* jonesgaze.jpg */,
 				48F897D317B9B0DE000C95A1 /* ListenNow.jpg */,
 			);
-			path = Images;
+			name = Images;
+			path = InfoWars/Images;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -416,6 +449,10 @@
 				48F3B54417B82D8600A52433 /* PersonDetailViewController.m in Sources */,
 				48F897C817B9AE96000C95A1 /* Reachability.m in Sources */,
 				4861DE3917B9BE490072CCE3 /* Scene3ViewController.m in Sources */,
+				485253C517BD5E420012F8EA /* UIDevice+Hardware.m in Sources */,
+				485253C717BD5E420012F8EA /* LevelMeterView.m in Sources */,
+				485253C917BD5E420012F8EA /* AudioStreamer.m in Sources */,
+				485253CD17BD5E860012F8EA /* NowPlayingViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -425,6 +462,10 @@
 			files = (
 				48F3B53017B81BE900A52433 /* InfoWarsTests.m in Sources */,
 				48F897C917B9AE96000C95A1 /* Reachability.m in Sources */,
+				485253C617BD5E420012F8EA /* UIDevice+Hardware.m in Sources */,
+				485253C817BD5E420012F8EA /* LevelMeterView.m in Sources */,
+				485253CA17BD5E420012F8EA /* AudioStreamer.m in Sources */,
+				485253CE17BD5E860012F8EA /* NowPlayingViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
