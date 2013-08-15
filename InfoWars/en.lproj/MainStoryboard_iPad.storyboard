@@ -4,10 +4,10 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="2083"/>
     </dependencies>
     <scenes>
-        <!--Main View Controller-->
+        <!--Now Playing View Controller-->
         <scene sceneID="hui-Hd-iOa">
             <objects>
-                <viewController id="nSk-CR-6Ds" customClass="MainViewController" sceneMemberID="viewController">
+                <viewController id="nSk-CR-6Ds" customClass="NowPlayingViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="CHZ-tu-JdH">
                         <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -352,41 +352,38 @@
         <image name="jonesgaze.jpg" width="329" height="429"/>
     </resources>
     <classes>
-        <class className="MainViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/MainViewController.h"/>
-            <relationships>
-                <relationship kind="action" name="loadWebPage:"/>
-                <relationship kind="action" name="playAudioStream:"/>
-                <relationship kind="action" name="playVideoStream:"/>
-                <relationship kind="action" name="stopAudioStream:"/>
-                <relationship kind="outlet" name="listenNow" candidateClass="UIButton"/>
-                <relationship kind="outlet" name="listenNowWebView" candidateClass="UIWebView"/>
-                <relationship kind="outlet" name="myIndicator" candidateClass="UIActivityIndicatorView"/>
-                <relationship kind="outlet" name="pageWebView" candidateClass="UIWebView"/>
-                <relationship kind="outlet" name="pageWebViewContainer" candidateClass="UIView"/>
-                <relationship kind="outlet" name="watchNow" candidateClass="UIButton"/>
-            </relationships>
+        <class className="LevelMeterView" superclassName="UIView">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/LevelMeterView.h"/>
         </class>
         <class className="NowPlayingViewController" superclassName="UIViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/NowPlayingViewController.h"/>
             <relationships>
                 <relationship kind="action" name="buttonPressed:"/>
-                <relationship kind="action" name="callButtonPressed:"/>
                 <relationship kind="action" name="cancel:"/>
-                <relationship kind="action" name="emailButtonPressed:"/>
+                <relationship kind="action" name="loadWebPage:"/>
+                <relationship kind="action" name="playAudioStream:"/>
+                <relationship kind="action" name="playVideoStream:"/>
                 <relationship kind="action" name="sliderMoved:" candidateClass="UISlider"/>
+                <relationship kind="action" name="stopAudioStream:"/>
                 <relationship kind="outlet" name="button" candidateClass="UIButton"/>
                 <relationship kind="outlet" name="callButton" candidateClass="UIButton"/>
                 <relationship kind="outlet" name="downloadSourceField" candidateClass="UITextField"/>
                 <relationship kind="outlet" name="emailButton" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="levelMeterView" candidateClass="LevelMeterView"/>
+                <relationship kind="outlet" name="listenNow" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="listenNowWebView" candidateClass="UIWebView"/>
                 <relationship kind="outlet" name="mainView" candidateClass="UIView"/>
                 <relationship kind="outlet" name="metadataAlbum" candidateClass="UITextField"/>
                 <relationship kind="outlet" name="metadataArtist" candidateClass="UITextField"/>
                 <relationship kind="outlet" name="metadataTitle" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="myIndicator" candidateClass="UIActivityIndicatorView"/>
+                <relationship kind="outlet" name="pageWebView" candidateClass="UIWebView"/>
+                <relationship kind="outlet" name="pageWebViewContainer" candidateClass="UIView"/>
                 <relationship kind="outlet" name="phoneLabel" candidateClass="UILabel"/>
                 <relationship kind="outlet" name="positionLabel" candidateClass="UILabel"/>
                 <relationship kind="outlet" name="progressSlider" candidateClass="UISlider"/>
                 <relationship kind="outlet" name="volumeSlider" candidateClass="UIView"/>
+                <relationship kind="outlet" name="watchNow" candidateClass="UIButton"/>
             </relationships>
         </class>
         <class className="Scene2ViewController" superclassName="UIViewController">

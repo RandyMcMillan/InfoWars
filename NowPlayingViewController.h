@@ -34,11 +34,10 @@
     
     IBOutlet UILabel *phoneLabel;
     IBOutlet UIView *mainView;
-    
+    IBOutlet LevelMeterView *levelMeterView;
 	AudioStreamer *streamer;
 	NSTimer *progressUpdateTimer;
 	NSTimer *levelMeterUpdateTimer;
-	LevelMeterView *levelMeterView;
 	NSString *currentArtist;
 	NSString *currentTitle;
     NSString *currentChannel;
@@ -51,7 +50,7 @@
 @property (retain) NSString* currentTitle;
 @property (retain, nonatomic) NSArray* channelList;
 @property (retain, nonatomic) NSString* currentChannel;
-
+@property (nonatomic,retain)  LevelMeterView *levelMeterView;
 
 //@property (nonatomic) BOOL uiIsVisible;
 

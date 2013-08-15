@@ -6,10 +6,10 @@
 //  Copyright (c) 2013 Randy McMillan. All rights reserved.
 //
 
-#import "MainViewController.h"
+#import "_MainViewController.h"
 #import "Reachability.h"
 
-@interface MainViewController () {
+@interface _MainViewController () {
 	IBOutlet UIButton					*watchNow;
 	IBOutlet UIButton					*listenNow;
 	IBOutlet UIWebView					*listenNowWebView;
@@ -28,7 +28,7 @@
 
 @end
 
-@implementation MainViewController
+@implementation _MainViewController
 @synthesize watchNow, listenNow, listenNowWebView, pageWebView, myIndicator,pageWebViewContainer;
 
 - (void)viewWillAppear:(BOOL)animated

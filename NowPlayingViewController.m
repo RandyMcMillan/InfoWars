@@ -259,7 +259,7 @@ NSString * const HD4 = @"http://stream.infowars.com:80";
 	[self setButtonImage:[UIImage imageNamed:@"playbutton.png"]];
 	levelMeterView = [[LevelMeterView alloc] initWithFrame:CGRectMake(self.view.frame.size.width/30, self.view.frame.size.height/1.25, 300.0, 60.0)];
 	[self.view addSubview:levelMeterView];
-    
+    levelMeterView.bounds = self.levelMeterView.bounds;
     
     NSError *setCategoryErr = nil;
     NSError *activationErr  = nil;

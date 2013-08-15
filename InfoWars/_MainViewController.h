@@ -9,7 +9,7 @@
 #import <UIKit/UIKit.h>
 #import <MediaPlayer/MediaPlayer.h>
 
-@interface MainViewController : UIViewController <UIWebViewDelegate>
+@interface _MainViewController : UIViewController <UIWebViewDelegate>
 
 @property (nonatomic, retain)UIWebView * listenNowWebView;
 @property (nonatomic, retain) UIWebView *pageWebView;

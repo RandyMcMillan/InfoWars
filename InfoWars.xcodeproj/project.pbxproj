@@ -40,7 +40,7 @@
 		48F3B50C17B81BE900A52433 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 48F3B50B17B81BE900A52433 /* AppDelegate.m */; };
 		48F3B51517B81BE900A52433 /* MainStoryboard_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 48F3B51317B81BE900A52433 /* MainStoryboard_iPhone.storyboard */; };
 		48F3B51817B81BE900A52433 /* MainStoryboard_iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 48F3B51617B81BE900A52433 /* MainStoryboard_iPad.storyboard */; };
-		48F3B51B17B81BE900A52433 /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 48F3B51A17B81BE900A52433 /* MainViewController.m */; };
+		48F3B51B17B81BE900A52433 /* _MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 48F3B51A17B81BE900A52433 /* _MainViewController.m */; };
 		48F3B52317B81BE900A52433 /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 48F3B52217B81BE900A52433 /* SenTestingKit.framework */; };
 		48F3B52417B81BE900A52433 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 48F3B4FB17B81BE900A52433 /* UIKit.framework */; };
 		48F3B52517B81BE900A52433 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 48F3B4FD17B81BE900A52433 /* Foundation.framework */; };
@@ -111,8 +111,8 @@
 		48F3B50B17B81BE900A52433 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		48F3B51417B81BE900A52433 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard_iPhone.storyboard; sourceTree = "<group>"; };
 		48F3B51717B81BE900A52433 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard_iPad.storyboard; sourceTree = "<group>"; };
-		48F3B51917B81BE900A52433 /* MainViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MainViewController.h; sourceTree = "<group>"; };
-		48F3B51A17B81BE900A52433 /* MainViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MainViewController.m; sourceTree = "<group>"; };
+		48F3B51917B81BE900A52433 /* _MainViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = _MainViewController.h; sourceTree = "<group>"; };
+		48F3B51A17B81BE900A52433 /* _MainViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = _MainViewController.m; sourceTree = "<group>"; };
 		48F3B52117B81BE900A52433 /* InfoWarsTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = InfoWarsTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
 		48F3B52217B81BE900A52433 /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
 		48F3B52A17B81BE900A52433 /* InfoWarsTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "InfoWarsTests-Info.plist"; sourceTree = "<group>"; };
@@ -239,8 +239,8 @@
 				48F3B53917B81E0300A52433 /* Scene2ViewController.h */,
 				48F3B53A17B81E0300A52433 /* Scene2ViewController.m */,
 				48F3B51617B81BE900A52433 /* MainStoryboard_iPad.storyboard */,
-				48F3B51917B81BE900A52433 /* MainViewController.h */,
-				48F3B51A17B81BE900A52433 /* MainViewController.m */,
+				48F3B51917B81BE900A52433 /* _MainViewController.h */,
+				48F3B51A17B81BE900A52433 /* _MainViewController.m */,
 				48F3B50217B81BE900A52433 /* Supporting Files */,
 			);
 			path = InfoWars;
@@ -422,7 +422,7 @@
 			files = (
 				48F3B50817B81BE900A52433 /* main.m in Sources */,
 				48F3B50C17B81BE900A52433 /* AppDelegate.m in Sources */,
-				48F3B51B17B81BE900A52433 /* MainViewController.m in Sources */,
+				48F3B51B17B81BE900A52433 /* _MainViewController.m in Sources */,
 				48F3B53B17B81E0300A52433 /* Scene2ViewController.m in Sources */,
 				48F897C817B9AE96000C95A1 /* Reachability.m in Sources */,
 				485253C517BD5E420012F8EA /* UIDevice+Hardware.m in Sources */,
