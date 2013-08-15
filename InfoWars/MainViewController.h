@@ -9,7 +9,7 @@
 #import <UIKit/UIKit.h>
 #import <MediaPlayer/MediaPlayer.h>
 
-@interface ViewController : UIViewController <UIWebViewDelegate>
+@interface MainViewController : UIViewController <UIWebViewDelegate>
 
 @property (nonatomic, retain)UIWebView * listenNowWebView;
 @property (nonatomic, retain) UIWebView *pageWebView;
@@ -20,5 +20,6 @@
 - (IBAction)stopAudioStream:(id)sender;
 - (IBAction)loadWebPage:(id)sender;
 - (void)loadWebPage;
+- (void)playAudioStream;
 
 @end

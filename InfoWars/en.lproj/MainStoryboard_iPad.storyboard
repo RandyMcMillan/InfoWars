@@ -4,10 +4,10 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="2083"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Main View Controller-->
         <scene sceneID="hui-Hd-iOa">
             <objects>
-                <viewController id="nSk-CR-6Ds" customClass="ViewController" sceneMemberID="viewController">
+                <viewController id="nSk-CR-6Ds" customClass="MainViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="CHZ-tu-JdH">
                         <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -324,21 +324,6 @@
                 <relationship kind="action" name="doneButtonPressed:"/>
                 <relationship kind="outlet" name="myIndicator" candidateClass="UIActivityIndicatorView"/>
                 <relationship kind="outlet" name="webView" candidateClass="UIWebView"/>
-            </relationships>
-        </class>
-        <class className="ViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/ViewController.h"/>
-            <relationships>
-                <relationship kind="action" name="loadWebPage:"/>
-                <relationship kind="action" name="playAudioStream:"/>
-                <relationship kind="action" name="playVideoStream:"/>
-                <relationship kind="action" name="stopAudioStream:"/>
-                <relationship kind="outlet" name="listenNow" candidateClass="UIButton"/>
-                <relationship kind="outlet" name="listenNowWebView" candidateClass="UIWebView"/>
-                <relationship kind="outlet" name="myIndicator" candidateClass="UIActivityIndicatorView"/>
-                <relationship kind="outlet" name="pageWebView" candidateClass="UIWebView"/>
-                <relationship kind="outlet" name="pageWebViewContainer" candidateClass="UIView"/>
-                <relationship kind="outlet" name="watchNow" candidateClass="UIButton"/>
             </relationships>
         </class>
     </classes>

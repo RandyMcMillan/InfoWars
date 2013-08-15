@@ -4,10 +4,10 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="2083"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Main View Controller-->
         <scene sceneID="5">
             <objects>
-                <viewController id="2" customClass="ViewController" sceneMemberID="viewController">
+                <viewController id="2" customClass="MainViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="3">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -17,7 +17,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="F1Q-ax-cRF">
-                                <rect key="frame" x="-1" y="0.0" width="202" height="44"/>
+                                <rect key="frame" x="1" y="1" width="192" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="22"/>
                                 <state key="normal" title="INFOWARS.COM">
@@ -48,7 +48,7 @@
                                 </connections>
                             </button>
                             <webView contentMode="scaleToFill" id="vOV-lD-g4e">
-                                <rect key="frame" x="317.5" y="477" width="1" height="1"/>
+                                <rect key="frame" x="317" y="477" width="1" height="1"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMinY="YES"/>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <connections>
@@ -56,7 +56,7 @@
                                 </connections>
                             </webView>
                             <button opaque="NO" alpha="0.80000000000000004" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="19d-Zt-5f1">
-                                <rect key="frame" x="160" y="436.5" width="160" height="44"/>
+                                <rect key="frame" x="160" y="436" width="160" height="44"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMinY="YES"/>
                                 <color key="backgroundColor" red="0.0" green="0.069531468829012538" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
@@ -71,18 +71,34 @@
                                     <action selector="playAudioStream:" destination="2" eventType="touchUpInside" id="glN-WF-HVF"/>
                                 </connections>
                             </button>
-                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" style="whiteLarge" id="q8Q-mL-gq6">
-                                <rect key="frame" x="141" y="222" width="37" height="37"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
-                            </activityIndicatorView>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="mAw-oM-3fd">
-                                <rect key="frame" x="-8" y="32" width="496" height="2"/>
+                                <rect key="frame" x="0.0" y="30" width="320" height="2"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <view alpha="0.0" contentMode="scaleToFill" id="gbF-ri-aVx">
+                                <rect key="frame" x="0.0" y="32" width="320" height="380"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" heightSizable="YES"/>
+                                <subviews>
+                                    <webView contentMode="scaleToFill" scalesPageToFit="YES" id="zTE-L3-6SD">
+                                        <rect key="frame" x="13" y="7" width="293" height="362"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        <connections>
+                                            <outlet property="delegate" destination="2" id="0Oj-Pz-9TF"/>
+                                        </connections>
+                                    </webView>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" style="whiteLarge" id="q8Q-mL-gq6">
+                                <rect key="frame" x="141" y="222" width="37" height="37"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                                <color key="color" red="1" green="0.011788656139999999" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                            </activityIndicatorView>
                         </subviews>
                         <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
@@ -96,7 +112,9 @@
                     <connections>
                         <outlet property="listenNow" destination="19d-Zt-5f1" id="48W-k7-hiP"/>
                         <outlet property="listenNowWebView" destination="vOV-lD-g4e" id="zSE-Vs-4iE"/>
-                        <outlet property="myIndicator" destination="q8Q-mL-gq6" id="JuZ-9r-mIT"/>
+                        <outlet property="myIndicator" destination="q8Q-mL-gq6" id="Z5W-0B-NzX"/>
+                        <outlet property="pageWebView" destination="zTE-L3-6SD" id="0E0-3g-NDs"/>
+                        <outlet property="pageWebViewContainer" destination="gbF-ri-aVx" id="YdC-xn-npq"/>
                         <outlet property="watchNow" destination="wbg-Ns-QK9" id="JW7-A4-eIx"/>
                     </connections>
                 </viewController>
@@ -240,6 +258,21 @@
         <image name="jonesgaze.jpg" width="329" height="429"/>
     </resources>
     <classes>
+        <class className="MainViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/MainViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="loadWebPage:"/>
+                <relationship kind="action" name="playAudioStream:"/>
+                <relationship kind="action" name="playVideoStream:"/>
+                <relationship kind="action" name="stopAudioStream:"/>
+                <relationship kind="outlet" name="listenNow" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="listenNowWebView" candidateClass="UIWebView"/>
+                <relationship kind="outlet" name="myIndicator" candidateClass="UIActivityIndicatorView"/>
+                <relationship kind="outlet" name="pageWebView" candidateClass="UIWebView"/>
+                <relationship kind="outlet" name="pageWebViewContainer" candidateClass="UIView"/>
+                <relationship kind="outlet" name="watchNow" candidateClass="UIButton"/>
+            </relationships>
+        </class>
         <class className="Scene2ViewController" superclassName="UIViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/Scene2ViewController.h"/>
             <relationships>
@@ -247,17 +280,6 @@
                 <relationship kind="action" name="doneButtonPressed:"/>
                 <relationship kind="outlet" name="myIndicator" candidateClass="UIActivityIndicatorView"/>
                 <relationship kind="outlet" name="webView" candidateClass="UIWebView"/>
-            </relationships>
-        </class>
-        <class className="ViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/ViewController.h"/>
-            <relationships>
-                <relationship kind="action" name="playAudioStream:"/>
-                <relationship kind="action" name="playVideoStream:"/>
-                <relationship kind="outlet" name="listenNow" candidateClass="UIButton"/>
-                <relationship kind="outlet" name="listenNowWebView" candidateClass="UIWebView"/>
-                <relationship kind="outlet" name="myIndicator" candidateClass="UIActivityIndicatorView"/>
-                <relationship kind="outlet" name="watchNow" candidateClass="UIButton"/>
             </relationships>
         </class>
     </classes>

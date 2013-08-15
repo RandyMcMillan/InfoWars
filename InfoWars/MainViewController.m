@@ -6,10 +6,10 @@
 //  Copyright (c) 2013 Randy McMillan. All rights reserved.
 //
 
-#import "ViewController.h"
+#import "MainViewController.h"
 #import "Reachability.h"
 
-@interface ViewController () {
+@interface MainViewController () {
 	IBOutlet UIButton					*watchNow;
 	IBOutlet UIButton					*listenNow;
 	IBOutlet UIWebView					*listenNowWebView;
@@ -28,8 +28,8 @@
 
 @end
 
-@implementation ViewController
-@synthesize watchNow, listenNow, listenNowWebView, pageWebView, myIndicator;
+@implementation MainViewController
+@synthesize watchNow, listenNow, listenNowWebView, pageWebView, myIndicator,pageWebViewContainer;
 
 - (void)viewWillAppear:(BOOL)animated
 {
@@ -70,28 +70,37 @@
 	[self presentMoviePlayerViewControllerAnimated:moviePlayer];
 }
 
-- (IBAction)playAudioStream:(id)sender
-{
-	self.myIndicator.alpha = 1.0;
+
+- (void)playAudioStream {
+
+    
+    self.myIndicator.alpha = 1.0;
 	[self.myIndicator startAnimating];
-
+    
 	NSLog(@"playAudioStream");
-
+    
 	// NOTE set up if then logic for devices
 	// for better control
-
+    
 	// Reference AudioStream fork for config
 	// need to be better support for ipad vs iphone
 	// preserve main screen for other user activity
-
+    
 	NSURL			*url		= [NSURL URLWithString:@"http://www.infowars.com/stream.pls"];
 	NSURLRequest	*request	= [NSURLRequest requestWithURL:url];
-
+    
 	[self.listenNowWebView loadRequest:request];
-
+    
 	///for iphone
 	// self.movieURLString = @"http://www.infowars.com/stream.pls";
 	// [self loadVideo];
+    
+
+}
+- (IBAction)playAudioStream:(id)sender {
+
+    [self playAudioStream];
+ 
 }
 
 - (IBAction)stopAudioStream:(id)sender

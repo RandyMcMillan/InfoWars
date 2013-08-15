@@ -6,10 +6,10 @@
 //  Copyright (c) 2013 Randy McMillan. All rights reserved.
 //
 
-#import "ViewController.h"
+#import "MainViewController.h"
 #import "Person.h"
 
-@interface PersonDetailViewController : ViewController {}
+@interface PersonDetailViewController : MainViewController {}
 
 
 
