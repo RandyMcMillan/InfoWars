@@ -962,4 +962,6 @@ NSString *const HD4 = @"http://stream.infowars.com:80";
 	// Dispose of any resources that can be recreated.
 }
 
+- (IBAction)cancel:(id)sender{}
+
 @end
