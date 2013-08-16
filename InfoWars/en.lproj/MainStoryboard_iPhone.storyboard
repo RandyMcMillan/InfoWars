@@ -220,7 +220,7 @@
                                     <action selector="stopAudioStream:" destination="ghA-rL-hMj" eventType="touchUpInside" id="HwT-ZU-SpN"/>
                                 </connections>
                             </button>
-                            <webView contentMode="scaleToFill" id="vOV-lD-g4e">
+                            <webView hidden="YES" contentMode="scaleToFill" id="vOV-lD-g4e">
                                 <rect key="frame" x="79" y="310" width="1" height="1"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMinY="YES"/>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>

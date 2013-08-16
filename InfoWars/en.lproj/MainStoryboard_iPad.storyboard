@@ -418,7 +418,9 @@
             <source key="sourceIdentifier" type="project" relativePath="./Classes/NowPlayingViewController.h"/>
             <relationships>
                 <relationship kind="action" name="buttonPressed:"/>
+                <relationship kind="action" name="callButtonPressed:"/>
                 <relationship kind="action" name="cancel:"/>
+                <relationship kind="action" name="emailButtonPressed:"/>
                 <relationship kind="action" name="loadWebPage:"/>
                 <relationship kind="action" name="playAudioStream:"/>
                 <relationship kind="action" name="playVideoStream:"/>
