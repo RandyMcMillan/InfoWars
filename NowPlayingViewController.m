@@ -234,15 +234,16 @@ NSString * const HD4 = @"http://stream.infowars.com:80";
 	[volumeView sizeToFit];
 	
 	[self setButtonImage:[UIImage imageNamed:@"playbutton.png"]];
-	
-	levelMeterView = [[LevelMeterView alloc] initWithFrame:CGRectMake(10.0, 310.0, 300.0, 60.0)];
+
+	levelMeterView = [[LevelMeterView alloc] initWithFrame:CGRectMake(self.view.frame.size.width*0.05, self.view.frame.size.height*0.85, 300, 5.0)];
 	levelMeterView.autoresizingMask = (
                                        UIViewAutoresizingFlexibleBottomMargin |
                                        //UIViewAutoresizingFlexibleLeftMargin //|
-                                       UIViewAutoresizingFlexibleTopMargin //|
+                                       UIViewAutoresizingFlexibleTopMargin |
                                        //UIViewAutoresizingFlexibleRightMargin
+                                       UIViewAutoresizingFlexibleWidth
                                        );
-    
+    [levelMeterView setBackgroundColor:[UIColor blackColor]];
     [self.view addSubview:levelMeterView];
     
     

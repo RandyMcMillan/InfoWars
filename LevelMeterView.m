@@ -32,7 +32,7 @@
 	
 	CGContextRef context = UIGraphicsGetCurrentContext();
 	CGContextSetFillColorWithColor(context, [UIColor greenColor].CGColor);
-	CGContextFillRect(context, CGRectMake(0.0, 1.0, kMeterViewFullWidth * leftValue, 1.0));
+	CGContextFillRect(context, CGRectMake(0.0, 0.0, kMeterViewFullWidth * leftValue, 1.0));
 	CGContextFillRect(context, CGRectMake(0.0, 4.0, kMeterViewFullWidth * rightValue, 1.0));
 	CGContextFlush(context);
 }
