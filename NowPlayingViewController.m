@@ -33,6 +33,7 @@
 @property (nonatomic, readwrite) NSString	*movieURLString;
 @property (nonatomic, readwrite) UIButton	*watchNow;
 @property (nonatomic, readwrite) UIButton	*listenNow;
+@property (nonatomic, readwrite) NSURLCache	*theCache;
 
 @property (strong) UIActivityIndicatorView *myIndicator;
 
@@ -244,6 +245,12 @@ NSString *const HD4 = @"http://stream.infowars.com:80";
 {
 	[super viewDidLoad];
 
+    
+    self.theCache = [NSURLCache sharedURLCache];
+    [self.theCache setMemoryCapacity:4 * 1024 * 1024];
+    [self.theCache setDiskCapacity:512*1024];
+    
+    
 	// self.channelList = [[NSArray alloc] initWithObjects:@"http://stream.wmnf.org:8000/wmnf_high_quality",@"http://131.247.176.1:8000/stream",@"http://stream.wmnf.org:8000/wmnf_hd3",@"http://stream.wmnf.org:8000/wmnf_hd4", nil];
 	self.channelList	= [[NSArray alloc] initWithObjects:@"http://stream.infowars.com:80", nil];
 	currentChannel		= 0;
@@ -761,7 +768,7 @@ NSString *const HD4 = @"http://stream.infowars.com:80";
 - (void)loadVideo
 {
 	NSURL			*url		= [NSURL URLWithString:@""];
-	NSURLRequest	*request	= [NSURLRequest requestWithURL:url cachePolicy:NSURLRequestReturnCacheDataElseLoad timeoutInterval:30];
+	NSURLRequest	*request	= [NSURLRequest requestWithURL:url cachePolicy:NSURLRequestReturnCacheDataElseLoad timeoutInterval:10];
 
 	[self.listenNowWebView loadRequest:request];
 
@@ -810,7 +817,7 @@ NSString *const HD4 = @"http://stream.infowars.com:80";
 - (IBAction)stopAudioStream:(id)sender
 {
 	NSURL			*url		= [NSURL URLWithString:@"http://www.infowars.com/"];
-	NSURLRequest	*request	= [NSURLRequest requestWithURL:url cachePolicy:NSURLRequestReturnCacheDataElseLoad timeoutInterval:30];
+	NSURLRequest	*request	= [NSURLRequest requestWithURL:url cachePolicy:NSURLRequestReturnCacheDataElseLoad timeoutInterval:10];
 
 	[self.listenNowWebView loadRequest:request];
 }
@@ -820,7 +827,7 @@ NSString *const HD4 = @"http://stream.infowars.com:80";
 	self.myIndicator.alpha = 1.0;
 	[self.myIndicator startAnimating];
 	NSURL			*url		= [NSURL URLWithString:@"http://www.infowars.com/"];
-	NSURLRequest	*request	= [NSURLRequest requestWithURL:url cachePolicy:NSURLRequestReturnCacheDataElseLoad timeoutInterval:30];
+	NSURLRequest	*request	= [NSURLRequest requestWithURL:url cachePolicy:NSURLRequestReturnCacheDataElseLoad timeoutInterval:10];
 
 	[self.pageWebView loadRequest:request];
 }
