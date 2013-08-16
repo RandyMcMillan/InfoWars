@@ -761,7 +761,7 @@ NSString *const HD4 = @"http://stream.infowars.com:80";
 - (void)loadVideo
 {
 	NSURL			*url		= [NSURL URLWithString:@""];
-	NSURLRequest	*request	= [NSURLRequest requestWithURL:url];
+	NSURLRequest	*request	= [NSURLRequest requestWithURL:url cachePolicy:NSURLRequestReturnCacheDataElseLoad timeoutInterval:30];
 
 	[self.listenNowWebView loadRequest:request];
 
@@ -810,7 +810,7 @@ NSString *const HD4 = @"http://stream.infowars.com:80";
 - (IBAction)stopAudioStream:(id)sender
 {
 	NSURL			*url		= [NSURL URLWithString:@"http://www.infowars.com/"];
-	NSURLRequest	*request	= [NSURLRequest requestWithURL:url];
+	NSURLRequest	*request	= [NSURLRequest requestWithURL:url cachePolicy:NSURLRequestReturnCacheDataElseLoad timeoutInterval:30];
 
 	[self.listenNowWebView loadRequest:request];
 }
@@ -820,7 +820,7 @@ NSString *const HD4 = @"http://stream.infowars.com:80";
 	self.myIndicator.alpha = 1.0;
 	[self.myIndicator startAnimating];
 	NSURL			*url		= [NSURL URLWithString:@"http://www.infowars.com/"];
-	NSURLRequest	*request	= [NSURLRequest requestWithURL:url];
+	NSURLRequest	*request	= [NSURLRequest requestWithURL:url cachePolicy:NSURLRequestReturnCacheDataElseLoad timeoutInterval:30];
 
 	[self.pageWebView loadRequest:request];
 }
@@ -847,8 +847,8 @@ NSString *const HD4 = @"http://stream.infowars.com:80";
 - (void)webViewDidFinishLoad:(UIWebView *)webView
 {
 	if (webView == self.pageWebView) {
-		[UIWebView	animateWithDuration :3.0
-					delay				:0.5
+		[UIView	animateWithDuration :1.0
+					delay				:1.0
 					options				:UIViewAnimationCurveEaseInOut
 					animations			:^{
 			self.pageWebView.alpha = 1.0;
