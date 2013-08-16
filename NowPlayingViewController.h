@@ -20,41 +20,38 @@
 
 @interface NowPlayingViewController : UIViewController
 {
-	IBOutlet UITextField *downloadSourceField;
-	IBOutlet UIButton *button;
-	IBOutlet UIView *volumeSlider;
-	IBOutlet UILabel *positionLabel;
-	IBOutlet UISlider *progressSlider;
-	IBOutlet UITextField *metadataArtist;
-	IBOutlet UITextField *metadataTitle;
-	IBOutlet UITextField *metadataAlbum;
-    IBOutlet UIButton *callButton;
-    IBOutlet UIButton *emailButton;
-    
-    IBOutlet UILabel *phoneLabel;
-    IBOutlet UIView *mainView;
-    
-	AudioStreamer *streamer;
-	NSTimer *progressUpdateTimer;
-	NSTimer *levelMeterUpdateTimer;
-	LevelMeterView *levelMeterView;
-	NSString *currentArtist;
-	NSString *currentTitle;
-    NSString *currentChannel;
-    NSArray *channelList;
+	IBOutlet UITextField	*downloadSourceField;
+	IBOutlet UIButton		*button;
+	IBOutlet UIView			*volumeSlider;
+	IBOutlet UILabel		*positionLabel;
+	IBOutlet UISlider		*progressSlider;
+	IBOutlet UITextField	*metadataArtist;
+	IBOutlet UITextField	*metadataTitle;
+	IBOutlet UITextField	*metadataAlbum;
+	IBOutlet UIButton		*callButton;
+	IBOutlet UIButton		*emailButton;
+
+	IBOutlet UILabel	*phoneLabel;
+	IBOutlet UIView		*mainView;
+
+	AudioStreamer	*streamer;
+	NSTimer			*progressUpdateTimer;
+	NSTimer			*levelMeterUpdateTimer;
+	LevelMeterView	*levelMeterView;
+	NSString		*currentArtist;
+	NSString		*currentTitle;
+	NSString		*currentChannel;
+	NSArray			*channelList;
 }
 
 - (IBAction)cancel:(id)sender;
 
-@property (retain) NSString* currentArtist;
-@property (retain) NSString* currentTitle;
-@property (retain, nonatomic) NSArray* channelList;
-@property (retain, nonatomic) NSString* currentChannel;
+@property (retain) NSString				*currentArtist;
+@property (retain) NSString				*currentTitle;
+@property (retain, nonatomic) NSArray	*channelList;
+@property (retain, nonatomic) NSString	*currentChannel;
 
-
-//@property (nonatomic) BOOL uiIsVisible;
-
-
+// @property (nonatomic) BOOL uiIsVisible;
 
 - (IBAction)buttonPressed:(id)sender;
 - (void)spinButton;
@@ -66,4 +63,3 @@
 - (void)changeChannel:(int)channelIndex;
 
 @end
-
