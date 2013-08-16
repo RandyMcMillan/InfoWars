@@ -21,12 +21,10 @@
                     <nil key="simulatedBottomBarMetrics"/>
                     <simulatedOrientationMetrics key="simulatedOrientationMetrics"/>
                     <connections>
-                        <outlet property="listenNow" destination="19d-Zt-5f1" id="48W-k7-hiP"/>
                         <outlet property="listenNowWebView" destination="vOV-lD-g4e" id="zSE-Vs-4iE"/>
                         <outlet property="myIndicator" destination="q8Q-mL-gq6" id="Z5W-0B-NzX"/>
                         <outlet property="pageWebView" destination="zTE-L3-6SD" id="0E0-3g-NDs"/>
                         <outlet property="pageWebViewContainer" destination="gbF-ri-aVx" id="YdC-xn-npq"/>
-                        <outlet property="watchNow" destination="wbg-Ns-QK9" id="JW7-A4-eIx"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4" sceneMemberID="firstResponder"/>
@@ -172,25 +170,25 @@
                         <rect key="frame" x="0.0" y="20" width="320" height="460"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
+                            <imageView userInteractionEnabled="NO" alpha="0.30000001192092896" contentMode="scaleToFill" image="jonesgaze.jpg" id="vwe-Rt-Vnj">
+                                <rect key="frame" x="0.0" y="0.0" width="568" height="568"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
                             <view alpha="0.0" contentMode="scaleToFill" id="gbF-ri-aVx">
-                                <rect key="frame" x="53" y="-40" width="213" height="540"/>
+                                <rect key="frame" x="-1" y="45" width="321" height="370"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" heightSizable="YES"/>
                                 <subviews>
                                     <webView contentMode="scaleToFill" scalesPageToFit="YES" id="zTE-L3-6SD">
-                                        <rect key="frame" x="8" y="10" width="195" height="514"/>
+                                        <rect key="frame" x="13" y="6" width="294" height="352"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         <connections>
-                                            <outlet property="delegate" destination="2" id="0Oj-Pz-9TF"/>
+                                            <outlet property="delegate" destination="ghA-rL-hMj" id="B5x-bb-R0r"/>
                                         </connections>
                                     </webView>
                                 </subviews>
                                 <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                             </view>
-                            <imageView userInteractionEnabled="NO" alpha="0.30000001192092896" contentMode="scaleToFill" image="jonesgaze.jpg" id="vwe-Rt-Vnj">
-                                <rect key="frame" x="0.0" y="0.0" width="568" height="568"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="F1Q-ax-cRF">
                                 <rect key="frame" x="5" y="3" width="192" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -203,11 +201,11 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <segue destination="OhL-Sw-6Vd" kind="modal" id="YtN-q6-lSg"/>
+                                    <action selector="loadWebPage:" destination="ghA-rL-hMj" eventType="touchUpInside" id="0gD-Ki-GJK"/>
                                 </connections>
                             </button>
                             <button opaque="NO" alpha="0.80000000000000004" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="wbg-Ns-QK9">
-                                <rect key="frame" x="0.5" y="416" width="160" height="44"/>
+                                <rect key="frame" x="-0.5" y="416" width="160" height="44"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <color key="backgroundColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
@@ -219,7 +217,8 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <action selector="playVideoStream:" destination="2" eventType="touchUpInside" id="YHX-ia-VKG"/>
+                                    <action selector="playVideoStream:" destination="ghA-rL-hMj" eventType="touchUpInside" id="sgd-A5-O2m"/>
+                                    <action selector="stopAudioStream:" destination="ghA-rL-hMj" eventType="touchUpInside" id="HwT-ZU-SpN"/>
                                 </connections>
                             </button>
                             <webView contentMode="scaleToFill" id="vOV-lD-g4e">
@@ -243,12 +242,11 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <action selector="buttonPressed:" destination="ghA-rL-hMj" eventType="touchUpInside" id="uqs-GX-2A1"/>
-                                    <action selector="playAudioStream:" destination="2" eventType="touchUpInside" id="glN-WF-HVF"/>
+                                    <action selector="buttonPressed:" destination="ghA-rL-hMj" eventType="touchUpInside" id="ysI-Xc-FbT"/>
                                 </connections>
                             </button>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="mAw-oM-3fd">
-                                <rect key="frame" x="80" y="149" width="192" height="2"/>
+                                <rect key="frame" x="0.0" y="30" width="320" height="2"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -266,8 +264,14 @@
                     <simulatedOrientationMetrics key="simulatedOrientationMetrics"/>
                     <connections>
                         <outlet property="button" destination="19d-Zt-5f1" id="9Pj-4b-bBU"/>
+                        <outlet property="listenNow" destination="19d-Zt-5f1" id="5Jg-jx-HRq"/>
+                        <outlet property="listenNowWebView" destination="vOV-lD-g4e" id="rgR-Ff-rsh"/>
                         <outlet property="mainView" destination="gtJ-wY-gFg" id="IpY-XI-ifr"/>
+                        <outlet property="myIndicator" destination="q8Q-mL-gq6" id="rFm-3x-1Ya"/>
+                        <outlet property="pageWebView" destination="zTE-L3-6SD" id="F0p-0T-N0w"/>
+                        <outlet property="pageWebViewContainer" destination="gbF-ri-aVx" id="sNh-Qh-aSJ"/>
                         <outlet property="view" destination="gtJ-wY-gFg" id="Odb-O6-0jM"/>
+                        <outlet property="watchNow" destination="wbg-Ns-QK9" id="Ng5-eb-Qye"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="MGk-0B-qhG" userLabel="First Responder" sceneMemberID="firstResponder"/>

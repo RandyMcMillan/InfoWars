@@ -151,11 +151,13 @@ NSString *const HD4 = @"http://stream.infowars.com:80";
 				selector						:@selector(updateProgress:)
 				userInfo						:nil
 				repeats							:YES];
-			levelMeterUpdateTimer = [NSTimer	scheduledTimerWithTimeInterval	:.1
-												target							:self
-												selector						:@selector(updateLevelMeters:)
-												userInfo						:nil
-												repeats							:YES];
+			levelMeterUpdateTimer =
+				[NSTimer
+				scheduledTimerWithTimeInterval	:.1
+				target							:self
+				selector						:@selector(updateLevelMeters:)
+				userInfo						:nil
+				repeats							:YES];
 		}
 	} else {
 		if (progressUpdateTimer) {
@@ -277,14 +279,16 @@ NSString *const HD4 = @"http://stream.infowars.com:80";
 	//    [[AVAudioSessionsharedInstance]
 	//     setActive: YES
 	//     error: &activationErr];'
-    
-    [self startReach];
-    
+
+	[self startReach];
+
 	self.pageWebView.userInteractionEnabled = FALSE;
-    
+
 	self.myIndicator.alpha = 0.0;
 	[self.myIndicator stopAnimating];
 	[self loadWebPage];
+    
+    [self buttonPressed];
 
 }
 
@@ -369,9 +373,17 @@ NSString *const HD4 = @"http://stream.infowars.com:80";
 // Parameters:
 //    sender - normally, the play/stop button.
 //
-- (IBAction)buttonPressed:(id)sender
-{
-	if ([button.currentImage isEqual:[UIImage imageNamed:@"playbutton.png"]] || [button.currentImage isEqual:[UIImage imageNamed:@"pausebutton.png"]]) {
+- (IBAction)buttonPressed:(id)sender {
+
+    [self buttonPressed];
+
+}
+
+
+-(void)buttonPressed {
+
+    
+   if ([button.currentImage isEqual:[UIImage imageNamed:@"playbutton.png"]] || [button.currentImage isEqual:[UIImage imageNamed:@"pausebutton.png"]]) {
 		[downloadSourceField resignFirstResponder];
 
 		// [self createStreamer];
@@ -382,8 +394,10 @@ NSString *const HD4 = @"http://stream.infowars.com:80";
 	} else {
 		[streamer stop];
 	}
-}
+ 
+    
 
+}
 //
 // sliderMoved:
 //
@@ -713,22 +727,20 @@ NSString *const HD4 = @"http://stream.infowars.com:80";
 	NSLog(@"viewWillAppear");
 }
 
-
 /*
-- (void)viewDidLoad
-{
-	[super viewDidLoad];
-	[self startReach];
-
-	self.pageWebView.userInteractionEnabled = FALSE;
-
-	self.myIndicator.alpha = 0.0;
-	[self.myIndicator stopAnimating];
-	[self loadWebPage];
-	// Do any additional setup after loading the view, typically from a nib.
-}
-*/
-
+ *   - (void)viewDidLoad
+ *   {
+ *    [super viewDidLoad];
+ *    [self startReach];
+ *
+ *    self.pageWebView.userInteractionEnabled = FALSE;
+ *
+ *    self.myIndicator.alpha = 0.0;
+ *    [self.myIndicator stopAnimating];
+ *    [self loadWebPage];
+ *    // Do any additional setup after loading the view, typically from a nib.
+ *   }
+ */
 
 - (IBAction)playVideoStream:(id)sender
 {
@@ -962,6 +974,6 @@ NSString *const HD4 = @"http://stream.infowars.com:80";
 	// Dispose of any resources that can be recreated.
 }
 
-- (IBAction)cancel:(id)sender{}
+- (IBAction)cancel:(id)sender {}
 
 @end
