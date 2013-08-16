@@ -17,7 +17,7 @@
 - (id)initWithFrame:(CGRect)frame {
     if ((self = [super initWithFrame:frame])) {
         // Initialization code
-		self.backgroundColor = [UIColor blackColor];
+		self.backgroundColor = [UIColor clearColor];
     }
     return self;
 }
@@ -27,13 +27,13 @@
 - (void)drawRect:(CGRect)rect {
     // Drawing code
 	[[UIColor whiteColor] set];
-	[@"L" drawInRect:CGRectMake(0.0, 10.0, 15.0, 15.0) withFont:[UIFont boldSystemFontOfSize:[UIFont systemFontSize]] lineBreakMode:UILineBreakModeWordWrap alignment:UITextAlignmentCenter];
-	[@"R" drawInRect:CGRectMake(0.0, 35.0, 15.0, 15.0) withFont:[UIFont boldSystemFontOfSize:[UIFont systemFontSize]] lineBreakMode:UILineBreakModeWordWrap alignment:UITextAlignmentCenter];
+	[@"" drawInRect:CGRectMake(0.0, 10.0, 15.0, 15.0) withFont:[UIFont boldSystemFontOfSize:[UIFont systemFontSize]] lineBreakMode:UILineBreakModeWordWrap alignment:UITextAlignmentCenter];
+	[@"" drawInRect:CGRectMake(0.0, 35.0, 15.0, 15.0) withFont:[UIFont boldSystemFontOfSize:[UIFont systemFontSize]] lineBreakMode:UILineBreakModeWordWrap alignment:UITextAlignmentCenter];
 	
 	CGContextRef context = UIGraphicsGetCurrentContext();
 	CGContextSetFillColorWithColor(context, [UIColor greenColor].CGColor);
-	CGContextFillRect(context, CGRectMake(15.0, 10.0, kMeterViewFullWidth * leftValue, 15.0));
-	CGContextFillRect(context, CGRectMake(15.0, 35.0, kMeterViewFullWidth * rightValue, 15.0));
+	CGContextFillRect(context, CGRectMake(15.0, 20.0, kMeterViewFullWidth * leftValue, 1.0));
+	CGContextFillRect(context, CGRectMake(15.0, 25.0, kMeterViewFullWidth * rightValue, 1.0));
 	CGContextFlush(context);
 }
 
