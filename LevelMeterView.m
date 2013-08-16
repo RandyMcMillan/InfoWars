@@ -8,8 +8,7 @@
 
 #import "LevelMeterView.h"
 
-#define kMeterViewFullWidth 520.0
-
+#define kMeterViewFullWidth 520.0//[[UIScreen mainScreen] bounds].size.width///520.0
 
 @implementation LevelMeterView
 

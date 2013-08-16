@@ -244,12 +244,13 @@ NSString * const HD4 = @"http://stream.infowars.com:80";
                                        //UIViewAutoresizingFlexibleRightMargin |
                                        UIViewAutoresizingFlexibleWidth
                                        );
+    
     [levelMeterView setBackgroundColor:[UIColor clearColor]];
     [self.view addSubview:levelMeterView];
     
     
     NSError *setCategoryErr = nil;
-    NSError *activationErr  = nil;
+    //NSError *activationErr  = nil;
     [[AVAudioSession sharedInstance]
      setCategory: AVAudioSessionCategoryPlayback
      error: &setCategoryErr];
@@ -532,7 +533,7 @@ NSString * const HD4 = @"http://stream.infowars.com:80";
    
     [streamer stop];
     [self destroyStreamer];
-    AppDelegate *appDelegate = [[UIApplication sharedApplication] delegate];
+    //AppDelegate *appDelegate = [[UIApplication sharedApplication] delegate];
     //appDelegate.tabBarController.selectedIndex = 0;
 	[self createStreamer:[channelList objectAtIndex:channelIndex]];
     [streamer start];
@@ -581,7 +582,7 @@ NSString * const HD4 = @"http://stream.infowars.com:80";
 - (BOOL)textFieldShouldReturn:(UITextField *)sender
 {
 	[sender resignFirstResponder];
-	[self createStreamer];
+	[self createStreamer:@""];
 	return YES;
 }
 
