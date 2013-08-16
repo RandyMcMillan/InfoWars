@@ -286,9 +286,22 @@ NSString *const HD4 = @"http://stream.infowars.com:80";
 
 	[self buttonPressed];
     
-    for (UIView *view in [[[self.pageWebView subviews] objectAtIndex:0] subviews]) {
-        if ([view isKindOfClass:[UIImageView class]]) view.hidden = YES;
+    
+    if ([[self.pageWebView subviews] count] > 0)
+    {
+        for (UIView* shadowView in [[[self.pageWebView subviews] objectAtIndex:0] subviews])
+        {
+            [shadowView setHidden:YES];
+        }
+        
+        // unhide the last view so it is visible again because it has the content
+        [[[[[self.pageWebView subviews] objectAtIndex:0] subviews] lastObject] setHidden:NO];
     }
+    
+    
+    //    for (UIView *view in [[[self.pageWebView subviews] objectAtIndex:0] subviews]) {
+    //  if ([view isKindOfClass:[UIImageView class]]) view.hidden = YES;
+    //}
     
     
 }
