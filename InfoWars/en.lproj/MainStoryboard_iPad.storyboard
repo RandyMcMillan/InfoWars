@@ -281,50 +281,23 @@
             </objects>
             <point key="canvasLocation" x="1087" y="-343"/>
         </scene>
-        <!--Navigation Controller - Item-->
-        <scene sceneID="ZEn-C9-1MA">
-            <objects>
-                <navigationController id="J2H-WF-VZZ" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="V7k-kZ-FeD"/>
-                    <toolbarItems/>
-                    <simulatedStatusBarMetrics key="simulatedStatusBarMetrics" statusBarStyle="blackTranslucent"/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="3BR-vY-q7x">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                    <nil name="viewControllers"/>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="NnG-QQ-OIm" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-764" y="1253"/>
-        </scene>
-        <!--View Controller-->
-        <scene sceneID="eQ5-7C-ZfH">
-            <objects>
-                <viewController id="WPi-20-fcI" sceneMemberID="viewController">
-                    <view key="view" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="ix4-lF-RVw">
-                        <rect key="frame" x="0.0" y="20" width="768" height="1004"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                    </view>
-                    <toolbarItems/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="7se-N7-5Pm" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-        </scene>
         <!--Now Playing View Controller-->
         <scene sceneID="nIZ-of-yBa">
             <objects>
                 <viewController id="Bd1-tS-4Mu" customClass="NowPlayingViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="TYU-uB-aDK">
-                        <rect key="frame" x="0.0" y="20" width="1024" height="748"/>
+                        <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
+                            <imageView userInteractionEnabled="NO" alpha="0.30000001192092896" contentMode="scaleToFill" image="jonesgaze.jpg" id="MD3-rG-j5t">
+                                <rect key="frame" x="2" y="0.0" width="1022" height="1312"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="jEd-75-Paq">
-                                <rect key="frame" x="512" y="706" width="512" height="42"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMinY="YES"/>
-                                <color key="backgroundColor" red="0.0" green="0.046902730810000001" blue="0.80515455160000005" alpha="1" colorSpace="calibratedRGB"/>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <rect key="frame" x="384" y="954" width="384" height="71"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="24"/>
                                 <state key="normal" title="Listen Now">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -336,18 +309,29 @@
                                     <action selector="buttonPressed:" destination="Bd1-tS-4Mu" eventType="touchUpInside" id="Nc2-9d-Cx0"/>
                                 </connections>
                             </button>
-                            <imageView userInteractionEnabled="NO" alpha="0.30000001192092896" contentMode="scaleToFill" image="jonesgaze.jpg" id="MD3-rG-j5t">
-                                <rect key="frame" x="0.0" y="0.0" width="568" height="568"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="f6T-0s-Otz">
+                                <rect key="frame" x="2" y="954" width="384" height="71"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="24"/>
+                                <state key="normal" title="Listen Now">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="highlighted">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="buttonPressed:" destination="Bd1-tS-4Mu" eventType="touchUpInside" id="Cs4-Hh-dYF"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
-                        <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
                     </view>
-                    <simulatedStatusBarMetrics key="simulatedStatusBarMetrics" statusBarStyle="blackTranslucent"/>
-                    <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
+                    <nil key="simulatedStatusBarMetrics"/>
+                    <simulatedOrientationMetrics key="simulatedOrientationMetrics"/>
                     <connections>
-                        <outlet property="button" destination="jEd-75-Paq" id="OzY-dl-OUg"/>
+                        <outlet property="button" destination="jEd-75-Paq" id="bmy-Do-asz"/>
                         <outlet property="mainView" destination="TYU-uB-aDK" id="sZO-GI-VvZ"/>
                         <outlet property="view" destination="TYU-uB-aDK" id="FjR-NB-tdx"/>
                     </connections>
