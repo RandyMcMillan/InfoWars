@@ -235,7 +235,7 @@ NSString * const HD4 = @"http://stream.infowars.com:80";
 	
 	[self setButtonImage:[UIImage imageNamed:@"playbutton.png"]];
 
-	levelMeterView = [[LevelMeterView alloc] initWithFrame:CGRectMake(self.view.frame.size.width*0.05, self.view.frame.size.height*0.85, 300, 5.0)];
+	levelMeterView = [[LevelMeterView alloc] initWithFrame:CGRectMake(self.view.frame.size.width*0.0, self.view.frame.size.height*0.93, 300, 5.0)];
 	levelMeterView.autoresizingMask = (
                                        UIViewAutoresizingFlexibleBottomMargin |
                                        //UIViewAutoresizingFlexibleLeftMargin //|
@@ -243,7 +243,7 @@ NSString * const HD4 = @"http://stream.infowars.com:80";
                                        //UIViewAutoresizingFlexibleRightMargin
                                        UIViewAutoresizingFlexibleWidth
                                        );
-    [levelMeterView setBackgroundColor:[UIColor blackColor]];
+    [levelMeterView setBackgroundColor:[UIColor clearColor]];
     [self.view addSubview:levelMeterView];
     
     
