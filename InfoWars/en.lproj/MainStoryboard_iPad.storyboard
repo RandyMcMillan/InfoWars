@@ -289,16 +289,38 @@
                         <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" alpha="0.30000001192092896" contentMode="scaleToFill" image="jonesgaze.jpg" id="MD3-rG-j5t">
-                                <rect key="frame" x="2" y="0.0" width="1022" height="1312"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <imageView userInteractionEnabled="NO" alpha="0.30000001192092896" contentMode="scaleToFill" image="jonesgaze.jpg" id="eMD-1s-VhH">
+                                <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="jEd-75-Paq">
-                                <rect key="frame" x="384" y="954" width="384" height="71"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                            <view alpha="0.0" contentMode="scaleToFill" id="vxM-f3-cEp">
+                                <rect key="frame" x="0.0" y="67" width="768" height="900"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                <subviews>
+                                    <webView contentMode="scaleToFill" scalesPageToFit="YES" id="tQO-xc-6QX">
+                                        <rect key="frame" x="0.0" y="19" width="768" height="845"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        <connections>
+                                            <outlet property="delegate" destination="Bd1-tS-4Mu" id="20C-nP-VSS"/>
+                                        </connections>
+                                    </webView>
+                                </subviews>
                                 <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="24"/>
-                                <state key="normal" title="Listen Now">
+                            </view>
+                            <webView contentMode="scaleToFill" id="l9B-xC-Otr">
+                                <rect key="frame" x="271" y="452" width="1" height="256"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <connections>
+                                    <outlet property="delegate" destination="Bd1-tS-4Mu" id="rWm-3T-J0o"/>
+                                </connections>
+                            </webView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="U1k-ey-brD">
+                                <rect key="frame" x="54" y="29" width="192" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="22"/>
+                                <state key="normal" title="INFOWARS.COM">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -306,33 +328,65 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <action selector="buttonPressed:" destination="Bd1-tS-4Mu" eventType="touchUpInside" id="Nc2-9d-Cx0"/>
+                                    <action selector="loadWebPage:" destination="Bd1-tS-4Mu" eventType="touchUpInside" id="uy3-qb-jRF"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="f6T-0s-Otz">
-                                <rect key="frame" x="2" y="954" width="384" height="71"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
-                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="24"/>
-                                <state key="normal" title="Listen Now">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <button opaque="NO" alpha="0.80000001192092896" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="rmh-UZ-VHF">
+                                <rect key="frame" x="49" y="975" width="160" height="44"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <color key="backgroundColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" title="Watch Now">
+                                    <color key="titleColor" red="0.97387137099999999" green="1" blue="0.94930857059999996" alpha="1" colorSpace="calibratedRGB"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <state key="highlighted">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <action selector="buttonPressed:" destination="Bd1-tS-4Mu" eventType="touchUpInside" id="Cs4-Hh-dYF"/>
+                                    <action selector="playVideoStream:" destination="Bd1-tS-4Mu" eventType="touchUpInside" id="ttd-dW-BlN"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" alpha="0.80000001192092896" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="XWy-kL-zbo">
+                                <rect key="frame" x="561" y="975" width="160" height="44"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMinY="YES"/>
+                                <color key="backgroundColor" red="0.0" green="0.069531468829999998" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" title="Listen Now">
+                                    <color key="titleColor" red="0.97387137099999999" green="1" blue="0.94930857059999996" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="highlighted">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="buttonPressed:" destination="Bd1-tS-4Mu" eventType="touchUpInside" id="RSO-vW-aUT"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="WMo-g1-6Er">
+                                <rect key="frame" x="224" y="511" width="320" height="2"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" style="whiteLarge" id="OiL-Wx-vGw">
+                                <rect key="frame" x="365" y="494" width="37" height="37"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                                <color key="color" red="1" green="0.011788656139999999" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                            </activityIndicatorView>
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <nil key="simulatedStatusBarMetrics"/>
                     <simulatedOrientationMetrics key="simulatedOrientationMetrics"/>
                     <connections>
-                        <outlet property="button" destination="jEd-75-Paq" id="bmy-Do-asz"/>
+                        <outlet property="button" destination="XWy-kL-zbo" id="qsd-TZ-LzO"/>
                         <outlet property="mainView" destination="TYU-uB-aDK" id="sZO-GI-VvZ"/>
+                        <outlet property="myIndicator" destination="OiL-Wx-vGw" id="SU6-wv-rA2"/>
+                        <outlet property="pageWebView" destination="tQO-xc-6QX" id="MDP-Je-K1P"/>
+                        <outlet property="pageWebViewContainer" destination="vxM-f3-cEp" id="6bk-Hv-FpH"/>
                         <outlet property="view" destination="TYU-uB-aDK" id="FjR-NB-tdx"/>
                     </connections>
                 </viewController>
@@ -344,6 +398,62 @@
     <resources>
         <image name="jonesgaze.jpg" width="329" height="429"/>
     </resources>
+    <classes>
+        <class className="MainViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/MainViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="loadWebPage:"/>
+                <relationship kind="action" name="playAudioStream:"/>
+                <relationship kind="action" name="playVideoStream:"/>
+                <relationship kind="action" name="stopAudioStream:"/>
+                <relationship kind="outlet" name="listenNow" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="listenNowWebView" candidateClass="UIWebView"/>
+                <relationship kind="outlet" name="myIndicator" candidateClass="UIActivityIndicatorView"/>
+                <relationship kind="outlet" name="pageWebView" candidateClass="UIWebView"/>
+                <relationship kind="outlet" name="pageWebViewContainer" candidateClass="UIView"/>
+                <relationship kind="outlet" name="watchNow" candidateClass="UIButton"/>
+            </relationships>
+        </class>
+        <class className="NowPlayingViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/NowPlayingViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="buttonPressed:"/>
+                <relationship kind="action" name="cancel:"/>
+                <relationship kind="action" name="loadWebPage:"/>
+                <relationship kind="action" name="playAudioStream:"/>
+                <relationship kind="action" name="playVideoStream:"/>
+                <relationship kind="action" name="sliderMoved:" candidateClass="UISlider"/>
+                <relationship kind="action" name="stopAudioStream:"/>
+                <relationship kind="outlet" name="button" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="callButton" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="downloadSourceField" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="emailButton" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="listenNow" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="listenNowWebView" candidateClass="UIWebView"/>
+                <relationship kind="outlet" name="mainView" candidateClass="UIView"/>
+                <relationship kind="outlet" name="metadataAlbum" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="metadataArtist" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="metadataTitle" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="myIndicator" candidateClass="UIActivityIndicatorView"/>
+                <relationship kind="outlet" name="pageWebView" candidateClass="UIWebView"/>
+                <relationship kind="outlet" name="pageWebViewContainer" candidateClass="UIView"/>
+                <relationship kind="outlet" name="phoneLabel" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="positionLabel" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="progressSlider" candidateClass="UISlider"/>
+                <relationship kind="outlet" name="volumeSlider" candidateClass="UIView"/>
+                <relationship kind="outlet" name="watchNow" candidateClass="UIButton"/>
+            </relationships>
+        </class>
+        <class className="Scene2ViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/Scene2ViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="cancel:"/>
+                <relationship kind="action" name="doneButtonPressed:"/>
+                <relationship kind="outlet" name="myIndicator" candidateClass="UIActivityIndicatorView"/>
+                <relationship kind="outlet" name="webView" candidateClass="UIWebView"/>
+            </relationships>
+        </class>
+    </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar" statusBarStyle="blackTranslucent"/>
         <simulatedOrientationMetrics key="orientation"/>

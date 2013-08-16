@@ -237,13 +237,9 @@ NSString *const HD4 = @"http://stream.infowars.com:80";
 	NSLog(@">>> Leaving %s <<<", __PRETTY_FUNCTION__);
 }
 
-//
-// viewDidLoad
-//
 // Creates the volume slider, sets the default path for the local file and
 // creates the streamer immediately if we already have a file at the local
 // location.
-//
 - (void)viewDidLoad
 {
 	[super viewDidLoad];
@@ -287,9 +283,8 @@ NSString *const HD4 = @"http://stream.infowars.com:80";
 	self.myIndicator.alpha = 0.0;
 	[self.myIndicator stopAnimating];
 	[self loadWebPage];
-    
-    [self buttonPressed];
 
+	[self buttonPressed];
 }
 
 - (void)viewDidAppear:(BOOL)animated
@@ -373,17 +368,14 @@ NSString *const HD4 = @"http://stream.infowars.com:80";
 // Parameters:
 //    sender - normally, the play/stop button.
 //
-- (IBAction)buttonPressed:(id)sender {
-
-    [self buttonPressed];
-
+- (IBAction)buttonPressed:(id)sender
+{
+	[self buttonPressed];
 }
 
-
--(void)buttonPressed {
-
-    
-   if ([button.currentImage isEqual:[UIImage imageNamed:@"playbutton.png"]] || [button.currentImage isEqual:[UIImage imageNamed:@"pausebutton.png"]]) {
+- (void)buttonPressed
+{
+	if ([button.currentImage isEqual:[UIImage imageNamed:@"playbutton.png"]] || [button.currentImage isEqual:[UIImage imageNamed:@"pausebutton.png"]]) {
 		[downloadSourceField resignFirstResponder];
 
 		// [self createStreamer];
@@ -394,10 +386,8 @@ NSString *const HD4 = @"http://stream.infowars.com:80";
 	} else {
 		[streamer stop];
 	}
- 
-    
-
 }
+
 //
 // sliderMoved:
 //
@@ -613,12 +603,9 @@ NSString *const HD4 = @"http://stream.infowars.com:80";
 
 //
 // textFieldShouldReturn:
-//
 // Dismiss the text field when done is pressed
-//
 // Parameters:
 //    sender - the text field
-//
 // returns YES
 //
 - (BOOL)textFieldShouldReturn:(UITextField *)sender
@@ -682,9 +669,7 @@ NSString *const HD4 = @"http://stream.infowars.com:80";
 
 //
 // dealloc
-//
 // Releases instance memory.
-//
 - (void)dealloc
 {
 	[self destroyStreamer];
