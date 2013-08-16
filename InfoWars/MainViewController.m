@@ -15,7 +15,7 @@
 	IBOutlet UIWebView					*listenNowWebView;
 	IBOutlet UIWebView					*pageWebView;
 	IBOutlet UIActivityIndicatorView	*myIndicator;
-	IBOutlet UIView	*pageWebViewContainer;
+	IBOutlet UIView						*pageWebViewContainer;
 }
 
 @property (nonatomic, readwrite) NSString	*movieURLString;
@@ -29,7 +29,7 @@
 @end
 
 @implementation MainViewController
-@synthesize watchNow, listenNow, listenNowWebView, pageWebView, myIndicator,pageWebViewContainer;
+@synthesize watchNow, listenNow, listenNowWebView, pageWebView, myIndicator, pageWebViewContainer;
 
 - (void)viewWillAppear:(BOOL)animated
 {
@@ -41,7 +41,7 @@
 	[super viewDidLoad];
 	[self startReach];
 
-    self.pageWebView.userInteractionEnabled = FALSE;
+	self.pageWebView.userInteractionEnabled = FALSE;
 
 	self.myIndicator.alpha = 0.0;
 	[self.myIndicator stopAnimating];
@@ -70,43 +70,40 @@
 	[self presentMoviePlayerViewControllerAnimated:moviePlayer];
 }
 
-
-- (void)playAudioStream {
-
-   /*
-    self.myIndicator.alpha = 1.0;
-	[self.myIndicator startAnimating];
-    
-	NSLog(@"playAudioStream");
-    
-	// NOTE set up if then logic for devices
-	// for better control
-    
-	// Reference AudioStream fork for config
-	// need to be better support for ipad vs iphone
-	// preserve main screen for other user activity
-    
-	NSURL			*url		= [NSURL URLWithString:@"http://www.infowars.com/stream.pls"];
-	NSURLRequest	*request	= [NSURLRequest requestWithURL:url];
-    
-	[self.listenNowWebView loadRequest:request];
-    
-	///for iphone
-	// self.movieURLString = @"http://www.infowars.com/stream.pls";
-	// [self loadVideo];
-    
-    
-    */
-    self.movieURLString =
-    @"http://www.infowars.com/stream.pls";
-    [self loadVideo];
- 
-
+- (void)playAudioStream
+{
+	/*
+	 *   self.myIndicator.alpha = 1.0;
+	 *   [self.myIndicator startAnimating];
+	 *
+	 *   NSLog(@"playAudioStream");
+	 *
+	 *   // NOTE set up if then logic for devices
+	 *   // for better control
+	 *
+	 *   // Reference AudioStream fork for config
+	 *   // need to be better support for ipad vs iphone
+	 *   // preserve main screen for other user activity
+	 *
+	 *   NSURL			*url		= [NSURL URLWithString:@"http://www.infowars.com/stream.pls"];
+	 *   NSURLRequest	*request	= [NSURLRequest requestWithURL:url];
+	 *
+	 *   [self.listenNowWebView loadRequest:request];
+	 *
+	 *   ///for iphone
+	 *   // self.movieURLString = @"http://www.infowars.com/stream.pls";
+	 *   // [self loadVideo];
+	 *
+	 *
+	 */
+	self.movieURLString =
+		@"http://www.infowars.com/stream.pls";
+	[self loadVideo];
 }
-- (IBAction)playAudioStream:(id)sender {
 
-    [self playAudioStream];
- 
+- (IBAction)playAudioStream:(id)sender
+{
+	[self playAudioStream];
 }
 
 - (IBAction)stopAudioStream:(id)sender
@@ -119,8 +116,7 @@
 
 - (void)loadWebPage
 {
-    
-    self.myIndicator.alpha = 1.0;
+	self.myIndicator.alpha = 1.0;
 	[self.myIndicator startAnimating];
 	NSURL			*url		= [NSURL URLWithString:@"http://www.infowars.com/"];
 	NSURLRequest	*request	= [NSURLRequest requestWithURL:url];
@@ -155,13 +151,11 @@
 					options				:UIViewAnimationCurveEaseInOut
 					animations			:^{
 			self.pageWebView.alpha = 1.0;
-            self.pageWebViewContainer.alpha = 1.0;
+			self.pageWebViewContainer.alpha = 1.0;
 		}
 
 					completion			:^(BOOL finished) {
-                        
 			self.pageWebView.userInteractionEnabled = TRUE;
-                        
 		}
 
 		];
