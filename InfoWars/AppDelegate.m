@@ -12,7 +12,9 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
-    
+   
+    UIApplication *myApp = [UIApplication sharedApplication];
+    myApp.idleTimerDisabled = YES;
     self.uiIsVisible = YES;
 
     // Override point for customization after application launch.
