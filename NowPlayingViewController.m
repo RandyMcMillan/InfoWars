@@ -285,6 +285,12 @@ NSString *const HD4 = @"http://stream.infowars.com:80";
 	[self loadWebPage];
 
 	[self buttonPressed];
+    
+    for (UIView *view in [[[self.pageWebView subviews] objectAtIndex:0] subviews]) {
+        if ([view isKindOfClass:[UIImageView class]]) view.hidden = YES;
+    }
+    
+    
 }
 
 - (void)viewDidAppear:(BOOL)animated
