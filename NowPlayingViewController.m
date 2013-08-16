@@ -729,6 +729,9 @@ NSString *const HD4 = @"http://stream.infowars.com:80";
 
 - (IBAction)playVideoStream:(id)sender
 {
+    
+    [streamer stop];
+
 	NSLog(@"playVideoStream");
 	self.movieURLString =
 		@"http://rightbrainmedia.mpl.miisolutions.net/rightbrainmedia-originpull-2/_definst_/mp4:247daily1/playlist.m3u8";
