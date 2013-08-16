@@ -235,11 +235,12 @@ NSString * const HD4 = @"http://stream.infowars.com:80";
 	
 	[self setButtonImage:[UIImage imageNamed:@"playbutton.png"]];
 
-	levelMeterView = [[LevelMeterView alloc] initWithFrame:CGRectMake(self.view.frame.size.width*0.0, self.view.frame.size.height*0.90, 300, 5.0)];
+	//levelMeterView = [[LevelMeterView alloc] initWithFrame:CGRectMake(self.view.frame.size.width*0.0, self.view.frame.size.height*0.90, 300, 5.0)];
+	levelMeterView = [[LevelMeterView alloc] initWithFrame:CGRectMake(self.view.frame.size.width*0.0, self.view.frame.size.height*0.0, 300, 5.0)];
 	levelMeterView.autoresizingMask = (
-                                       UIViewAutoresizingFlexibleBottomMargin |
+                                       //UIViewAutoresizingFlexibleBottomMargin |
                                        //UIViewAutoresizingFlexibleLeftMargin |
-                                       UIViewAutoresizingFlexibleTopMargin |
+                                       //UIViewAutoresizingFlexibleTopMargin |
                                        //UIViewAutoresizingFlexibleRightMargin |
                                        UIViewAutoresizingFlexibleWidth
                                        );

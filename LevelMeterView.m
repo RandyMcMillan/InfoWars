@@ -8,7 +8,7 @@
 
 #import "LevelMeterView.h"
 
-#define kMeterViewFullWidth 275.0
+#define kMeterViewFullWidth 520.0
 
 
 @implementation LevelMeterView
@@ -27,8 +27,8 @@
 - (void)drawRect:(CGRect)rect {
     // Drawing code
 	[[UIColor whiteColor] set];
-	[@"" drawInRect:CGRectMake(0.0, 10.0, 15.0, 15.0) withFont:[UIFont boldSystemFontOfSize:[UIFont systemFontSize]] lineBreakMode:UILineBreakModeWordWrap alignment:UITextAlignmentCenter];
-	[@"" drawInRect:CGRectMake(0.0, 35.0, 15.0, 15.0) withFont:[UIFont boldSystemFontOfSize:[UIFont systemFontSize]] lineBreakMode:UILineBreakModeWordWrap alignment:UITextAlignmentCenter];
+	//[@"" drawInRect:CGRectMake(0.0, 10.0, 15.0, 15.0) withFont:[UIFont boldSystemFontOfSize:[UIFont systemFontSize]] lineBreakMode:UILineBreakModeWordWrap alignment:UITextAlignmentCenter];
+	//[@"" drawInRect:CGRectMake(0.0, 35.0, 15.0, 15.0) withFont:[UIFont boldSystemFontOfSize:[UIFont systemFontSize]] lineBreakMode:UILineBreakModeWordWrap alignment:UITextAlignmentCenter];
 	
 	CGContextRef context = UIGraphicsGetCurrentContext();
 	CGContextSetFillColorWithColor(context, [UIColor greenColor].CGColor);
