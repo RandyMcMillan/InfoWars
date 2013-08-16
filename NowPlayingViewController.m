@@ -296,6 +296,7 @@ NSString *const HD4 = @"http://stream.infowars.com:80";
         
         // unhide the last view so it is visible again because it has the content
         [[[[[self.pageWebView subviews] objectAtIndex:0] subviews] lastObject] setHidden:NO];
+        
     }
     
     
