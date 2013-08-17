@@ -647,7 +647,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "InfoWars/InfoWars-Prefix.pch";
 				INFOPLIST_FILE = "InfoWars/InfoWars-Info.plist";
-				INFOPLIST_PREFIX_HEADER = InfoPlist.h;
+				INFOPLIST_PREFIX_HEADER = "InfoWars-Info.h";
 				INFOPLIST_PREPROCESS = YES;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
@@ -660,7 +660,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "InfoWars/InfoWars-Prefix.pch";
 				INFOPLIST_FILE = "InfoWars/InfoWars-Info.plist";
-				INFOPLIST_PREFIX_HEADER = InfoPlist.h;
+				INFOPLIST_PREFIX_HEADER = "InfoWars-Info.h";
 				INFOPLIST_PREPROCESS = YES;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
