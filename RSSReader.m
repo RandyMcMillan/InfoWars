@@ -15,7 +15,7 @@
 
 -(IBAction) back:(id)sender{
 	
-	[self dismissModalViewControllerAnimated:YES];
+	//[self dismissModalViewControllerAnimated:YES];
 }
 
 - (void)viewDidLoad {
@@ -79,7 +79,7 @@
 		  summaryLabel.tag = 2;
             summaryLabel.autoresizingMask = (UIViewAutoresizingFlexibleWidth);
 
-		[summaryLabel setBackgroundColor:[UIColor redColor]];
+            [titleLabel setBackgroundColor:[UIColor clearColor]];
             [cell.contentView addSubview:summaryLabel];
 		 
 		}
@@ -95,8 +95,8 @@
 	{
 	  UILabel * summaryLabel = (UILabel *) [cell.contentView viewWithTag:2];
 		summaryLabel.numberOfLines = 44;
-		summaryLabel.lineBreakMode = UILineBreakModeWordWrap; 
-	  summaryLabel.text = [[stories objectAtIndex: storyIndex] objectForKey: @"summary"]; 
+        summaryLabel.lineBreakMode = UILineBreakModeWordWrap;
+        summaryLabel.text = [[stories objectAtIndex: storyIndex] objectForKey: @"summary"];
 		
 	}
 		
