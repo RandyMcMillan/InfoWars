@@ -8,6 +8,7 @@
 
 #import "RSSReader.h"
 #import "webViewer.h"
+#import "NowPlayingViewController.h"
 
 
 @implementation RSSReader
@@ -27,6 +28,30 @@
     //self.newsTable.rowHeight = ROW_HEIGHT;
 
 }
+
+
+
+-(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    
+    NSLog(@"_________________NowPlayingViewController____________________");
+ 
+    if ([segue.identifier isEqualToString:@"nowPlaying"]) {
+        NSLog(@"_________________NowPlayingViewController____________________");
+        UITableViewCell *cell = (UITableViewCell *)sender;
+        //NSIndexPath *ip = [self.tableView indexPathForCell:cell];
+        //Person *p = [self.people objectAtIndex:ip.row];
+        
+        NowPlayingViewController  *npvc = (NowPlayingViewController *)segue.destinationViewController;
+        //[[stories objectAtIndex: storyIndex] objectForKey: @"guid"];
+        //npvc.movieURLString = [[stories objectAtIndex: storyIndex] objectForKey: @"guid"];
+        //pdv.person = p;
+        
+        
+    }
+    
+    
+}
+
 
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
@@ -114,7 +139,10 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
 	// Navigation logic
-	
+
+    [tableView deselectRowAtIndexPath:[tableView indexPathForSelectedRow] animated:YES];
+
+    
 	int storyIndex = [indexPath indexAtPosition: [indexPath length] - 1];
 	
 	
@@ -128,7 +156,7 @@
 	myBrowser.storyLink = [myBrowser.storyLink stringByReplacingOccurrencesOfString:@"\n" withString:@""];
 	myBrowser.storyLink = [myBrowser.storyLink stringByReplacingOccurrencesOfString:@"	" withString:@""];
     
-	[self presentModalViewController:myBrowser animated:YES];
+	//[self presentModalViewController:myBrowser animated:YES];
 	
 	
 	
