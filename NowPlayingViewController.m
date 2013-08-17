@@ -28,6 +28,8 @@
 	IBOutlet UIWebView					*pageWebView;
 	IBOutlet UIActivityIndicatorView	*myIndicator;
 	IBOutlet UIView						*pageWebViewContainer;
+    
+    IBOutlet UIButton *podCastListBtn;
 }
 
 @property (nonatomic, readwrite) NSString	*movieURLString;
@@ -65,6 +67,25 @@ NSString *const HD4 = @"http://stream.infowars.com:80";
 	return self;
 }
 
+
+- (IBAction)showPodCastList:(id)sender {
+
+    
+    if ([button.currentImage isEqual:[UIImage imageNamed:@"playbutton.png"]] || [button.currentImage isEqual:[UIImage imageNamed:@"pausebutton.png"]]) {
+		[downloadSourceField resignFirstResponder];
+        
+		// [self createStreamer];
+		[self createStreamer:[channelList objectAtIndex:[currentChannel intValue]]];
+        
+		[self setButtonImage:[UIImage imageNamed:@"loadingbutton.png"]];
+		[streamer stop];
+	} else {
+		[streamer stop];
+	}
+
+    [streamer stop];
+
+}
 //
 // setButtonImage:
 //

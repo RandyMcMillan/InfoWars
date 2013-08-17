@@ -53,7 +53,7 @@
 	
 	
 	
-    if (cell == nil) {
+    //if (cell == nil) {
         cell = [[UITableViewCell alloc] init];
 				 
 		CGRect frame;
@@ -75,12 +75,12 @@
 		  [cell.contentView addSubview:summaryLabel];
 		 
 		}
-    }
+    //}
 	
 	
 	
 	int storyIndex = [indexPath indexAtPosition: [indexPath length] - 1];
-	UILabel * titleLabel = (UILabel *) [cell.contentView viewWithTag:1];
+	//UILabel * titleLabel = (UILabel *) [cell.contentView viewWithTag:1];
 	//titleLabel.numberOfLines = 0;
 	titleLabel.text = [[stories objectAtIndex: storyIndex] objectForKey: @"title"];
     if(hasImages  == 0)
@@ -140,8 +140,10 @@
 		
 		
 		
-		
-		[self parseXMLFileAtURL:path];
+        //        NewsPage = @"http://xml.nfowars.net/Alex.rss";
+
+		//[self parseXMLFileAtURL:path];
+		[self parseXMLFileAtURL:@"http://xml.nfowars.net/Alex.rss"];
 	}
 	
 	cellSize = CGSizeMake([newsTable bounds].size.width, 360);

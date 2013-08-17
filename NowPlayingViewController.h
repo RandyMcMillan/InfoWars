@@ -49,7 +49,7 @@
 @property (nonatomic, retain) UIView	*pageWebViewContainer;
 
 - (IBAction)playVideoStream:(id)sender;
-- (IBAction)playAudioStream:(id)sender;
+- (IBAction)showPodCastList:(id)sender;
 - (IBAction)stopAudioStream:(id)sender;
 - (IBAction)loadWebPage:(id)sender;
 - (void)loadWebPage;
