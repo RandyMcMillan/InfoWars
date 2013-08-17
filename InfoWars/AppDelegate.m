@@ -17,6 +17,16 @@
     myApp.idleTimerDisabled = YES;
     self.uiIsVisible = YES;
 
+    
+    
+    NSString *shortVersion = [[NSBundle mainBundle] objectForInfoDictionaryKey:@"CFBundleShortVersionString"];
+    NSString *version = [[NSBundle mainBundle] objectForInfoDictionaryKey:@"CFBundleVersion"];
+    NSLog(@"\nSystem: %@ %@\nModel: %@\nApp version: %@ (%@)",
+          [[UIDevice currentDevice] systemName], [[UIDevice currentDevice] systemVersion],
+          [[UIDevice currentDevice] model],
+          shortVersion,version);
+    
+    
     // Override point for customization after application launch.
     return YES;
 }
