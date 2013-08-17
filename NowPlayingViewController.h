@@ -73,4 +73,7 @@
 - (IBAction)sliderMoved:(UISlider *)aSlider;
 - (void)changeChannel:(int)channelIndex;
 
+
+@property (nonatomic, readwrite) NSString	*movieURLString;
+
 @end
