@@ -11,7 +11,7 @@
 
 
 @implementation RSSReader
-@synthesize hasImages,path;
+@synthesize hasImages,path,activityView,newsTable;
 
 -(IBAction) back:(id)sender{
 	
@@ -22,6 +22,10 @@
 	// Add the following line if you want the list to be editable
 	// self.navigationItem.leftBarButtonItem = self.editButtonItem;
 	[activityView startAnimating];
+#define ROW_HEIGHT 160
+
+    //self.newsTable.rowHeight = ROW_HEIGHT;
+
 }
 
 
@@ -53,18 +57,19 @@
 	
 	
 	
-    //if (cell == nil) {
+    if (cell.textLabel.text == nil) {
         cell = [[UITableViewCell alloc] init];
 				 
 		CGRect frame;
 		frame.origin.x = 10;
-		frame.origin.y = 5;
+		frame.origin.y = 0;
 		frame.size.height = 75;
 		frame.size.width = 300;
 		
 		UILabel *titleLabel = [[UILabel alloc] initWithFrame:frame];
 		titleLabel.tag = 1;
-		//[titleLabel setColor: CGColorCreate(CGColorSpaceCreateDeviceRGB(), blue)];
+        titleLabel.autoresizingMask = (UIViewAutoresizingFlexibleWidth);
+		[titleLabel setBackgroundColor:[UIColor blackColor]];
 		[titleLabel setTextColor:[UIColor blueColor]]; // Foreground color
 		[cell.contentView addSubview:titleLabel];
 		
@@ -72,15 +77,18 @@
 		  frame.origin.y += 48;
 		  UILabel *summaryLabel = [[UILabel alloc] initWithFrame:frame];
 		  summaryLabel.tag = 2;
-		  [cell.contentView addSubview:summaryLabel];
+            summaryLabel.autoresizingMask = (UIViewAutoresizingFlexibleWidth);
+
+		[summaryLabel setBackgroundColor:[UIColor redColor]];
+            [cell.contentView addSubview:summaryLabel];
 		 
 		}
-    //}
+    }
 	
 	
 	
 	int storyIndex = [indexPath indexAtPosition: [indexPath length] - 1];
-	//UILabel * titleLabel = (UILabel *) [cell.contentView viewWithTag:1];
+	UILabel * titleLabel = (UILabel *) [cell.contentView viewWithTag:1];
 	//titleLabel.numberOfLines = 0;
 	titleLabel.text = [[stories objectAtIndex: storyIndex] objectForKey: @"title"];
     if(hasImages  == 0)
