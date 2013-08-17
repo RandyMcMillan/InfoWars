@@ -32,7 +32,7 @@
     IBOutlet UIButton *podCastListBtn;
 }
 
-@property (nonatomic, readwrite) NSString	*movieURLString;
+//@property (nonatomic, readwrite) NSString	*movieURLString;
 @property (nonatomic, readwrite) UIButton	*watchNow;
 @property (nonatomic, readwrite) UIButton	*listenNow;
 @property (nonatomic, readwrite) NSURLCache	*theCache;
@@ -209,7 +209,7 @@ NSString *const HD4 = @"http://stream.infowars.com:80";
 	}
 
 	NSLog(@"1");
-	NSLog(@"nowplaing controller id:%@", self);
+	NSLog(@"nowplaying controller id:%@", self);
 	[self destroyStreamer];
 	NSLog(@"2");
 
