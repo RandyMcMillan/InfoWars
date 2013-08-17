@@ -156,7 +156,7 @@
 	myBrowser.storyLink = [myBrowser.storyLink stringByReplacingOccurrencesOfString:@"\n" withString:@""];
 	myBrowser.storyLink = [myBrowser.storyLink stringByReplacingOccurrencesOfString:@"	" withString:@""];
     
-	//[self presentModalViewController:myBrowser animated:YES];
+	[self presentModalViewController:myBrowser animated:YES];
 	
 	
 	

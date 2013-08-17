@@ -131,12 +131,12 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Cp2-Te-ELu" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1355" y="909"/>
+            <point key="canvasLocation" x="895" y="1181"/>
         </scene>
         <!--Now Playing View Controller-->
         <scene sceneID="axI-Je-9lP">
             <objects>
-                <viewController id="ghA-rL-hMj" customClass="NowPlayingViewController" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="NowPlayingViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="ghA-rL-hMj" customClass="NowPlayingViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="gtJ-wY-gFg">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -286,6 +286,9 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         </view>
+                                        <connections>
+                                            <segue destination="ghA-rL-hMj" kind="custom" id="qCS-t2-pMn"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                                 <connections>
@@ -314,68 +317,18 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="d8s-pk-Zvd" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="1242" y="556"/>
         </scene>
     </scenes>
     <resources>
         <image name="jonesgaze.jpg" width="329" height="429"/>
     </resources>
-    <classes>
-        <class className="NowPlayingViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/NowPlayingViewController.h"/>
-            <relationships>
-                <relationship kind="action" name="buttonPressed:"/>
-                <relationship kind="action" name="callButtonPressed:"/>
-                <relationship kind="action" name="cancel:"/>
-                <relationship kind="action" name="emailButtonPressed:"/>
-                <relationship kind="action" name="loadWebPage:"/>
-                <relationship kind="action" name="playAudioStream:"/>
-                <relationship kind="action" name="playVideoStream:"/>
-                <relationship kind="action" name="showPodCastList:"/>
-                <relationship kind="action" name="sliderMoved:" candidateClass="UISlider"/>
-                <relationship kind="action" name="stopAudioStream:"/>
-                <relationship kind="outlet" name="button" candidateClass="UIButton"/>
-                <relationship kind="outlet" name="callButton" candidateClass="UIButton"/>
-                <relationship kind="outlet" name="downloadSourceField" candidateClass="UITextField"/>
-                <relationship kind="outlet" name="emailButton" candidateClass="UIButton"/>
-                <relationship kind="outlet" name="listenNow" candidateClass="UIButton"/>
-                <relationship kind="outlet" name="listenNowWebView" candidateClass="UIWebView"/>
-                <relationship kind="outlet" name="mainView" candidateClass="UIView"/>
-                <relationship kind="outlet" name="metadataAlbum" candidateClass="UITextField"/>
-                <relationship kind="outlet" name="metadataArtist" candidateClass="UITextField"/>
-                <relationship kind="outlet" name="metadataTitle" candidateClass="UITextField"/>
-                <relationship kind="outlet" name="myIndicator" candidateClass="UIActivityIndicatorView"/>
-                <relationship kind="outlet" name="pageWebView" candidateClass="UIWebView"/>
-                <relationship kind="outlet" name="pageWebViewContainer" candidateClass="UIView"/>
-                <relationship kind="outlet" name="phoneLabel" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="podCastListBtn" candidateClass="UIButton"/>
-                <relationship kind="outlet" name="positionLabel" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="progressSlider" candidateClass="UISlider"/>
-                <relationship kind="outlet" name="volumeSlider" candidateClass="UIView"/>
-                <relationship kind="outlet" name="watchNow" candidateClass="UIButton"/>
-            </relationships>
-        </class>
-        <class className="RSSReader" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/RSSReader.h"/>
-            <relationships>
-                <relationship kind="action" name="back:"/>
-                <relationship kind="outlet" name="activityView" candidateClass="UIActivityIndicatorView"/>
-                <relationship kind="outlet" name="newsTable" candidateClass="UITableView"/>
-            </relationships>
-        </class>
-        <class className="webViewer" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/webViewer.h"/>
-            <relationships>
-                <relationship kind="action" name="back:"/>
-                <relationship kind="action" name="goback:"/>
-                <relationship kind="action" name="goforward:"/>
-                <relationship kind="outlet" name="activityView" candidateClass="UIActivityIndicatorView"/>
-                <relationship kind="outlet" name="webView" candidateClass="UIWebView"/>
-            </relationships>
-        </class>
-    </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>
         <simulatedScreenMetrics key="destination"/>
     </simulatedMetricsContainer>
+    <inferredMetricsTieBreakers>
+        <segue reference="Q7F-pT-EIW"/>
+    </inferredMetricsTieBreakers>
 </document>
