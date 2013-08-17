@@ -76,6 +76,18 @@
 		48F897DB17B9B0DE000C95A1 /* jonesgaze.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 48F897D217B9B0DE000C95A1 /* jonesgaze.jpg */; };
 		48F897DC17B9B0DE000C95A1 /* ListenNow.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 48F897D317B9B0DE000C95A1 /* ListenNow.jpg */; };
 		48F897DD17B9B0DE000C95A1 /* ListenNow.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 48F897D317B9B0DE000C95A1 /* ListenNow.jpg */; };
+		48FCE79617BF52B3009B5538 /* webViewer.m in Sources */ = {isa = PBXBuildFile; fileRef = 48FCE78E17BF52B3009B5538 /* webViewer.m */; };
+		48FCE79717BF52B3009B5538 /* webViewer.m in Sources */ = {isa = PBXBuildFile; fileRef = 48FCE78E17BF52B3009B5538 /* webViewer.m */; };
+		48FCE79817BF52B3009B5538 /* webViewer.xib in Resources */ = {isa = PBXBuildFile; fileRef = 48FCE78F17BF52B3009B5538 /* webViewer.xib */; };
+		48FCE79917BF52B3009B5538 /* webViewer.xib in Resources */ = {isa = PBXBuildFile; fileRef = 48FCE78F17BF52B3009B5538 /* webViewer.xib */; };
+		48FCE79A17BF52B3009B5538 /* RSSReader.m in Sources */ = {isa = PBXBuildFile; fileRef = 48FCE79117BF52B3009B5538 /* RSSReader.m */; };
+		48FCE79B17BF52B3009B5538 /* RSSReader.m in Sources */ = {isa = PBXBuildFile; fileRef = 48FCE79117BF52B3009B5538 /* RSSReader.m */; };
+		48FCE79C17BF52B3009B5538 /* RSSReader.xib in Resources */ = {isa = PBXBuildFile; fileRef = 48FCE79217BF52B3009B5538 /* RSSReader.xib */; };
+		48FCE79D17BF52B3009B5538 /* RSSReader.xib in Resources */ = {isa = PBXBuildFile; fileRef = 48FCE79217BF52B3009B5538 /* RSSReader.xib */; };
+		48FCE79E17BF52B3009B5538 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 48FCE79417BF52B3009B5538 /* ViewController.m */; };
+		48FCE79F17BF52B3009B5538 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 48FCE79417BF52B3009B5538 /* ViewController.m */; };
+		48FCE7A017BF52B3009B5538 /* ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 48FCE79517BF52B3009B5538 /* ViewController.xib */; };
+		48FCE7A117BF52B3009B5538 /* ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 48FCE79517BF52B3009B5538 /* ViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -164,6 +176,15 @@
 		48F897D117B9B0DE000C95A1 /* header4.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = header4.jpg; sourceTree = "<group>"; };
 		48F897D217B9B0DE000C95A1 /* jonesgaze.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = jonesgaze.jpg; sourceTree = "<group>"; };
 		48F897D317B9B0DE000C95A1 /* ListenNow.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = ListenNow.jpg; sourceTree = "<group>"; };
+		48FCE78D17BF52B3009B5538 /* webViewer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = webViewer.h; sourceTree = "<group>"; };
+		48FCE78E17BF52B3009B5538 /* webViewer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = webViewer.m; sourceTree = "<group>"; };
+		48FCE78F17BF52B3009B5538 /* webViewer.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = webViewer.xib; sourceTree = "<group>"; };
+		48FCE79017BF52B3009B5538 /* RSSReader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RSSReader.h; sourceTree = "<group>"; };
+		48FCE79117BF52B3009B5538 /* RSSReader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RSSReader.m; sourceTree = "<group>"; };
+		48FCE79217BF52B3009B5538 /* RSSReader.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RSSReader.xib; sourceTree = "<group>"; };
+		48FCE79317BF52B3009B5538 /* ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		48FCE79417BF52B3009B5538 /* ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		48FCE79517BF52B3009B5538 /* ViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -236,6 +257,7 @@
 		48F3B4EF17B81BE900A52433 = {
 			isa = PBXGroup;
 			children = (
+				48FCE78C17BF528E009B5538 /* RSSReader */,
 				485253BE17BD5E290012F8EA /* AudioStreamer */,
 				48F3164D17BAF8DA00F54E81 /* 144x144.png */,
 				48F3164B17BAF88000F54E81 /* 72x72.png */,
@@ -352,6 +374,22 @@
 			path = InfoWars/Images;
 			sourceTree = "<group>";
 		};
+		48FCE78C17BF528E009B5538 /* RSSReader */ = {
+			isa = PBXGroup;
+			children = (
+				48FCE78D17BF52B3009B5538 /* webViewer.h */,
+				48FCE78E17BF52B3009B5538 /* webViewer.m */,
+				48FCE78F17BF52B3009B5538 /* webViewer.xib */,
+				48FCE79017BF52B3009B5538 /* RSSReader.h */,
+				48FCE79117BF52B3009B5538 /* RSSReader.m */,
+				48FCE79217BF52B3009B5538 /* RSSReader.xib */,
+				48FCE79317BF52B3009B5538 /* ViewController.h */,
+				48FCE79417BF52B3009B5538 /* ViewController.m */,
+				48FCE79517BF52B3009B5538 /* ViewController.xib */,
+			);
+			name = RSSReader;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -454,6 +492,9 @@
 				485DE4FA17BDE223009CFAC2 /* playbutton@2x.png in Resources */,
 				485DE4FB17BDE223009CFAC2 /* stopbutton.png in Resources */,
 				485DE4FC17BDE223009CFAC2 /* stopbutton@2x.png in Resources */,
+				48FCE79817BF52B3009B5538 /* webViewer.xib in Resources */,
+				48FCE79C17BF52B3009B5538 /* RSSReader.xib in Resources */,
+				48FCE7A017BF52B3009B5538 /* ViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -467,6 +508,9 @@
 				48F897D917B9B0DE000C95A1 /* header4.jpg in Resources */,
 				48F897DB17B9B0DE000C95A1 /* jonesgaze.jpg in Resources */,
 				48F897DD17B9B0DE000C95A1 /* ListenNow.jpg in Resources */,
+				48FCE79917BF52B3009B5538 /* webViewer.xib in Resources */,
+				48FCE79D17BF52B3009B5538 /* RSSReader.xib in Resources */,
+				48FCE7A117BF52B3009B5538 /* ViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -519,6 +563,9 @@
 				485253C717BD5E420012F8EA /* LevelMeterView.m in Sources */,
 				485253C917BD5E420012F8EA /* AudioStreamer.m in Sources */,
 				485253CD17BD5E860012F8EA /* NowPlayingViewController.m in Sources */,
+				48FCE79617BF52B3009B5538 /* webViewer.m in Sources */,
+				48FCE79A17BF52B3009B5538 /* RSSReader.m in Sources */,
+				48FCE79E17BF52B3009B5538 /* ViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -532,6 +579,9 @@
 				485253C817BD5E420012F8EA /* LevelMeterView.m in Sources */,
 				485253CA17BD5E420012F8EA /* AudioStreamer.m in Sources */,
 				485253CE17BD5E860012F8EA /* NowPlayingViewController.m in Sources */,
+				48FCE79717BF52B3009B5538 /* webViewer.m in Sources */,
+				48FCE79B17BF52B3009B5538 /* RSSReader.m in Sources */,
+				48FCE79F17BF52B3009B5538 /* ViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
