@@ -145,12 +145,12 @@
                                 <rect key="frame" x="0.0" y="0.0" width="680" height="874"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <view contentMode="scaleToFill" id="gbF-ri-aVx">
-                                <rect key="frame" x="-1" y="46" width="321" height="388"/>
+                            <view alpha="0.0" contentMode="scaleToFill" id="gbF-ri-aVx">
+                                <rect key="frame" x="0.0" y="46" width="320" height="388"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" heightSizable="YES"/>
                                 <subviews>
                                     <webView contentMode="scaleToFill" scalesPageToFit="YES" id="zTE-L3-6SD">
-                                        <rect key="frame" x="13" y="9" width="294" height="374"/>
+                                        <rect key="frame" x="13" y="7" width="293" height="374"/>
                                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         <connections>
@@ -183,7 +183,7 @@
                                 <rect key="frame" x="161" y="436" width="159" height="44"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMinY="YES"/>
                                 <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.17999999999999999" colorSpace="calibratedRGB"/>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
                                 <state key="normal" title="★ Watch Now ★">
                                     <color key="titleColor" red="0.97387137097154952" green="1" blue="0.94930857064453589" alpha="1" colorSpace="calibratedRGB"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -208,7 +208,7 @@
                                 <rect key="frame" x="0.0" y="436" width="159" height="44"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.17999999999999999" colorSpace="calibratedRGB"/>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
                                 <state key="normal" title="★ Listen Now ★">
                                     <color key="titleColor" red="0.97387137099999999" green="1" blue="0.94930857059999996" alpha="1" colorSpace="calibratedRGB"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
