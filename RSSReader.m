@@ -76,20 +76,38 @@
 	UITableViewCell *cell = [tableView
 		dequeueReusableCellWithIdentifier:CellIdentifier];
     [cell setBackgroundColor:[UIColor clearColor]];
-	if (cell.textLabel.text == nil) {
+	
+    
+    
+    
+    if (cell.textLabel.text == nil) {
 		cell = [[UITableViewCell alloc] init];
 
 		CGRect frame;
-		frame.origin.x		= 10;
+		
+        frame.origin.x		= 15;
+		frame.origin.y		= 15;
+		frame.size.height	= 72;
+		frame.size.width	= 72;
+
+		UIImageView *icon = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"72x72.png"]];
+		icon.autoresizingMask = (UIViewAutoresizingNone);//UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight);
+		[cell.contentView addSubview:icon];
+        
+        
+		//CGRect frame;
+		frame.origin.x		= 90;
 		frame.origin.y		= 10;
 		frame.size.height	= 25;
-		frame.size.width	= 480;
+		frame.size.width	= 200;
 
 		UILabel *titleLabel = [[UILabel alloc] initWithFrame:frame];
+        titleLabel.lineBreakMode = NSLineBreakByClipping;
 		titleLabel.tag = 1;
 		titleLabel.autoresizingMask = (UIViewAutoresizingFlexibleWidth);
 				[titleLabel setBackgroundColor:[UIColor clearColor]];
 				[titleLabel setTextColor:[UIColor blueColor]]; // Foreground color
+        titleLabel.preferredMaxLayoutWidth = 100;
 		[cell.contentView addSubview:titleLabel];
 
 		if (hasImages == 0) {
