@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="2.0" toolsVersion="3084" systemVersion="12E55" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" initialViewController="HfZ-Qq-mFf">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="2.0" toolsVersion="3084" systemVersion="12E55" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" initialViewController="1aG-Xj-cff">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="2083"/>
     </dependencies>
@@ -141,12 +141,12 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" alpha="0.30000001192092896" contentMode="scaleToFill" image="jonesgaze.jpg" id="vwe-Rt-Vnj">
-                                <rect key="frame" x="0.0" y="0.0" width="568" height="568"/>
+                            <imageView userInteractionEnabled="NO" alpha="0.29999999999999999" contentMode="scaleToFill" image="jonesgaze.jpg" id="vwe-Rt-Vnj">
+                                <rect key="frame" x="0.0" y="0.0" width="680" height="874"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <view alpha="0.0" contentMode="scaleToFill" id="gbF-ri-aVx">
-                                <rect key="frame" x="-1" y="37" width="321" height="376"/>
+                                <rect key="frame" x="0.0" y="37" width="321" height="376"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" heightSizable="YES"/>
                                 <subviews>
                                     <webView contentMode="scaleToFill" scalesPageToFit="YES" id="zTE-L3-6SD">
@@ -239,7 +239,7 @@
                                 </state>
                                 <connections>
                                     <action selector="showPodCastList:" destination="ghA-rL-hMj" eventType="touchUpInside" id="SYE-cF-WmL"/>
-                                    <segue destination="gon-Uv-kum" kind="modal" id="VVQ-Ic-neo"/>
+                                    <segue destination="gon-Uv-kum" kind="push" id="vHs-QI-EAq"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -264,7 +264,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="MGk-0B-qhG" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1243" y="556"/>
+            <point key="canvasLocation" x="1769" y="556"/>
         </scene>
         <!--Reader-->
         <scene sceneID="y9k-Bh-ah7">
@@ -274,10 +274,14 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
+                            <imageView userInteractionEnabled="NO" alpha="0.40000000000000013" contentMode="scaleToFill" image="jonesgaze.jpg" id="nh0-yZ-2uu">
+                                <rect key="frame" x="-359" y="0.0" width="680" height="874"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxY="YES"/>
+                            </imageView>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="24q-cZ-O56">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="436"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <prototypes>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="blue" indentationWidth="10" reuseIdentifier="Cell" id="pvq-le-3fc">
                                         <rect key="frame" x="0.0" y="22" width="320" height="44"/>
@@ -287,9 +291,6 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         </view>
-                                        <connections>
-                                            <segue destination="HfZ-Qq-mFf" kind="modal" identifier="backToNowPlaying" id="qCS-t2-pMn"/>
-                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                                 <connections>
@@ -303,14 +304,15 @@
                                 <items>
                                     <barButtonItem title="Close" id="czC-5k-xPu">
                                         <connections>
-                                            <segue destination="HfZ-Qq-mFf" kind="modal" identifier="backToNowPlaying" id="Q7F-pT-EIW"/>
+                                            <segue destination="ghA-rL-hMj" kind="push" id="qLn-Iw-oaf"/>
                                         </connections>
                                     </barButtonItem>
                                 </items>
                             </toolbar>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
+                    <navigationItem key="navigationItem" id="YGB-rP-rkQ"/>
                     <connections>
                         <outlet property="newsTable" destination="24q-cZ-O56" id="9fn-1E-9fQ"/>
                         <outlet property="view" destination="3Po-Cf-Deb" id="dmY-Av-zt1"/>
@@ -318,25 +320,32 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="d8s-pk-Zvd" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1768" y="556"/>
+            <point key="canvasLocation" x="2294" y="556"/>
         </scene>
         <!--Navigation Controller-->
-        <scene sceneID="lJt-yI-UEg">
+        <scene sceneID="amb-KQ-7J6">
             <objects>
-                <navigationController id="HfZ-Qq-mFf" sceneMemberID="viewController">
+                <navigationController navigationBarHidden="YES" id="1aG-Xj-cff" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="A2y-3M-Hxy">
+                    <nil key="simulatedStatusBarMetrics"/>
+                    <nil key="simulatedTopBarMetrics"/>
+                    <nil key="simulatedBottomBarMetrics"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="OEP-pm-hUO">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
+                    <toolbar key="toolbar" opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="KIk-x7-ySD">
+                        <rect key="frame" x="0.0" y="436" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </toolbar>
                     <connections>
-                        <segue destination="ghA-rL-hMj" kind="relationship" relationship="rootViewController" id="3ha-jR-4ze"/>
+                        <segue destination="ghA-rL-hMj" kind="relationship" relationship="rootViewController" id="NJ7-Mk-AUD"/>
                     </connections>
                 </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Leu-3Y-Zl9" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="4xm-rm-PeK" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="717" y="556"/>
+            <point key="canvasLocation" x="1243" y="556"/>
         </scene>
     </scenes>
     <resources>
@@ -347,8 +356,11 @@
             <source key="sourceIdentifier" type="project" relativePath="./Classes/NowPlayingViewController.h"/>
             <relationships>
                 <relationship kind="action" name="buttonPressed:"/>
+                <relationship kind="action" name="callButtonPressed:"/>
                 <relationship kind="action" name="cancel:"/>
+                <relationship kind="action" name="emailButtonPressed:"/>
                 <relationship kind="action" name="loadWebPage:"/>
+                <relationship kind="action" name="playAudioStream:"/>
                 <relationship kind="action" name="playVideoStream:"/>
                 <relationship kind="action" name="showPodCastList:"/>
                 <relationship kind="action" name="sliderMoved:" candidateClass="UISlider"/>
@@ -399,6 +411,6 @@
         <simulatedScreenMetrics key="destination"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
-        <segue reference="qCS-t2-pMn"/>
+        <segue reference="qLn-Iw-oaf"/>
     </inferredMetricsTieBreakers>
 </document>
