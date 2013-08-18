@@ -81,9 +81,9 @@
 
 		CGRect frame;
 		frame.origin.x		= 10;
-		frame.origin.y		= 0;
-		frame.size.height	= 75;
-		frame.size.width	= 300;
+		frame.origin.y		= 10;
+		frame.size.height	= 25;
+		frame.size.width	= 480;
 
 		UILabel *titleLabel = [[UILabel alloc] initWithFrame:frame];
 		titleLabel.tag = 1;
