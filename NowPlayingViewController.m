@@ -799,6 +799,15 @@ NSString *const HD4 = @"http://stream.infowars.com:80";
 	[self presentMoviePlayerViewControllerAnimated:moviePlayer];
 }
 
+///shared DataObject
+
+- (void)assignURL:(DataObject *)object {
+
+    NSLog(@"assignURL object.url =  %@",object.url);
+    self.movieURLString = [NSString stringWithFormat:@"%@",object.url];//object.url;
+
+}
+
 - (void)playAudioStream
 {
 	/*

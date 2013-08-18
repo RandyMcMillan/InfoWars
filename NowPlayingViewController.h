@@ -15,6 +15,7 @@
 #import <UIKit/UIKit.h>
 #import "AVFoundation/AVFoundation.h"
 #import "AudioToolbox/AudioToolbox.h"
+#import "DataObject.h"
 
 @class AudioStreamer, LevelMeterView;
 
@@ -42,16 +43,23 @@
 	NSString		*currentTitle;
 	NSString		*currentChannel;
 	NSArray			*channelList;
+    
+    DataObject    *dataObject;
+    
 }
 
 @property (nonatomic, retain) UIWebView *listenNowWebView;
 @property (nonatomic, retain) UIWebView *pageWebView;
 @property (nonatomic, retain) UIView	*pageWebViewContainer;
+@property (nonatomic, retain) DataObject	*dataObject;
 
 - (IBAction)playVideoStream:(id)sender;
 - (IBAction)showPodCastList:(id)sender;
 - (IBAction)stopAudioStream:(id)sender;
 - (IBAction)loadWebPage:(id)sender;
+
+- (void)assignURL:(DataObject *)object;
+
 - (void)loadWebPage;
 - (void)playAudioStream;
 
