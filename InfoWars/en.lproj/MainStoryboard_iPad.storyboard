@@ -26,7 +26,7 @@
                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         </view>
                                         <connections>
-                                            <segue destination="Bd1-tS-4Mu" kind="modal" id="B30-IM-L4b"/>
+                                            <segue destination="Bd1-tS-4Mu" kind="modal" identifier="backToNowPlaying" id="cUn-6T-4Il"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -42,7 +42,7 @@
                                 <items>
                                     <barButtonItem title="Done" style="done" id="mxG-bO-7T0">
                                         <connections>
-                                            <segue destination="Bd1-tS-4Mu" kind="modal" id="f7S-is-EOZ"/>
+                                            <segue destination="Bd1-tS-4Mu" kind="modal" identifier="backToNowPlaying" id="f7S-is-EOZ"/>
                                         </connections>
                                     </barButtonItem>
                                 </items>
@@ -324,11 +324,8 @@
             <source key="sourceIdentifier" type="project" relativePath="./Classes/NowPlayingViewController.h"/>
             <relationships>
                 <relationship kind="action" name="buttonPressed:"/>
-                <relationship kind="action" name="callButtonPressed:"/>
                 <relationship kind="action" name="cancel:"/>
-                <relationship kind="action" name="emailButtonPressed:"/>
                 <relationship kind="action" name="loadWebPage:"/>
-                <relationship kind="action" name="playAudioStream:"/>
                 <relationship kind="action" name="playVideoStream:"/>
                 <relationship kind="action" name="showPodCastList:"/>
                 <relationship kind="action" name="sliderMoved:" candidateClass="UISlider"/>

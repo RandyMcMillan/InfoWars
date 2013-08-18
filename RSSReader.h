@@ -13,7 +13,7 @@
 	
 	IBOutlet UITableView *newsTable;
 	IBOutlet UIActivityIndicatorView *activityView;
-	
+    
 	UIActivityIndicatorView *activityIndicator;
 	
 	CGSize cellSize;
