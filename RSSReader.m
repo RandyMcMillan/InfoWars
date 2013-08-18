@@ -9,6 +9,7 @@
 #import "RSSReader.h"
 #import "webViewer.h"
 #import "NowPlayingViewController.h"
+#define ROW_HEIGHT 160
 
 
 @implementation RSSReader
@@ -19,17 +20,14 @@
 	//[self dismissModalViewControllerAnimated:YES];
 }
 
-- (void)viewDidLoad {
+-(void)viewDidLoad {
 	// Add the following line if you want the list to be editable
 	// self.navigationItem.leftBarButtonItem = self.editButtonItem;
 	[activityView startAnimating];
-#define ROW_HEIGHT 160
 
     //self.newsTable.rowHeight = ROW_HEIGHT;
 
 }
-
-
 
 -(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
     
@@ -53,11 +51,11 @@
 }
 
 
+//*******************************************************************************
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
 	return 1; 
 }
-
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
 	return [stories count];
@@ -69,8 +67,6 @@
 	else
 		return 125;
 }
-
-
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
 	
@@ -134,9 +130,6 @@
 	return cell;
 }
 
-
-//###################### code to open web page #####################################
-
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
 	// Navigation logic
 
@@ -191,16 +184,13 @@
 - (void)viewDidDisappear:(BOOL)animated {
 }
 
-
-
-
-- (void)parserDidStartDocument:(NSXMLParser *)parser{	
+//*******************************************************************************
+- (void)parserDidStartDocument:(NSXMLParser *)parser {
 	NSLog(@"found file and started parsing");
 	
 }
 
-- (void)parseXMLFileAtURL:(NSString *)URL
-{	
+- (void)parseXMLFileAtURL:(NSString *)URL {
 	stories = [[NSMutableArray alloc] init];
 	
     //you must then convert the path to a proper NSURL or it won't work
@@ -279,15 +269,10 @@
     
 }
 
-
-
-
-
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation {
 	// Return YES for supported orientations
 	return (interfaceOrientation == UIInterfaceOrientationPortrait);
 }
-
 
 - (void)didReceiveMemoryWarning {
 	[super didReceiveMemoryWarning]; // Releases the view if it doesn't have a superview
