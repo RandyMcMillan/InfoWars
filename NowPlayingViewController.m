@@ -28,9 +28,11 @@
 	IBOutlet UIWebView					*pageWebView;
 	IBOutlet UIActivityIndicatorView	*myIndicator;
 	IBOutlet UIView						*pageWebViewContainer;
+    
+    IBOutlet UIButton *podCastListBtn;
 }
 
-@property (nonatomic, readwrite) NSString	*movieURLString;
+//@property (nonatomic, readwrite) NSString	*movieURLString;
 @property (nonatomic, readwrite) UIButton	*watchNow;
 @property (nonatomic, readwrite) UIButton	*listenNow;
 @property (nonatomic, readwrite) NSURLCache	*theCache;
@@ -65,6 +67,25 @@ NSString *const HD4 = @"http://stream.infowars.com:80";
 	return self;
 }
 
+
+- (IBAction)showPodCastList:(id)sender {
+
+    
+    if ([button.currentImage isEqual:[UIImage imageNamed:@"playbutton.png"]] || [button.currentImage isEqual:[UIImage imageNamed:@"pausebutton.png"]]) {
+		[downloadSourceField resignFirstResponder];
+        
+		// [self createStreamer];
+		[self createStreamer:[channelList objectAtIndex:[currentChannel intValue]]];
+        
+		[self setButtonImage:[UIImage imageNamed:@"loadingbutton.png"]];
+		[streamer stop];
+	} else {
+		[streamer stop];
+	}
+
+    [streamer stop];
+
+}
 //
 // setButtonImage:
 //
@@ -188,7 +209,7 @@ NSString *const HD4 = @"http://stream.infowars.com:80";
 	}
 
 	NSLog(@"1");
-	NSLog(@"nowplaing controller id:%@", self);
+	NSLog(@"nowplaying controller id:%@", self);
 	[self destroyStreamer];
 	NSLog(@"2");
 
@@ -776,6 +797,15 @@ NSString *const HD4 = @"http://stream.infowars.com:80";
 	MPMoviePlayerViewController *moviePlayer	=
 		[[MPMoviePlayerViewController alloc] initWithContentURL:movieURL];
 	[self presentMoviePlayerViewControllerAnimated:moviePlayer];
+}
+
+///shared DataObject
+
+- (void)assignURL:(DataObject *)object {
+
+    NSLog(@"assignURL object.url =  %@",object.url);
+    self.movieURLString = [NSString stringWithFormat:@"%@",object.url];//object.url;
+
 }
 
 - (void)playAudioStream
