@@ -278,7 +278,7 @@
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="24q-cZ-O56">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="436"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxX="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" heightSizable="YES"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <prototypes>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="blue" indentationWidth="10" reuseIdentifier="Cell" id="pvq-le-3fc">
@@ -296,19 +296,22 @@
                                     <outlet property="delegate" destination="gon-Uv-kum" id="KIT-Mk-yG3"/>
                                 </connections>
                             </tableView>
-                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="pgO-Sy-Xj9">
-                                <rect key="frame" x="0.0" y="436" width="320" height="44"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
-                                <items>
-                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="17c-le-LI7"/>
-                                    <barButtonItem title="Done" style="done" id="czC-5k-xPu">
-                                        <connections>
-                                            <segue destination="ghA-rL-hMj" kind="modal" id="hQg-fg-Dzs"/>
-                                        </connections>
-                                    </barButtonItem>
-                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="9K5-uA-uoo"/>
-                                </items>
-                            </toolbar>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="wwb-5g-3BK">
+                                <rect key="frame" x="0.0" y="437" width="320" height="44"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.17999999999999999" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" title="Done">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="highlighted">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="ghA-rL-hMj" kind="modal" id="M4K-Va-4gy"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="0.0" green="0.042180815609999998" blue="0.31640625" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
@@ -348,63 +351,12 @@
             <point key="canvasLocation" x="1275" y="556"/>
         </scene>
     </scenes>
-    <classes>
-        <class className="NowPlayingViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/NowPlayingViewController.h"/>
-            <relationships>
-                <relationship kind="action" name="buttonPressed:"/>
-                <relationship kind="action" name="cancel:"/>
-                <relationship kind="action" name="loadWebPage:"/>
-                <relationship kind="action" name="playVideoStream:"/>
-                <relationship kind="action" name="showPodCastList:"/>
-                <relationship kind="action" name="sliderMoved:" candidateClass="UISlider"/>
-                <relationship kind="action" name="stopAudioStream:"/>
-                <relationship kind="outlet" name="button" candidateClass="UIButton"/>
-                <relationship kind="outlet" name="callButton" candidateClass="UIButton"/>
-                <relationship kind="outlet" name="downloadSourceField" candidateClass="UITextField"/>
-                <relationship kind="outlet" name="emailButton" candidateClass="UIButton"/>
-                <relationship kind="outlet" name="listenNow" candidateClass="UIButton"/>
-                <relationship kind="outlet" name="listenNowWebView" candidateClass="UIWebView"/>
-                <relationship kind="outlet" name="mainView" candidateClass="UIView"/>
-                <relationship kind="outlet" name="metadataAlbum" candidateClass="UITextField"/>
-                <relationship kind="outlet" name="metadataArtist" candidateClass="UITextField"/>
-                <relationship kind="outlet" name="metadataTitle" candidateClass="UITextField"/>
-                <relationship kind="outlet" name="myIndicator" candidateClass="UIActivityIndicatorView"/>
-                <relationship kind="outlet" name="pageWebView" candidateClass="UIWebView"/>
-                <relationship kind="outlet" name="pageWebViewContainer" candidateClass="UIView"/>
-                <relationship kind="outlet" name="phoneLabel" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="podCastListBtn" candidateClass="UIButton"/>
-                <relationship kind="outlet" name="positionLabel" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="progressSlider" candidateClass="UISlider"/>
-                <relationship kind="outlet" name="volumeSlider" candidateClass="UIView"/>
-                <relationship kind="outlet" name="watchNow" candidateClass="UIButton"/>
-            </relationships>
-        </class>
-        <class className="RSSReader" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/RSSReader.h"/>
-            <relationships>
-                <relationship kind="action" name="back:"/>
-                <relationship kind="outlet" name="activityView" candidateClass="UIActivityIndicatorView"/>
-                <relationship kind="outlet" name="newsTable" candidateClass="UITableView"/>
-            </relationships>
-        </class>
-        <class className="webViewer" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/webViewer.h"/>
-            <relationships>
-                <relationship kind="action" name="back:"/>
-                <relationship kind="action" name="goback:"/>
-                <relationship kind="action" name="goforward:"/>
-                <relationship kind="outlet" name="activityView" candidateClass="UIActivityIndicatorView"/>
-                <relationship kind="outlet" name="webView" candidateClass="UIWebView"/>
-            </relationships>
-        </class>
-    </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>
         <simulatedScreenMetrics key="destination"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
-        <segue reference="hQg-fg-Dzs"/>
+        <segue reference="M4K-Va-4gy"/>
     </inferredMetricsTieBreakers>
 </document>
