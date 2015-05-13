@@ -1,16 +1,16 @@
 //
-//  RSSReaderAppDelegate.h
-//  RSSReader
+//  InfoWarsAppDelegate.h
+//  InfoWars
 //
 //  Created by Imthiaz Rafiq @hmimthiaz
 //  http://imthi.com
-//  https://github.com/hmimthiaz/RSSReader
+//  https://github.com/hmimthiaz/InfoWars
 //
 
 
 #import <UIKit/UIKit.h>
 
-@interface RSSReaderAppDelegate : NSObject <UIApplicationDelegate> {
+@interface InfoWarsAppDelegate : NSObject <UIApplicationDelegate> {
     UITabBarController * _tabBarController;
 }
 

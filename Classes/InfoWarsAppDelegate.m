@@ -1,18 +1,18 @@
 //
-//  RSSReaderAppDelegate.m
-//  RSSReader
+//  InfoWarsAppDelegate.m
+//  InfoWars
 //
 //  Created by Imthiaz Rafiq @hmimthiaz
 //  http://imthi.com
-//  https://github.com/hmimthiaz/RSSReader
+//  https://github.com/hmimthiaz/InfoWars
 //
 
 
-#import "RSSReaderAppDelegate.h"
+#import "InfoWarsAppDelegate.h"
 #import "RSSParser.h"
 #import "NewsListViewController.h"
 
-@implementation RSSReaderAppDelegate
+@implementation InfoWarsAppDelegate
 
 
 @synthesize window=_window;

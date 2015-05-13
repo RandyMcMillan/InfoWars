@@ -1,10 +1,10 @@
 //
 //  RSSListViewController.m
-//  RSSReader
+//  InfoWars
 //
 //  Created by Imthiaz Rafiq @hmimthiaz
 //  http://imthi.com
-//  https://github.com/hmimthiaz/RSSReader
+//  https://github.com/hmimthiaz/InfoWars
 //
 
 

@@ -13,15 +13,15 @@
 			<array>
 				<dict>
 					<key>BlogTitle</key>
-					<string>InfoWars.com Archive</string>
-					<key>BlogURL</key>
-					<string>http://xml.nfowars.net/Alex.rss</string>
-				</dict>
-				<dict>
-					<key>BlogTitle</key>
 					<string>InfoWars.com</string>
 					<key>BlogURL</key>
 					<string>http://www.infowars.com/feed/custom_feed_rss</string>
+				</dict>
+				<dict>
+					<key>BlogTitle</key>
+					<string>InfoWars.com Archive</string>
+					<key>BlogURL</key>
+					<string>http://xml.nfowars.net/Alex.rss</string>
 				</dict>
 				<dict>
 					<key>BlogTitle</key>
